@@ -1,0 +1,2700 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал</title><description>Blog</description><link>https://guilliman.ru/</link><language>ru</language><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
+&lt;p&gt;Основная сложность при вязании узла «обезьяний кулак» заключается в определении необходимого количества витков для полного покрытия сердечника (обычно это сферический предмет, например, стеклянный шарик или металлический подшипниковый шар). Представленная ниже таблица послужит незаменимым помощником при создании вашего следующего узла «обезьяний кулак». Если вы часто вяжете такие узлы, рекомендуем добавить эту страницу в закладки. Поделитесь ей с друзьями, которым она может пригодиться!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;.//images/2.webp&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Таблица размеров для паракорда 550&lt;/h2&gt;
+&lt;p&gt;Данная таблица разработана специально для паракорда типа 550 (диаметр около 4 мм). При использовании шнура другой толщины потребуется корректировка параметров.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Диаметр сердечника&lt;/th&gt;
+&lt;th&gt;Количество витков&lt;/th&gt;
+&lt;th&gt;Требуемая длина шнура&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;16 мм (5/8&quot;)&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;50 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19 мм (3/4&quot;)&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;75 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22 мм (7/8&quot;)&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;100 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25 мм (1&quot;)&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;130 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29 мм (1 1/8&quot;)&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;160 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32 мм (1 1/4&quot;)&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;200 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35 мм (1 3/8&quot;)&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;240 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;38 мм (1 1/2&quot;)&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;290 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Мяч для пинг-понга (40 мм)&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;310 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;41 мм (1 5/8&quot;)&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;340 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Мяч для гольфа (43 мм)&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;360 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;44 мм (1 3/4&quot;)&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;390 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;48 мм (1 7/8&quot;)&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;445 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;51 мм (2&quot;)&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;510 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;54 мм (2 1/8&quot;)&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;580 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;57 мм (2 1/4&quot;)&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;650 см&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Важные примечания&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;О паракорде:&lt;/strong&gt;
+Не весь паракорд 550 идентичен. В зависимости от производителя, материала изготовления и даже партии продукции его фактический диаметр может незначительно варьироваться. Это может повлиять на конечный результат.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;О длине шнура:&lt;/strong&gt;
+Указанная в таблице длина рассчитана для &lt;strong&gt;готового, затянутого узла&lt;/strong&gt;. Однако в процессе вязания вам может потребоваться &lt;strong&gt;в 1,5–2 раза больше шнура&lt;/strong&gt;, чтобы удобно манипулировать им и правильно завязать узел. Всегда берите шнур с запасом!&lt;/p&gt;
+&lt;h2&gt;Практические советы&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Для начинающих:&lt;/strong&gt; начните с малых размеров (3–4 витка), чтобы освоить технику&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Выбор сердечника:&lt;/strong&gt; металлические шарики от подшипников — оптимальный вариант по весу и долговечности&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Проверка перед обрезкой:&lt;/strong&gt; убедитесь, что узел полностью затянут, прежде чем обрезать излишки шнура&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Сохраните эту таблицу для быстрого доступа при работе над проектами!&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>G-PASS TERMINAL</title><link>https://guilliman.ru/posts/password_generator/</link><guid isPermaLink="true">https://guilliman.ru/posts/password_generator/</guid><description>Киберпанк-генератор паролей: разбор под капотом</description><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Киберпанк-генератор паролей: разбор под капотом&lt;/h1&gt;
+&lt;p&gt;Короче, запилил генератор паролей. Но не очередную поделку &quot;возьми Math.random и склей буковки&quot;, а что-то более серьёзное. С криптографией, энтропией и тремя режимами на выбор. Давайте разберём, что там внутри.&lt;/p&gt;
+&lt;h2&gt;Три режима — три философии&lt;/h2&gt;
+&lt;h3&gt;1. Стандартный режим&lt;/h3&gt;
+&lt;p&gt;Классика жанра: берём пул символов, кидаем кости, получаем &lt;code&gt;Xk#9mP$2nL&lt;/code&gt;. Но есть нюансы.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Гарантия категорий.&lt;/strong&gt; Если выбраны нижний регистр, верхний, цифры и символы — пароль &lt;em&gt;гарантированно&lt;/em&gt; будет содержать минимум по одному символу из каждой категории. Никаких &quot;опс, а цифр-то и нет&quot;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Сначала берём по одному из каждой категории
+let chars: string[] = categories.map((c) =&amp;gt; getSecureRandomChar(c.chars));
+
+// Потом добиваем из общего пула
+while (chars.length &amp;lt; length) {
+    chars.push(getSecureRandomChar(pool));
+}
+
+// И перемешиваем Fisher-Yates
+for (let i = chars.length - 1; i &amp;gt; 0; i--) {
+    const j = secureRandomInt(i + 1);
+    [chars[i], chars[j]] = [chars[j], chars[i]];
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Поддержка кириллицы.&lt;/strong&gt; Переключаешь тумблер — и вместо 52 латинских букв получаешь 66 кириллических. Пул символов увеличивается, энтропия растёт. А ещё это ломает мозг злоумышленнику, который ожидает латиницу.&lt;/p&gt;
+&lt;h3&gt;2. XKCD-режим&lt;/h3&gt;
+&lt;p&gt;Помните &lt;a href=&quot;https://xkcd.com/936/&quot;&gt;тот самый комикс&lt;/a&gt;? &lt;code&gt;correct horse battery staple&lt;/code&gt; — легко запомнить, сложно подобрать. Реализовал именно этот подход.&lt;/p&gt;
+&lt;p&gt;Словарь — ~180 слов из кибер/техно-тематики:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;correct horse battery staple system hacking cyber neural matrix logic 
+ghost shell neon laser future data access denied granted protocol...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Размер словаря = &lt;strong&gt;180 слов&lt;/strong&gt; → &lt;strong&gt;~7.49 бит на слово&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;5 слов = ~37.5 бит только от слов. Добавляем случайную капитализацию (+5 бит) и число 00-99 (+6.6 бит) — получаем ~49 бит. Для онлайн-атак более чем достаточно.&lt;/p&gt;
+&lt;h3&gt;3. Фонетический режим&lt;/h3&gt;
+&lt;p&gt;Идея: генерировать не случайную кашу и не настоящие слова, а &lt;strong&gt;произносимые псевдослова&lt;/strong&gt;. &lt;code&gt;Bakemi-Toruva-Sinelo-42&lt;/code&gt; — не существует ни в одном языке, но ты можешь это произнести и запомнить.&lt;/p&gt;
+&lt;p&gt;Четыре паттерна слогов:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CV&lt;/strong&gt; — согласная + гласная (ба, ке, ми) — самый простой&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CVC&lt;/strong&gt; — согласная + гласная + согласная (бак, кем, мир)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CVCC&lt;/strong&gt; — согласная + гласная + две согласных (банк, керн)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CCVC&lt;/strong&gt; — две согласных + гласная + согласная (стар, крик)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;const generateSyllable = (): string =&amp;gt; {
+    switch (phoneticPattern) {
+        case &quot;cv&quot;:
+            return getSecureRandomChar(consonants) + getSecureRandomChar(vowels);
+        case &quot;cvc&quot;:
+            return getSecureRandomChar(consonants) + 
+                   getSecureRandomChar(vowels) + 
+                   getSecureRandomChar(consonants);
+        // ...
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Латинские согласные: 18 штук (&lt;code&gt;bcdfghjklmnprstvwz&lt;/code&gt;)
+Латинские гласные: 5 штук (&lt;code&gt;aeiou&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Энтропия слога CV = log₂(18) + log₂(5) ≈ 4.17 + 2.32 = &lt;strong&gt;6.49 бит&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Три слова по три слога = 9 слогов = ~58 бит. Неплохо для чего-то, что можно произнести!&lt;/p&gt;
+&lt;p&gt;И да, тут тоже есть кириллица. Кириллические согласные/гласные дают чуть больше энтропии за счёт большего алфавита.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Криптографически безопасный RNG&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Math.random()&lt;/code&gt; — это PRNG (псевдослучайный генератор). Для паролей не годится. Используем Web Crypto API:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const secureRandomInt = (max: number): number =&amp;gt; {
+    if (max &amp;lt;= 0) return 0;
+    const randomBuffer = new Uint32Array(1);
+    const maxValid = Math.floor(0xffffffff / max) * max;
+
+    do {
+        crypto.getRandomValues(randomBuffer);
+    } while (randomBuffer[0] &amp;gt;= maxValid);
+
+    return randomBuffer[0] % max;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Rejection sampling&lt;/strong&gt; — важная штука. Если &lt;code&gt;max&lt;/code&gt; не делит 2³² нацело, простой &lt;code&gt;% max&lt;/code&gt; даёт смещение (bias). Например, для &lt;code&gt;max = 3&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0xFFFFFFFF % 3 = 0&lt;/li&gt;
+&lt;li&gt;Числа 0, 1, 2 будут выпадать не с равной вероятностью&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Решение: отбрасываем значения ≥ &lt;code&gt;maxValid&lt;/code&gt; и генерируем заново. Да, теоретически может зациклиться навечно. Практически — вероятность даже одного retry около 0.0000002%.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Расчёт энтропии&lt;/h2&gt;
+&lt;p&gt;Энтропия — это не &quot;сколько символов в пароле&quot;, а &quot;сколько бит информации нужно угадать&quot;. Чем больше — тем лучше.&lt;/p&gt;
+&lt;h3&gt;Стандартный режим&lt;/h3&gt;
+&lt;p&gt;Наивный подход: &lt;code&gt;length × log₂(poolSize)&lt;/code&gt;. Но это неточно, потому что мы &lt;em&gt;гарантируем&lt;/em&gt; символы из каждой категории.&lt;/p&gt;
+&lt;p&gt;Правильный расчёт:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 1. Биты от обязательных символов
+for (const cat of categories) {
+    totalBits += Math.log2(cat.size);
+}
+
+// 2. Биты от остальных символов (из общего пула)
+if (L &amp;gt; k) {
+    totalBits += (L - k) * Math.log2(poolSize);
+}
+
+// 3. Биты от перестановок — C(L, k) способов расставить обязательные
+if (k &amp;gt; 0 &amp;amp;&amp;amp; L &amp;gt; k) {
+    totalBits += logBinomial(L, k);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Функция &lt;code&gt;logBinomial&lt;/code&gt; считает log₂(C(n,k)) без переполнения:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const logBinomial = (n: number, k: number): number =&amp;gt; {
+    let result = 0;
+    for (let i = 0; i &amp;lt; k; i++) {
+        result += Math.log2(n - i) - Math.log2(i + 1);
+    }
+    return result;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;XKCD и фонетический режимы&lt;/h3&gt;
+&lt;p&gt;Тут проще:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Слова/слоги независимы → умножаем количество на биты каждого&lt;/li&gt;
+&lt;li&gt;Случайная капитализация: +1 бит на слово&lt;/li&gt;
+&lt;li&gt;Число: +log₂(range) бит&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Оценка времени взлома&lt;/h2&gt;
+&lt;p&gt;Беру пессимистичный сценарий: офлайн-атака со скоростью &lt;strong&gt;10¹⁰ хешей/сек&lt;/strong&gt; (мощная GPU-ферма).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const combinations = Math.pow(2, entropyBits);
+const speed = 1e10; // 10 миллиардов в секунду
+const seconds = combinations / speed / 2; // В среднем находим за половину перебора
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Потом форматирую в человекочитаемый вид:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (seconds &amp;lt; universe) return `${(seconds / millennium).toFixed(0)} тысячелетий`;
+return `${(seconds / universe).toFixed(2)}x возраст Вселенной`;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;80 бит энтропии = ~1.9 миллиарда лет при 10¹⁰/сек. Думаю, достаточно.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Мелкие радости&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;QR-код&lt;/strong&gt; — сгенерировал пароль, показал QR, отсканировал телефоном. Удобно для переноса на устройства без синхронизации.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;История в localStorage&lt;/strong&gt; — последние 20 паролей сохраняются локально. Нажал — скопировал. Закрыл вкладку — история осталась.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Визуальная шкала энтропии&lt;/strong&gt; — от красного (&amp;lt; 20 бит, взлом мгновенный) до белого (256+ бит, AES-256 уровень). С маркерами на 50, 80, 128, 192 бита.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Что можно улучшить?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Больший словарь для XKCD.&lt;/strong&gt; 180 слов — это ~7.5 бит. EFF wordlist даёт 7776 слов = ~12.9 бит на слово. Но тогда слова будут менее &quot;тематические&quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Passphrase с грамматикой.&lt;/strong&gt; &lt;code&gt;The lazy purple robot hacks silently&lt;/code&gt; — ещё запоминаемее, но сложнее реализовать.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Проверка на утечки.&lt;/strong&gt; Интеграция с Have I Been Pwned API (k-anonymity, конечно).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Экспорт в KeePass/Bitwarden.&lt;/strong&gt; Генерируешь — сразу в менеджер.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Итого&lt;/h2&gt;
+&lt;p&gt;Генератор получился с тремя режимами под разные задачи:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Стандартный&lt;/strong&gt; — для систем с жёсткими требованиями &quot;минимум 1 цифра, 1 символ...&quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;XKCD&lt;/strong&gt; — когда нужно запомнить без менеджера&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Фонетический&lt;/strong&gt; — компромисс между случайностью и произносимостью&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Попробовать генератор можно &lt;a href=&quot;https://password.guilliman.ru/&quot;&gt;здесь&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;::github{repo=&quot;hermanguilliman/passwordgenerator&quot;}&lt;/p&gt;
+</content:encoded></item><item><title>Фотобудка для STL/3MF</title><link>https://guilliman.ru/posts/stl-3mf-photo-booth/</link><guid isPermaLink="true">https://guilliman.ru/posts/stl-3mf-photo-booth/</guid><description>Бесплатный онлайн инструмент для красивых рендеров печатных моделей</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Что это вообще такое?&lt;/h2&gt;
+&lt;p&gt;Это браузерный просмотрщик 3D-моделей формата STL и 3MF. Закинул файл, покрутил, настроил материал, сделал скриншот, ушёл. Данные никуда не уходят.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Основные фичи:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📂 Drag &amp;amp; Drop загрузка (или кнопка, если ты олдскул)&lt;/li&gt;
+&lt;li&gt;🎨 18+ пресетов материалов — от шёлкового PLA до стекла и хрома&lt;/li&gt;
+&lt;li&gt;🌍 HDRI-окружение с кучей карт на выбор&lt;/li&gt;
+&lt;li&gt;💡 8 схем освещения (студийный, кибер, ринглайт и т.д.)&lt;/li&gt;
+&lt;li&gt;🖨️ &lt;strong&gt;Симуляция слоёв FDM-печати&lt;/strong&gt; — да, прямо в рендере!&lt;/li&gt;
+&lt;li&gt;📷 Скриншоты сцены и модели (с обрезкой фона)&lt;/li&gt;
+&lt;li&gt;📐 Отображение габаритов в мм&lt;/li&gt;
+&lt;li&gt;🌐 5 языков (RU, EN, ES, CN, JP)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Под капотом&lt;/h2&gt;
+&lt;p&gt;Для тех, кто любит копаться в кишках — вот что там внутри.&lt;/p&gt;
+&lt;h3&gt;Three.js и модульная архитектура&lt;/h3&gt;
+&lt;p&gt;Вся графика построена на &lt;strong&gt;Three.js 0.180.0&lt;/strong&gt;. Использую ES-модули через import map:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&quot;importmap&quot;&amp;gt;
+{
+    &quot;imports&quot;: {
+        &quot;three&quot;: &quot;https://unpkg.com/three@0.180.0/build/three.module.js&quot;,
+        &quot;three/addons/&quot;: &quot;https://unpkg.com/three@0.180.0/examples/jsm/&quot;
+    }
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Никаких бандлеров, никакого Webpack — просто нативные модули браузера. В 2025-м это работает везде.&lt;/p&gt;
+&lt;h3&gt;Загрузчики моделей&lt;/h3&gt;
+&lt;p&gt;Для STL — стандартный &lt;code&gt;STLLoader&lt;/code&gt;. Для 3MF — &lt;code&gt;ThreeMFLoader&lt;/code&gt;. Оба файла читаются как &lt;code&gt;ArrayBuffer&lt;/code&gt; через &lt;code&gt;FileReader&lt;/code&gt;, парсятся на клиенте:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;reader.onload = (ev) =&amp;gt; {
+    const buffer = ev.target.result;
+    
+    if (isSTL) {
+        const geometry = loaderSTL.parse(buffer);
+        geometry.center();
+        geometry.computeVertexNormals();
+        // ...
+    } else if (is3MF) {
+        const group = loader3MF.parse(buffer);
+        group.rotation.x = -Math.PI / 2; // Потому что 3MF любит Y-up
+        // ...
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3MF-файлы приходят с Y-up ориентацией, поэтому их сразу поворачиваем. STL центрируем и пересчитываем нормали (потому что некоторые экспортёры их криво генерят).&lt;/p&gt;
+&lt;h3&gt;Материал — MeshPhysicalMaterial с допилами&lt;/h3&gt;
+&lt;p&gt;Главный материал — &lt;code&gt;MeshPhysicalMaterial&lt;/code&gt;. Это самый навороченный PBR-материал в Three.js:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const material = new THREE.MeshPhysicalMaterial({
+    color: state.color,
+    roughness: 0.5,
+    metalness: 0.0,
+    clearcoat: 0.1,           // Лаковое покрытие
+    clearcoatRoughness: 0.3,
+    transmission: 0.0,         // Прозрачность (для стекла)
+    thickness: 0.2,            // Толщина (для преломления)
+    ior: 1.45,                 // Коэффициент преломления
+    sheen: 0.0,                // Шёлковый отблеск
+    sheenRoughness: 0.5,
+    side: THREE.DoubleSide,
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;18 пресетов — это просто объекты с заранее накрученными параметрами. Хром — &lt;code&gt;metalness: 1.0, roughness: 0.03&lt;/code&gt;. Стекло — &lt;code&gt;transmission: 0.95, ior: 1.52&lt;/code&gt;. И так далее.&lt;/p&gt;
+&lt;h3&gt;Симуляция слоёв печати&lt;/h3&gt;
+&lt;p&gt;Киллер фича, которая позволяет придать модели вид как у изделия созданного с помощью FDM принтера. Через &lt;code&gt;onBeforeCompile&lt;/code&gt; инжектим кастомный код в шейдер:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;material.onBeforeCompile = (shader) =&amp;gt; {
+    // Добавляем униформы
+    shader.uniforms.uLayerHeight = { value: 0.2 };  // мм
+    shader.uniforms.uLayerStrength = { value: 0.35 };
+    shader.uniforms.uLayerActive = { value: false };
+
+    // Вершинный шейдер: передаём Y-координату
+    shader.vertexShader = shader.vertexShader.replace(
+        &quot;#include &amp;lt;common&amp;gt;&quot;,
+        `#include &amp;lt;common&amp;gt;
+        varying float vWorldY;`
+    );
+    shader.vertexShader = shader.vertexShader.replace(
+        &quot;#include &amp;lt;worldpos_vertex&amp;gt;&quot;,
+        `#include &amp;lt;worldpos_vertex&amp;gt;
+        vWorldY = (modelMatrix * vec4(transformed, 1.0)).y;`
+    );
+
+    // Фрагментный шейдер: искажаем нормаль
+    shader.fragmentShader = shader.fragmentShader.replace(
+        &quot;#include &amp;lt;normal_fragment_maps&amp;gt;&quot;,
+        `#include &amp;lt;normal_fragment_maps&amp;gt;
+        if (uLayerActive) {
+            float k = 6.2831853 / uLayerHeight;  // 2π / высота слоя
+            float dys = cos(vWorldY * k);
+            
+            // Эффект сильнее на вертикальных поверхностях
+            float verticalFactor = 1.0 - abs(normal.y);
+            
+            normal.y += dys * uLayerStrength * verticalFactor;
+            normal = normalize(normal);
+        }`
+    );
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Как это работает:&lt;/strong&gt; берём Y-координату вершины в мировом пространстве, прогоняем через косинус с периодом равным высоте слоя. Получаем волну. Эту волну добавляем к нормали, имитируя микрорельеф слоёв.&lt;/p&gt;
+&lt;p&gt;Важный момент — &lt;code&gt;verticalFactor&lt;/code&gt;. На горизонтальных поверхностях (крышка модели) слоёв не видно, там &lt;code&gt;normal.y ≈ 1&lt;/code&gt;. На вертикальных стенках — видно хорошо.&lt;/p&gt;
+&lt;h3&gt;Постобработка&lt;/h3&gt;
+&lt;p&gt;Голый рендер — это скучно. Поэтому есть пайплайн постобработки:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+
+// SAO — Screen-space Ambient Occlusion
+const saoPass = new SAOPass(scene, camera, false, true);
+saoPass.params = {
+    saoBias: 0.5,
+    saoIntensity: 0.03,
+    saoScale: 50,
+    saoKernelRadius: 20,
+    saoBlurRadius: 8,
+};
+composer.addPass(saoPass);
+
+// FXAA — антиалиасинг
+const fxaaPass = new ShaderPass(FXAAShader);
+composer.addPass(fxaaPass);
+
+composer.addPass(new OutputPass());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;SAO&lt;/strong&gt; добавляет мягкие тени в углублениях — модель сразу выглядит объёмнее. &lt;strong&gt;FXAA&lt;/strong&gt; сглаживает зубчики на краях (потому что &lt;code&gt;antialias: false&lt;/code&gt; в рендерере — для скорости).&lt;/p&gt;
+&lt;h3&gt;HDRI и освещение&lt;/h3&gt;
+&lt;p&gt;Для реалистичных отражений используются HDRI-карты (формат &lt;code&gt;.hdr&lt;/code&gt;). Загружаем через &lt;code&gt;RGBELoader&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rgbeLoader.load(&quot;venice_sunset_1k.hdr&quot;, (texture) =&amp;gt; {
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    scene.environment = texture;  // Для отражений
+    scene.background = texture;   // Опционально — как фон
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Плюс есть 8 схем освещения — это просто наборы &lt;code&gt;DirectionalLight&lt;/code&gt;, &lt;code&gt;SpotLight&lt;/code&gt;, &lt;code&gt;PointLight&lt;/code&gt; с разными позициями и цветами. &quot;Кибер&quot; режим — это синий ключевой свет + пурпурный обратный. &quot;Ринглайт&quot; — точечный источник спереди + подсветка снизу.&lt;/p&gt;
+&lt;h3&gt;Скриншоты&lt;/h3&gt;
+&lt;p&gt;Две кнопки — &quot;Сцена&quot; и &quot;Модель&quot;. Первая делает скриншот как есть. Вторая — убирает фон, рендерит, и &lt;strong&gt;обрезает прозрачные пиксели&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function trimCanvas(canvas) {
+    const ctx = canvas.getContext(&quot;2d&quot;);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    
+    // Ищем границы непрозрачных пикселей
+    let minX = w, minY = h, maxX = 0, maxY = 0;
+    for (let y = 0; y &amp;lt; h; y++) {
+        for (let x = 0; x &amp;lt; w; x++) {
+            if (imageData.data[(y * w + x) * 4 + 3] &amp;gt; 0) {  // Альфа &amp;gt; 0
+                minX = Math.min(minX, x);
+                maxX = Math.max(maxX, x);
+                // ...
+            }
+        }
+    }
+    
+    // Вырезаем нужную область
+    const cutCanvas = document.createElement(&quot;canvas&quot;);
+    cutCanvas.width = maxX - minX + padding * 2;
+    // ...
+    return cutCanvas;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Результат копируется в буфер обмена через &lt;code&gt;navigator.clipboard.write()&lt;/code&gt;. Если браузер не поддерживает — скачивается как файл.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;UI/UX&lt;/h2&gt;
+&lt;p&gt;Дизайн — glassmorphism с полупрозрачными панелями и blur-эффектом:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.ui-panel {
+    background: rgba(20, 20, 30, 0.75);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Анимированные градиентные пятна на фоне через &lt;code&gt;::before&lt;/code&gt; и &lt;code&gt;::after&lt;/code&gt; с &lt;code&gt;filter: blur(100px)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Панель настроек — &lt;strong&gt;lil-gui&lt;/strong&gt; (наследник dat.gui). Лёгкая, минималистичная, хорошо кастомизируется через CSS-переменные.&lt;/p&gt;
+&lt;p&gt;Адаптив под мобилки — всё перестраивается: нижняя панель становится вертикальной, кнопки увеличиваются под палец (min 44px touch target), тултипы скрываются.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Что ещё&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Z-Up режим&lt;/strong&gt; — поворачивает модель так, как она будет в слайсере. Полезно для превью перед печатью.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Габариты&lt;/strong&gt; — показывает размеры bounding box в мм. Обновляются в реальном времени при вращении модели.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Автоповорот&lt;/strong&gt; — для демонстрации или лени.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Автодетект языка&lt;/strong&gt; — смотрит &lt;code&gt;navigator.language&lt;/code&gt; и выбирает подходящий.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Зачем это нужно&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Быстро глянуть модель&lt;/strong&gt; — без установки софта, без загрузки на сервер.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Сделать красивый рендер&lt;/strong&gt; — для соцсетей, документации, продажи модели.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Показать заказчику&lt;/strong&gt; — кидаешь ссылку + скриншот, выглядит профессионально.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Проверить габариты&lt;/strong&gt; — влезет ли на стол принтера.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Попробовать&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;&lt;a href=&quot;https://stl.guilliman.ru&quot;&gt;stl.guilliman.ru&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;hermanguilliman/STL-3MF-Photo-Booth&quot;}&lt;/p&gt;
+</content:encoded></item><item><title>Дизайн для 3D-печати</title><link>https://guilliman.ru/posts/design-for-3d-printing/</link><guid isPermaLink="true">https://guilliman.ru/posts/design-for-3d-printing/</guid><description>Перевод подробного руководства по проектированию функциональных деталей для 3D-печати (FDM/FFF), предлагающее эмпирические правила для оптимизации прочности, допусков и эффективности производства.</description><pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Это перевод статьи. Возможно, что в будущем будут вноситься правки.]
+&lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing&quot;&gt;Оригинал находится здесь - Design for 3D-Printing&lt;/a&gt;
+:::&lt;/p&gt;
+&lt;p&gt;За последние годы я всё глубже погружался в мир 3D-печати. Меня особенно увлекает, насколько этот процесс отличается от других методов производства. Это, в свою очередь, требует совершенно иного подхода к проектированию, чтобы создавать качественные детали для 3D-печати.&lt;/p&gt;
+&lt;p&gt;Поэтому я собирал небольшие хитрости и правила для проектирования деталей, которые хорошо печатаются. И, конечно, я всегда в поиске новых идей. В этой статье я хочу поделиться всем, что я узнал.&lt;/p&gt;
+&lt;h2&gt;Введение&lt;/h2&gt;
+&lt;p&gt;В интернете можно найти много информации об основах проектирования для 3D-печати, но глубоких материалов не так уж много. Ещё реже встречаются хорошие обзоры, которые собирают все маленькие хитрости, открытые энтузиастами.&lt;/p&gt;
+&lt;p&gt;Я считаю, что лучший формат для изучения правил проектирования для 3D-печати — это формат, основанный на эмпирических правилах и множестве практических примеров. Хотя такие правила никогда не охватят всю сложность реального мира, они могут стать ощутимым руководством к оптимальному решению в каждой ситуации. Они также служат отправной точкой для развития собственной интуиции по этой теме.&lt;/p&gt;
+&lt;p&gt;Этот подход близок по духу к немецкой книге &lt;em&gt;Konstruktionspraxis im Maschinenbau&lt;/em&gt; авторов Герхарда Хенова и Томаса Майснера (&lt;a href=&quot;https://www.hanser-kundencenter.de/fachbuch/artikel/9783446464858&quot;&gt;Hanser Fachbuch&lt;/a&gt;, ISBN 978-3-446-46485-8). Книга следует той же философии, но для традиционных методов производства. Если вам нравится такой стиль, эта книга может вас заинтересовать.&lt;/p&gt;
+&lt;h3&gt;Область применения&lt;/h3&gt;
+&lt;p&gt;Прежде чем углубиться, несколько слов об области применения этой статьи: во-первых, я сосредотачиваюсь исключительно на печати методом FDM/FFF (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BC_%D0%BD%D0%B0%D0%BF%D0%BB%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F&quot;&gt;Википедия&lt;/a&gt;). Многие правила связаны с ограничениями этого процесса и не применимы к другим методам аддитивного производства.&lt;/p&gt;
+&lt;p&gt;Во-вторых, я сосредотачиваюсь на проектировании функциональных деталей с оптимальными механическими свойствами. Эти детали должны легко печататься без необходимости тонкой настройки принтера. Они должны быть просты в производстве в больших количествах, требовать минимальной постобработки и минимального расхода материала. Эстетика не является приоритетом, хотя я твёрдо верю, что отличный механический дизайн выглядит невероятно красиво :)&lt;/p&gt;
+&lt;h3&gt;Цели проектирования&lt;/h3&gt;
+&lt;p&gt;Любой механический дизайн должен быть оптимизирован для множества целей и ограничений. Задача дизайнера — создать деталь, которая наилучшим образом соответствует всем этим требованиям.&lt;/p&gt;
+&lt;p&gt;Наиболее универсальные цели:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Проектирование с учётом сил&lt;/strong&gt; — Детали должны быть спроектированы так, чтобы их геометрия была оптимальной для передачи и выдерживания сил.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Проектирование с учётом метода производства&lt;/strong&gt; — Часто называемое &lt;em&gt;DFM&lt;/em&gt; (Design For Manufacturing), детали должны быть спроектированы так, чтобы их было легко производить. Небольшие изменения, которые обычно не влияют на функциональность, могут значительно упростить производство.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Проектирование с учётом стоимости&lt;/strong&gt; — Детали должны быть максимально дешёвыми. В 3D-печати это означает минимизацию использования материала и времени печати.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Конечно, в реальных проектах будет множество других целей и ограничений, которым должен соответствовать дизайн.&lt;/p&gt;
+&lt;p&gt;В этой статье я сосредоточусь на темах, связанных с проектированием для производства с помощью 3D-принтера. В целом, правила для других целей остаются одинаковыми независимо от метода производства. Однако есть некоторые аспекты, где 3D-печать влияет на эти цели, и я также выделю такие случаи.&lt;/p&gt;
+&lt;p&gt;Важное различие, которое я должен отметить, заключается в том, что подход инженерного проектирования решает проблему с совершенно противоположной стороны по сравнению, например, с разработчиками слайсеров и производителями 3D-принтеров. Они стремятся улучшить сам процесс производства, чтобы лучше печатать любую геометрию детали, тогда как инженер-дизайнер стремится адаптировать геометрию детали для оптимальной работы с текущим состоянием производственных процессов.&lt;/p&gt;
+&lt;p&gt;Например, инженер-дизайнер стремится использовать наиболее грубые допуски для каждого размера, которые всё ещё позволяют детали функционировать. Производитель 3D-принтеров хочет, чтобы их машина печатала с максимально точными допусками. Хотя инженер-дизайнер может попытаться использовать эти точные допуски, это сделает деталь невозможной для производства на более дешёвых принтерах, что увеличит стоимость и ограничит возможных поставщиков.&lt;/p&gt;
+&lt;p&gt;Это можно резюмировать как стремление к &lt;em&gt;переносимому дизайну&lt;/em&gt;. Переносимая деталь может быть напечатана кем угодно на любом принтере с лёгкостью. Если вы планируете делиться своими дизайнами в интернете, это определённо должно быть приоритетом.&lt;/p&gt;
+&lt;p&gt;Наконец, важно помнить, что из-за быстрого развития в области 3D-печати мы работаем с движущейся мишенью. По мере улучшения 3D-принтеров и программного обеспечения для слайсеров некоторые правила дизайна станут менее важными.&lt;/p&gt;
+&lt;h3&gt;Терминология&lt;/h3&gt;
+&lt;p&gt;Чтобы все были на одной волне, давайте быстро разберём наиболее важные термины FFF 3D-печати, которые будут использоваться в следующих главах:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Слои&lt;/strong&gt; — Горизонтальные сечения детали, которые накладываются друг на друга для создания детали (&lt;a href=&quot;https://help.prusa3d.com/article/layers-and-perimeters_1748#layer-height&quot;&gt;Высота слоя — База знаний Prusa&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Периметры&lt;/strong&gt; — На каждом слое 3D-принтер сначала печатает контур сечения. Этот контур состоит из нескольких линий периметра (&lt;a href=&quot;https://help.prusa3d.com/article/layers-and-perimeters_1748#perimeters&quot;&gt;Периметры — База знаний Prusa&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Оболочка&lt;/strong&gt; — Если рассматривать только периметры на каждом слое, получается полностью полый объект: &lt;em&gt;оболочка&lt;/em&gt; детали.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Заполнение&lt;/strong&gt; — Внутри периметров 3D-принтер заполняет пространство частично полым узором. Это называется узором заполнения (&lt;a href=&quot;https://help.prusa3d.com/article/infill_42&quot;&gt;Заполнение — База знаний Prusa&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Процент заполнения&lt;/strong&gt; — Сколько из узора заполнения является твёрдым, а сколько — пустым (&lt;a href=&quot;https://help.prusa3d.com/article/infill_42&quot;&gt;Заполнение — База знаний Prusa&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Свешивание&lt;/strong&gt; — Когда сечение слоя становится больше предыдущего, часть линий периметра не поддерживается материалом снизу. Это называется &lt;em&gt;свешивание&lt;/em&gt; и возможно, если оно не слишком велико. Обычно говорят об угле свешивания, рассматривая слои сбоку.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Мосты&lt;/strong&gt; — Хотя свешивания могут быть проблематичными, 3D-принтеры на удивление хорошо справляются с перекрытием зазоров между двумя опорными поверхностями. Это называется &lt;em&gt;мост&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Шов&lt;/strong&gt; — &lt;em&gt;Шов&lt;/em&gt; — это точка, где принтер начинает и заканчивает прокладку периметра. Эта точка обычно хорошо видна, так как идеально плавный переход очень трудно достичь (&lt;a href=&quot;https://help.prusa3d.com/article/seam-position_151069&quot;&gt;Положение шва — База знаний Prusa&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Профиль стандартного принтера&lt;/h3&gt;
+&lt;p&gt;Последняя тема перед тем, как мы углубимся. Для достижения упомянутого &lt;em&gt;переносимого дизайна&lt;/em&gt; полезно определить целевой профиль для вашей работы, то есть примерный контур 3D-принтера и профиля, с которым будет печататься дизайн.&lt;/p&gt;
+&lt;p&gt;Хотя большинство следующих правил актуальны в любом случае, мне нужно сделать некоторые предположения. Особенно для всех чисел, которые я упомяну, необходим контекст целевого профиля. Иначе значения ожидаемых допусков и эмпирических рекомендаций по размерам не будут иметь смысла.&lt;/p&gt;
+&lt;p&gt;Вот моё определение &lt;em&gt;профиля стандартного принтера&lt;/em&gt;. Большинство современных 3D-принтеров совместимы со следующими ожиданиями. Многие ожидания намеренно оставлены довольно размытыми — мы не должны предполагать слишком много, чтобы сохранить дизайны &lt;em&gt;переносимыми&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Стандартный 3D-принтер использует сопло диаметром 0,4 мм.&lt;/li&gt;
+&lt;li&gt;Стандартный профиль печатает с высотой слоя 0,2 мм.&lt;/li&gt;
+&lt;li&gt;Стандартный 3D-принтер откалиброван так, что не возникает значительных отклонений размеров из-за ошибок в настройке шагов/мм. Перекос между осями незначителен.&lt;/li&gt;
+&lt;li&gt;Скорости печати настроены на адекватный уровень, но нельзя предполагать отсутствие артефактов, таких как небольшой выбег или звон.&lt;/li&gt;
+&lt;li&gt;Перекрытие на разумных расстояниях надёжно.&lt;/li&gt;
+&lt;li&gt;Свешивания печатаются нормально.&lt;/li&gt;
+&lt;li&gt;Адгезия к столу достаточна и не создаёт проблем для неэкстремальной геометрии.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Правила дизайна&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Содержание&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#1-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B5%D0%B9&quot;&gt;Проектирование для прочности деталей&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2-%D0%B4%D0%BE%D0%BF%D1%83%D1%81%D0%BA%D0%B8-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B0-%D0%B8-%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%B0-%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B5%D0%B9&quot;&gt;Допуски производства и отделка деталей&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0&quot;&gt;Оптимизация процесса&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F&quot;&gt;Функциональная интеграция&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#5-%D0%B7%D0%B0-%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B0%D0%BC%D0%B8-%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BD%D1%8B%D0%B5-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D1%8B&quot;&gt;За пределами пластика — машинные элементы&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#6-%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B9-%D0%B2%D0%B8%D0%B4&quot;&gt;Внешний вид&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#7-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B2-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC%D0%B5-%D0%B2%D0%B0%D0%B7%D1%8B&quot;&gt;Дополнительно: дизайн в режиме вазы&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;1. Проектирование для прочности деталей&lt;/h2&gt;
+&lt;p&gt;Первые правила, которые я представлю, связаны с проектированием деталей, максимально прочных. В 3D-печати прочность детали тесно связана с процессом производства. Во-первых, детали частично полые и ведут себя совсем иначе, чем сплошной блок пластика. Во-вторых, послойный процесс производства приводит к анизотропии деталей — их механические свойства различаются в зависимости от направления (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B8%D0%B7%D0%BE%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D1%8F&quot;&gt;Википедия&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Таким образом, помимо общих правил проектирования для прочности, при проектировании деталей для 3D-печати следует учитывать несколько дополнительных аспектов.&lt;/p&gt;
+&lt;h3&gt;Ориентация детали&lt;/h3&gt;
+&lt;p&gt;Начнём с очевидного: напечатанные на 3D-принтере детали значительно слабее в направлении, где слои могут разрываться. Поэтому перед началом проектирования следует рассмотреть направление сил растяжения в детали и использовать их для выбора ориентации печати. Весь дальнейший дизайн должен выполняться с учётом этой ориентации.
+&amp;lt;a id=&quot;П1.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П1.1&lt;/strong&gt;]
+— Силы растяжения должны быть выровнены параллельно поверхности печати.
+:::&lt;/p&gt;
+&lt;p&gt;Это, вероятно, правило номер один, о котором говорят все в дизайне для 3D-печати. И не зря, потому что разница, которую оно создаёт, значительна. Тесты, проведённые My Tech Fun, показывают примерно в три раза большую прочность при идеальной ориентации (&lt;a href=&quot;https://www.youtube.com/watch?v=ZiQek0wei1g&quot;&gt;YouTube&lt;/a&gt;). Хотя точное соотношение сильно зависит от конкретной детали, я считаю, что это хороший показатель важности этой темы.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Screw-Thread-Orientation.png&quot; alt=&quot;Хорошая и плохая ориентация печати&quot; /&gt; Резьбовая деталь, спроектированная для вертикальной печати (не идеальна для нагрузки на растяжение), и деталь, спроектированная для печати плоско на столе. Отрезая часть резьбы, её можно напечатать лёжа на столе без поддержки.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Также следует помнить, что силы растяжения действуют на некоторое сечение детали при её изгибе. Это означает, что моменты изгиба также должны быть выровнены параллельно поверхности печати. Часто это правило нарушается при проектировании зажимов, которые слегка изгибаются для защёлкивания. Такие элементы легко ломаются, если не ориентированы правильно.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Clip-Orientation.png&quot; alt=&quot;Хорошая и плохая ориентация зажима&quot; /&gt; Зажимы, подобные тому, что слева, не выдерживают многократного использования и быстро ломаются.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Также хочу дать небольшой совет по публикации ваших дизайнов на платформах, таких как &lt;a href=&quot;https://www.printables.com/&quot;&gt;Printables&lt;/a&gt;: убедитесь, что вы загружаете модели в правильной ориентации для печати. Хотя правильная ориентация может казаться вам очевидной, другие могут не знать и попытаются напечатать вашу деталь без предварительной переориентации. Вы сделаете им небольшую услугу, загружая файлы в правильной ориентации 😊.&lt;/p&gt;
+&lt;h3&gt;Когда ни одна ориентация не работает&lt;/h3&gt;
+&lt;p&gt;Особенно в случае сложных деталей иногда нет идеальной ориентации печати. Хотя часто можно пойти на компромисс и принять ограниченную прочность в определённых местах, всегда следует учитывать альтернативу:
+&amp;lt;a id=&quot;П1.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П1.2&lt;/strong&gt;]
+— Разделите деталь на несколько частей, если ни одна ориентация не идеальна для всех нагрузок.
+:::&lt;/p&gt;
+&lt;p&gt;Поскольку каждая часть печатается отдельно, вы можете свободно выбирать оптимальную ориентацию для каждой из них. Умные соединения, такие как ласточкин хвост, позволяют легко собрать деталь после печати.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Dovetail.png&quot; alt=&quot;Две части с соединением ласточкин хвост&quot; /&gt; Соединение ласточкин хвост используется для соединения двух половин детали, чтобы каждая часть могла быть напечатана в улучшенной ориентации.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Заполнение или нет&lt;/h3&gt;
+&lt;p&gt;Вопреки первому правилу, тема, которая, на мой взгляд, обсуждается недостаточно, — это роль заполнения в прочности детали. Существует большое заблуждение, что можно магическим образом придать детали невероятную прочность, просто используя 100% заполнение. Хотя это действительно увеличит прочность, этот метод совсем не эффективен — большая часть дополнительного материала не способствует увеличению прочности, а лишь увеличивает отходы и время печати.&lt;/p&gt;
+&lt;p&gt;Почему? Всё дело в распределении сил внутри детали. Обычно детали не подвергаются чистому растяжению или сжатию. Вместо этого значительная часть нагрузки возникает в виде изгибающих моментов, которые распределяют силы неравномерно. Сила будет наибольшей в местах, наиболее удалённых от центра (нейтральной оси). Таким образом, добавление материала на поверхности детали обычно более эффективно, чем в центре.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/stress-concentration.png&quot; alt=&quot;Напряжение при изгибе&quot; /&gt; Напряжение максимально непосредственно под поверхностью детали. Обратите внимание на синюю нейтральную ось в центре, где напряжение минимально.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В терминах 3D-печати это означает, что следует увеличивать количество периметров/оболочек, а не процент заполнения. Стефан из CNC Kitchen провёл тщательный анализ этого вопроса (&lt;a href=&quot;https://www.youtube.com/watch?v=AmEaNAwFSfI&quot;&gt;YouTube&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;В целом, его работы — отличный ресурс для получения глубоких знаний о механическом поведении деталей, напечатанных на 3D-принтере (&lt;a href=&quot;https://www.cnckitchen.com/&quot;&gt;CNC Kitchen Блог/Сайт&lt;/a&gt; и &lt;a href=&quot;https://www.youtube.com/@CNCKitchen&quot;&gt;YouTube&lt;/a&gt;).
+&amp;lt;a id=&quot;П1.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П1.3&lt;/strong&gt;]
+— Большая часть прочности детали исходит от её поверхности, а не от заполнения.
+:::&lt;/p&gt;
+&lt;h3&gt;Поток сил&lt;/h3&gt;
+&lt;p&gt;Однако это ещё не всё. Мы можем влиять на уровень напряжения на поверхности, изменяя форму детали. Это часто намного эффективнее, чем оптимизация настроек печати. Способ концептуализации напряжения внутри детали — это представление о том, как силы &quot;текут&quot; через неё. Визуальное представление этого называется &lt;em&gt;силовые линии&lt;/em&gt; (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D1%81%D0%B8%D0%BB%D0%BE%D0%B2%D1%8B%D1%85_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B9&quot;&gt;Википедия&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/crack-force-lines.png&quot; alt=&quot;Силовые линии вокруг трещины&quot; /&gt;
+Силовые линии в пластине с центральной трещиной под растяжением.
+Кокчаров, &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;, через &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:CrackForceLines.png&quot;&gt;Wikimedia Commons&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Напряжение будет концентрироваться в местах, где линии сил расположены близко друг к другу. Вы можете видеть, как острые углы трещины на изображении выше приводят к областям особенно высокого напряжения и, вероятно, к поломке детали в этих местах.&lt;/p&gt;
+&lt;p&gt;Это не специфично для 3D-печати, но, поскольку это важная тема, я всё равно хочу включить её сюда. Правила в целом одинаковы для любого метода производства: мы хотим минимизировать напряжение, и лучший способ сделать это:
+&amp;lt;a id=&quot;П1.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П1.4&lt;/strong&gt;]
+— Направляйте силы по наиболее прямому пути.
+:::&lt;/p&gt;
+&lt;p&gt;Или, другими словами, держите линии сил как можно короче и прямее.&lt;/p&gt;
+&lt;p&gt;Пример, где это имеет большое значение, — острые углы. Они очень негативно влияют на прочность детали и обычно легко устраняются добавлением скругления. Вы можете видеть, как скругление позволяет силам проходить по гораздо более прямому пути, чем острый угол:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/force-lines-fillet.svg&quot; alt=&quot;Линии сил вокруг угла и скругления&quot; /&gt; Линии сил вокруг острого угла и угла со скруглением.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Соображения по поперечному сечению&lt;/h3&gt;
+&lt;p&gt;Неоднородная природа деталей, напечатанных на 3D-принтере, с их оболочкой и заполнением, имеет ещё больше последствий для прочности деталей, о которых стоит говорить. В традиционном инженерном проектировании вас учат максимально уменьшать площадь поперечного сечения детали. Материал следует сохранять только в тех местах, где он оказывает наибольшее влияние на увеличение прочности. Причина в том, что уменьшение объёма напрямую приводит к экономии материала, а значит, к снижению стоимости и веса.&lt;/p&gt;
+&lt;p&gt;В 3D-печати всё работает иначе. Вы можете значительно увеличить площадь поперечного сечения без заметного увеличения расхода материала, так как заполнение в основном состоит из пустого пространства. Вместо этого следует стремиться уменьшить площадь поверхности детали, потому что именно там используется больше всего материала.&lt;/p&gt;
+&lt;p&gt;Это означает, что в деталях, напечатанных на 3D-принтере, можно использовать гораздо более толстые формы, что, очевидно, значительно увеличивает прочность детали. Не пытайтесь искусственно работать против этого — если дизайн позволяет, выбирайте самую толстую форму.
+&amp;lt;a id=&quot;П1.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П1.5&lt;/strong&gt;]
+— Используйте большие поперечные сечения. Предпочитайте толстые формы тонким.
+:::&lt;/p&gt;
+&lt;p&gt;Для примера подумайте о традиционном двутавровом профиле (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D1%83%D1%82%D0%B0%D0%B2%D1%80&quot;&gt;Википедия&lt;/a&gt;). Идея в том, что материал сохраняется только в областях, удалённых от нейтральной оси изгибающего момента, где он оказывает наибольшее влияние на прочность детали. Это позволяет значительно экономить вес.&lt;/p&gt;
+&lt;p&gt;Хотя двутавровый профиль отлично работает для однородных материалов, он не подходит для 3D-печати. Квадратное сечение с такими же внешними размерами будет иметь сравнимую или лучшую прочность, но обычно не приводит к увеличению расхода материала и времени печати. Оно даже может быть лучше в этих аспектах, как показано ниже.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Profile-Comparison.png&quot; alt=&quot;Сравнение двутаврового и квадратного профиля&quot; /&gt; Сравнение времени печати и расхода материала для двутаврового и квадратного профиля.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Проблемы с симуляцией&lt;/h3&gt;
+&lt;p&gt;В традиционном машиностроении, когда нужно оценить прочность детали, инструментом выбора является симуляция. Симуляция позволяет точно предсказать поведение детали под нагрузкой без необходимости её изготовления. Особенно для деталей из дорогих материалов или изготовленных с использованием дорогостоящих методов производства, предварительное проведение симуляций критично для бюджета проекта.&lt;/p&gt;
+&lt;p&gt;К сожалению, симуляция быстро теряет свою эффективность при анализе деталей, напечатанных на 3D-принтере. Проблема снова в неоднородной природе 3D-печати. Хотя анализ напряжений всё ещё может быть полезен для выявления критических зон, требующих внимания, извлечение реалистичных значений предельных сил — дело безнадёжное.&lt;/p&gt;
+&lt;p&gt;К счастью, 3D-печать предлагает альтернативу симуляциям. Исключительно низкая стоимость производства деталей позволяет печатать прототипы для тестирования механических свойств, что часто является наиболее экономичным решением. Нужно найти предел текучести дизайна? Просто напечатайте несколько копий и определите его эмпирически.&lt;/p&gt;
+&lt;p&gt;Однако есть одна вещь, с которой нужно быть осторожным: хотя я считаю тестовые отпечатки отличным способом определения механических свойств, я советую не полагаться на них для определения точности размеров. Я подробнее объясню причины этого в следующей главе.&lt;/p&gt;
+&lt;p&gt;Наконец, следствием вышесказанного является то, что &lt;em&gt;топологическая оптимизация&lt;/em&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Topology_optimization&quot;&gt;Википедия&lt;/a&gt;) не очень подходит для FFF 3D-печати. Хотя она великолепна для других процессов аддитивного производства, текущие инструменты обычно не способны создавать дизайны, которые были бы действительно оптимальны для FFF 3D-печати. Не говоря уже о часто неидеальной печатаемости таких деталей.&lt;/p&gt;
+&lt;h2&gt;2. Допуски производства и отделка деталей&lt;/h2&gt;
+&lt;p&gt;Далее я хочу поговорить об оптимизации дизайна для улучшения производственных допусков. Некоторые формы, как правило, печатаются чище, чем другие. Если учитывать это при проектировании, можно добиться деталей, которые идеально подходят с первой печати и не требуют бесконечной настройки параметров слайсера и принтера. Приятным побочным эффектом улучшенных допусков является более чистая отделка деталей. Поэтому следующая глава охватывает оба аспекта: допуски производства и отделку деталей.&lt;/p&gt;
+&lt;h3&gt;Фаски против скруглений&lt;/h3&gt;
+&lt;p&gt;Начнём с краёв. В целом, механические детали должны избегать острых краёв, так как они неприятны на ощупь. Любой хороший дизайн устраняет края, добавляя либо круглое скругление, либо фаску под углом 45° подходящего размера.&lt;/p&gt;
+&lt;p&gt;Хотя выбор между ними часто делается по стилистическим причинам, есть некоторые важные аспекты печатаемости. Нужно рассмотреть два случая, в зависимости от ориентации края относительно поверхности печати:&lt;/p&gt;
+&lt;p&gt;Добавление фаски или скругления к краям, &lt;em&gt;параллельным&lt;/em&gt; поверхности печати, означает, что элемент будет формироваться из нескольких слоёв, возможно, со свешиванием. Скругления плохо подходят для этого. Они начинаются с очень крутого свешивания, которое плохо печатается. Часто такие скругления имеют большие отклонения поверхности. Даже если свешивания нет, когда скругление находится сверху, изменение кривизны делает шаги слоёв очень заметными, ухудшая отделку детали. Фаски гораздо лучше подходят для этой ориентации. Они имеют постоянный угол свешивания, что приводит к очень равномерному шагу слоёв, который выглядит гораздо приятнее.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Chamfer-And-Fillet-Vertical.png&quot; alt=&quot;Фаски и скругления горизонтально&quot; /&gt; Фаски и скругления на краях, параллельных поверхности печати. Синий периметр внизу скругления обозначает неподдерживаемое свешивание.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Напротив, края, &lt;em&gt;вертикальные&lt;/em&gt; к поверхности печати, гораздо лучше подходят для скруглений. Скругление означает, что принтеру не нужно делать острые углы при прокладке периметров. Это снижает ускорение печатающей головки и, следовательно, уменьшает поверхностные артефакты (звон, выбег). Фаска на таких краях будет иметь два острых угла, которые никогда не будут выглядеть так красиво и не достигнут таких же допусков, как круглое скругление.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Chamfer-And-Fillet-Horizontal.png&quot; alt=&quot;Фаски и скругления вертикально&quot; /&gt; Фаски и скругления на краях, вертикальных к поверхности печати. Скорость печати значительно снижается для углов фаски, тогда как скругления могут почти сохранять ту же скорость.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Таким образом, если стилистические решения не диктуют иное, самые чистые отпечатки будут достигнуты, следуя этому правилу:
+&amp;lt;a id=&quot;П2.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.1&lt;/strong&gt;]
+— Используйте фаски на краях, параллельных поверхности печати. Используйте скругления на краях, вертикальных к поверхности печати.
+:::&lt;/p&gt;
+&lt;h3&gt;Горизонтальные отверстия&lt;/h3&gt;
+&lt;p&gt;С горизонтальными скруглениями основная проблема — крутое свешивание. Есть и другие конструктивные элементы, где возникают подобные проблемы. Например, горизонтально ориентированные круглые отверстия. Чем они больше, тем серьёзнее проблема. Решение — отступить от идеального круга в пользу более оптимизированной формы. Для маленьких отверстий хорошо работает форма капли с углом 90°. Для больших отверстий можно добавить плоский &quot;потолок&quot;. Имейте в виду, что под потолком потребуется небольшой дополнительный зазор из-за лёгкого провисания мостов.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Horizontal-Holes.png&quot; alt=&quot;Альтернативные горизонтальные отверстия&quot; /&gt; Слева: отверстие ⌀4 мм с каплей 90°. Справа: отверстие ⌀10 мм с плоским потолком. Потолок находится на 0,4 мм выше теоретического круга, чтобы лёгкое провисание моста не повлияло на посадку.
+&amp;lt;a id=&quot;П2.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.2&lt;/strong&gt;]
+— Улучшайте горизонтальные отверстия, используя форму капли или добавляя плоский потолок.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Кажущаяся бесшовность&lt;/h3&gt;
+&lt;p&gt;Тема, очень важная как для отделки деталей, так и для размерных допусков, — это размещение швов периметра. Швы периметра — это точки, где начинается и заканчивается линия периметра. Очень сложно настроить принтер так, чтобы швы не оставляли артефактов. Поэтому стоит продумать размещение шва, чтобы он не мешал функциональности или эстетике.&lt;/p&gt;
+&lt;p&gt;Обычно размещение шва выбирается автоматически слайсером. Для каждого слоя он ищет самый острый угол (вогнутый или выпуклый) и размещает шов прямо в нём. Это доказало свою надёжность для получения хороших результатов без явного вмешательства пользователя.&lt;/p&gt;
+&lt;p&gt;Однако этот алгоритм не работает в двух ситуациях:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;На идеально круглых периметрах, таких как круглые отверстия или контуры.&lt;/li&gt;
+&lt;li&gt;Когда все углы имеют одинаковый угол или когда самый острый угол требует строгих допусков.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Особенно актуален первый случай. Этот эффект серьёзно влияет на допуски, которые можно достичь с круглым отверстием. В то время как остальная часть периметра может отклоняться менее чем на 0,1 мм, артефакты шва могут легко увеличить это до 0,4 мм. Хуже того, это смещает центральную линию отверстия, так как шов находится только в одном месте.&lt;/p&gt;
+&lt;p&gt;Решение простое: добавьте угол, где шов можно разместить без помех. Вместо идеального круга сделайте отверстие в форме капли с углом 120°. Обратите внимание на разницу с ранее обсуждавшимися горизонтальными отверстиями.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Teardrop-Vertical.png&quot; alt=&quot;Капля для размещения шва периметра&quot; /&gt; Форма капли позволяет шву не мешать круглому отверстию (белые точки/линия указывают на размещение шва).
+&amp;lt;a id=&quot;П2.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.3&lt;/strong&gt;]
+— Используйте форму капли для вертикальных отверстий, чтобы избежать неточностей из-за швов периметра.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Аналогично, если другие углы нельзя использовать для размещения шва, добавьте небольшую выемку где-нибудь, которая станет &quot;самым острым углом&quot; и примет шов автоматически. Хотя вы, конечно, можете вручную размещать шов с помощью слайсера, этот приём означает, что настройки слайсера не потребуются.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/aesthetic-seam.jpg&quot; alt=&quot;Эстетическая разница с оптимизированным размещением шва&quot; /&gt; Разница при принудительном размещении шва. Слева шов портит внешний вид канавки в центре. Справа небольшая выемка на задней стороне детали принимает шов, и канавка выглядит намного лучше.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В итоге:
+&amp;lt;a id=&quot;П2.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.4&lt;/strong&gt;]
+— Подумайте, где будет размещён шов. Если допуски строгие, предусмотрите острый вогнутый угол, чтобы спрятать шов.
+:::&lt;/p&gt;
+&lt;h3&gt;Ожидаемые допуски FFF/FDM&lt;/h3&gt;
+&lt;p&gt;Фундаментальной основой любого &quot;проектирования для производства&quot; является знание пределов точности производственного процесса. Как было сказано в начале, цель — создавать &lt;em&gt;переносимые&lt;/em&gt; дизайны, поэтому мы должны предполагать консервативные пределы вместо использования максимальных возможностей конкретного принтера. Обратите внимание, что это противоположно традиционному рабочему процессу: вместо &lt;em&gt;указания&lt;/em&gt; допусков, которые кто-то другой должен достичь во время производства, вы &lt;em&gt;принимаете&lt;/em&gt; определённые допуски производственного процесса и проектируете соответственно.&lt;/p&gt;
+&lt;p&gt;Также следует отметить, что базовое предположение здесь — 3D-принтеры хорошо откалиброваны. Некалиброванный принтер будет иметь дополнительную постоянную ошибку сверх своих допусков. Например, плохо настроенные значения &lt;em&gt;шагов/мм&lt;/em&gt; приведут к постоянному отклонению размеров вдоль определённой оси. Дизайн детали не может и не должен учитывать это — если бы мы пытались, от дизайна мало что осталось бы.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Tolerance-Calibration.png&quot; alt=&quot;Визуализация допусков и ошибки калибровки&quot; /&gt; Некалиброванный принтер будет иметь постоянную ошибку сверх общих производственных допусков.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Прежде чем говорить о значениях допусков, важно понять, что вызывает эти отклонения в первую очередь. Значение допуска ничего не значит без контекста, к которому оно применяется. Особенно в 3D-печати допуски будут сильно варьироваться в зависимости от конкретной геометрии детали. Эта тема довольно обширна, так как в неё вовлечено множество факторов. Поэтому в этой главе будут рассмотрены только самые важные аспекты.&lt;/p&gt;
+&lt;p&gt;Начнём с основ: нижняя граница точности обусловлена &lt;em&gt;шаговым разрешением&lt;/em&gt; шаговых двигателей принтера и их драйверов. Фундаментально невозможно достичь большей точности, чем это, так как размеры всегда будут находиться где-то между двумя положениями шага. Однако на современных 3D-принтерах теоретическое шаговое разрешение составляет около 0,01 мм. Достижимо ли это значение на практике — вопрос спорный, но вывод в том, что шаговое разрешение значительно ниже отклонений, вызванных другими эффектами.&lt;/p&gt;
+&lt;p&gt;Далее, есть ещё эффекты системы движения принтера на точность размеров. Все они связаны с механической нестабильностью принтера. Настройка параметров слайсера и продвинутое управление движением (формирование входного сигнала) могут значительно улучшить ситуацию. Однако не меньшую роль играет геометрия, которую печатает головка. Острые углы — худший нарушитель, так как они заставляют принтер работать с максимальным ускорением. Оптимизируя деталь для &quot;лёгкого движения&quot;, можно значительно улучшить допуски напечатанных деталей.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Chamfer-And-Fillet-Horizontal.png&quot; alt=&quot;Скорости вокруг разных углов&quot; /&gt; Снова фаски и скругления наглядно показывают, как различно будет ускорение печатающей головки в разных сценариях. Более острые углы приводят к большему ускорению и, следовательно, к худшим допускам.
+&amp;lt;a id=&quot;П2.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.5&lt;/strong&gt;]
+— Проектируйте геометрию детали для лёгких путей движения во время печати, чтобы улучшить точность размеров.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Следующий компонент, снижающий точность 3D-принтера, — это экструдер и хотэнд. Неравномерная экструзия приводит к изменению ширины линии, что влияет на внешние размеры детали. Кроме того, сопло принтера всегда слегка тянет экструдированную линию за собой. Это приводит к тому, что круги всегда немного меньше. На внутренних кругах (вертикальных отверстиях) предполагайте отклонение, уменьшающее отверстие. На внешних кругах предполагайте отклонение, уменьшающее внешний диаметр, но в меньшей степени.&lt;/p&gt;
+&lt;p&gt;Как правило, для современных популярных FFF 3D-принтеров с соплом 0,4 мм при высоте слоя 0,2 мм эти эффекты приводят к отклонениям в диапазоне ±0,1 мм для каждой поверхности. Отклонения смещены для круговых путей, как упомянуто. Хотя многие поверхности будут точнее, это значение — безопасная ставка для отклонения поверхности.&lt;/p&gt;
+&lt;p&gt;К сожалению, хотя у 3D-принтеров обычно нет заметного роста допуска для больших размеров, здесь вступают в игру другие эффекты: особенно коробление и усадка деталей, напечатанных на 3D-принтере, по мере их остывания.&lt;/p&gt;
+&lt;p&gt;Коробление и усадка сильно зависят от выбора материала, но есть и геометрии деталей, которые подвержены этому больше, чем другие. В общем, чем более объёмна деталь и чем менее острые её края, тем меньше можно ожидать коробления. Подумайте о силах, возникающих при усадке материала, и о том, как геометрия может сопротивляться этим силам.
+&amp;lt;a id=&quot;П2.6&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.6&lt;/strong&gt;]
+— Предотвращайте коробление, делая детали объёмными, а их поверхности гладкими и округлыми. Идеальная форма — сфера.
+:::&lt;/p&gt;
+&lt;h3&gt;Идеальная точность&lt;/h3&gt;
+&lt;p&gt;В предыдущей главе обсуждались допуски, которые можно ожидать от процесса FFF 3D-печати. Однако, конечно, бывают ситуации, когда требуется большая точность. Один из подходов, часто используемый для этого, — экспериментальное определение размера в CAD, при котором конечная деталь идеально подходит. 3D-печать делает это очень простым, потому что тестовые отпечатки дёшевы и быстры. Часто 3D-принтеры имеют удивительно хорошую повторяемость, поэтому размер, оптимизированный с помощью тестовых отпечатков, может достичь невероятных допусков. Некоторые называют это &lt;em&gt;подходом Златовласки&lt;/em&gt; (&lt;a href=&quot;https://hackaday.com/2020/06/09/finding-perfect-part-fits-with-the-goldilocks-approach-and-openscad/&quot;&gt;Hackaday&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Однако у этого эмпирического подхода есть огромный недостаток: он делает ваш дизайн сильно зависимым от настроек слайсера и конкретного принтера, на котором печаталась деталь. Как обсуждалось в начале, цель — избежать такой зависимости, чтобы сделать дизайн более &lt;em&gt;переносимым&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;К счастью, есть другие подходы, которые можно использовать для достижения той же цели, но без необходимости строгих допусков. Конечно, у этих подходов тоже есть свои ограничения. Поэтому то, что лучше в конкретной ситуации, нужно оценивать индивидуально.&lt;/p&gt;
+&lt;p&gt;Первый подход, который я хочу обсудить, гениально прост. Его можно кратко описать так (и я хотел бы иметь надёжный источник для этой цитаты):
+&amp;lt;a id=&quot;П2.7&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.7&lt;/strong&gt;]
+— Если вы не можете сделать это точно, сделайте это регулируемым.
+:::&lt;/p&gt;
+&lt;p&gt;Идея в том, что в местах, где требуется точность, вы должны проектировать деталь так, чтобы размер можно было отрегулировать. Существует множество механизмов регулировки. Следующие четыре примера должны показать возможности:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Продолговатые отверстия для винтов&lt;/strong&gt; позволяют перемещать деталь для выравнивания. Это даёт большой диапазон движения, но регулировка менее 1 мм очень сложна. Этот метод также хорошо подходит для коррекции угловых ошибок.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/oblong-hole-adjustment.jpg&quot; alt=&quot;Продолговатые отверстия для регулировки&quot; /&gt; Продолговатое отверстие используется для регулировки положения детали.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Противоположные винты для регулировки высоты&lt;/strong&gt; позволяют фиксировать размер на месте довольно надёжно. Естественное уменьшение винтов делает тонкую регулировку лёгкой. Недостаток в том, что требуется доступ с обеих сторон, что не всегда легко достижимо. Регулировка такого механизма немного утомительна, так как приходится постоянно ослаблять один винт и затягивать противоположный.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/opposing-screws.png&quot; alt=&quot;Противоположные винты для регулировки&quot; /&gt; Два винта в центре противостоят друг другу для тонкой регулировки высоты блока между ними.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;(Установочные) винты, противостоящие пружине или гибкому элементу&lt;/strong&gt;, отлично подходят для упрощения регулировки. Напряжение пружины, противодействующее винту, означает, что поворот винта в любом направлении соответственно регулирует размер. При необходимости второй (установочный) винт может фиксировать деталь на месте после регулировки.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/spring-adjustment.jpg&quot; alt=&quot;Винт с пружиной для регулировки&quot; /&gt; Регулировка высоты с помощью длинного винта M5, противостоящего пружине.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Шиммирование с использованием шайб из пружинной стали&lt;/strong&gt; — любимый в промышленности метод для небольших регулировок, которые редко нужно менять. Готовые шайбы различной толщины складываются для достижения точного смещения, необходимого для регулировки. Промышленные шайбы обычно изготавливаются из пружинной стали, но для некоторых применений могут подойти и шайбы, напечатанные на 3D-принтере. Однако, особенно для небольших высот, мелкие дефекты поверхности от процесса печати могут негативно повлиять на точность.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/shimming.jpg&quot; alt=&quot;Пример шиммирования&quot; /&gt; Грубый пример использования шайбы 0,2 мм для выравнивания приспособления.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Инженерные посадки&lt;/h3&gt;
+&lt;p&gt;В традиционном машиностроении, когда две детали должны геометрически соответствовать друг другу, используется так называемая &lt;em&gt;инженерная посадка&lt;/em&gt;. Инженерная посадка — это систематическая классификация разрешённых размеров для двух деталей. Обычно эта система посадок применяется к отверстиям и валам, но её можно применять и к другим формам.&lt;/p&gt;
+&lt;p&gt;Наиболее важное различие между:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Посадки с зазором&lt;/strong&gt;, где всегда есть некоторый люфт между деталями при любых разрешённых размерах,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Переходные посадки&lt;/strong&gt;, где может быть либо зазор, либо натяг,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Посадки с натягом&lt;/strong&gt;, где две детали всегда интерферируют, и для их соединения требуется значительное усилие. Это также называется &lt;em&gt;прессовой посадкой&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/engineering-fits.png&quot; alt=&quot;Иллюстрации различных типов посадок&quot; /&gt; Разные типы инженерных посадок. &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Engineering-fits.png&quot;&gt;CC BY-SA 4.0, через Wikimedia Commons&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ISO 286 затем определяет конкретные классы посадок с различными диапазонами допусков для размеров вала и отверстия (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D0%BA%D0%B0_%28%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5%29&quot;&gt;Википедия&lt;/a&gt;). Это отлично подходит для традиционного производства, но, к сожалению, в основном бесполезно для 3D-печати. Мы не можем печатать детали с конкретным допуском — вместо этого 3D-принтер имеет присущие ему допуски, которые мы должны учитывать в дизайне.&lt;/p&gt;
+&lt;p&gt;Если строгие инженерные посадки всё же требуются, не стоит забывать о возможности постобработки напечатанных деталей. Особенно для напечатанных отверстий можно использовать развёртывание (&lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D0%BA%D0%B0_%28%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%29&quot;&gt;Википедия&lt;/a&gt;), чтобы достичь, например, посадки H6. Тем не менее, эта опция имеет смысл только там, где она абсолютно необходима. В противном случае дополнительные усилия трудно оправдать.&lt;/p&gt;
+&lt;p&gt;Для всех других случаев выбор по сути между посадкой с зазором и посадкой с натягом. Посадки с зазором просты — зазор между деталями, превышающий удвоенный допуск принтера, решает задачу. Посадки с натягом, с другой стороны, сложнее. Проблема в том, что большие допуски печати означают, что силы в посадке с натягом сильно варьируются между разными деталями. В худшем случае это может даже привести к поломке соединений из-за чрезмерных сил.&lt;/p&gt;
+&lt;p&gt;Чтобы противодействовать этому, дизайны должны учитывать большие допуски 3D-печати. Есть несколько хитростей, которые можно использовать здесь, и я поделюсь ими далее.&lt;/p&gt;
+&lt;h4&gt;Круги считаются вредными&lt;/h4&gt;
+&lt;p&gt;Казалось бы, очевидное решение для переходной или натяжной посадки круглой формы — это круглое отверстие в вашем дизайне. Однако я хочу подчеркнуть, что это редко является лучшим решением для 3D-печати. Особенно когда упомянутые проблемы с допусками становятся актуальными, круглые отверстия следует избегать.&lt;/p&gt;
+&lt;p&gt;Другие формы, такие как квадраты или шестиугольники, могут подходить для сопрягаемой детали так же хорошо, но гораздо более устойчивы к допускам. Причина видна при рассмотрении того, как каждая форма деформируется в ситуациях с натягом. Круг может только расширяться за счёт растяжения по окружности. Это быстро приводит к разрушению материала, когда нужно компенсировать большие величины натяга. Квадрат или шестиугольник, с другой стороны, могут изгибаться, чтобы приспособиться к большему диаметру. При этом почти не происходит растяжения материала.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Interference-Visualization.png&quot; alt=&quot;Визуализация натяжной посадки круга против шестиугольника&quot; /&gt;
+Красный: вал большего размера / зелёный: круг или шестиугольник меньшего размера / серая штриховка: области натяга.
+Круг должен значительно растянуться, тогда как шестиугольник лишь слегка изгибается.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ещё одно преимущество квадрата или шестиугольника — проблема шва, как обсуждалось ранее. Идеальный круг сильно искажается швом, тогда как квадрат может аккуратно спрятать шов в одном из своих углов.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Hex-Holes.png&quot; alt=&quot;Шестиугольное отверстие для цилиндрического штифта&quot; /&gt; Шестиугольные отверстия используются для лёгкой прессовой посадки с цилиндрическими штифтами. Этот дизайн также имеет два кармана по бокам каждого штифта, которые облегчают удаление.
+&amp;lt;a id=&quot;П2.8&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.8&lt;/strong&gt;]
+— Не используйте круглые отверстия для посадок с натягом. Вместо этого используйте шестиугольные или квадратные отверстия.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Эта техника в основном полезна для меньших диаметров. Дополнительное пространство, занимаемое углами, может стать проблемой для больших отверстий, и поэтому следует предпочесть другие подходы к дизайну.&lt;/p&gt;
+&lt;h4&gt;Рёбра сминания&lt;/h4&gt;
+&lt;p&gt;Для больших диаметров есть ещё одна хитрость, заимствованная из литья под давлением. &lt;em&gt;Рёбра сминания&lt;/em&gt; — это элементы, предназначенные для пластической деформации во время сборки. Обычно к отверстию добавляется структура рёбер, которые могут быть сдавлены в &quot;долины&quot; между ними.&lt;/p&gt;
+&lt;p&gt;В литье под давлением эти рёбра сминания в основном используются для обхода необходимого угла выемки. Для 3D-печати мы можем использовать их для компенсации допусков принтера, как описал Дэн Ройер (&lt;a href=&quot;https://hackaday.com/2020/10/15/adding-crush-ribs-to-3d-printed-parts-for-a-better-press-fit/&quot;&gt;Hackaday&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Crush-Rib.png&quot; alt=&quot;Пример рёбер сминания в дизайне&quot; /&gt; Глухое отверстие с рёбрами сминания, спроектированное для прессовой посадки с валом.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Рёбра рассчитаны так, чтобы они всё ещё обеспечивали необходимый натяг на обоих концах диапазона допусков. Поскольку деформация маленьких рёбер намного проще, чем деформация всей контактной поверхности, сила соединения остаётся в пределах нормы по всему диапазону допусков.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Crush-Rib-Tolerance.png&quot; alt=&quot;Соображения допусков с рёбрами сминания&quot; /&gt; Для достижения надёжной посадки необходимо учитывать силы минимального и максимального натяга.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;При проектировании рёбер сминания имейте в виду, что такие мелкие элементы склонны к гораздо худшим допускам, чем крупные. Это имеет два эффекта:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Допуск рёбер сминания, показанных на чертеже выше, будет больше, чем обычно.&lt;/li&gt;
+&lt;li&gt;Поскольку рёбра сминания — это выпуклая форма, они, скорее всего, будут недоразмерены, чем переразмерены.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Для примера, уменьшение размера рёбер сминания на 0,2 мм и увеличение отверстия на 0,4 мм дали мне хорошие результаты.&lt;/p&gt;
+&lt;p&gt;Имейте в виду, что рёбра сминания не следует собирать повторно более одного раза. Их зависимость от пластической деформации означает, что сила соединения значительно уменьшится при повторной сборке.
+&amp;lt;a id=&quot;П2.9&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.9&lt;/strong&gt;]
+— Используйте рёбра сминания для прессовых посадок, которые собираются только один раз.
+:::&lt;/p&gt;
+&lt;h4&gt;Захватные плавники&lt;/h4&gt;
+&lt;p&gt;Ещё один интересный подход, представленный Slant 3D, называется &lt;em&gt;захватные плавники&lt;/em&gt; (&lt;a href=&quot;https://www.youtube.com/watch?v=yzg_NXM-NRs&quot;&gt;YouTube&lt;/a&gt;). В отличие от рёбер сминания, которые используют пластическую деформацию, захватные плавники деформируются только эластично. Большое преимущество, конечно, в том, что такое соединение можно собирать повторно, чего рёбра сминания не позволяют.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Grip-Fins.png&quot; alt=&quot;Пример захватных плавников&quot; /&gt; Захватные плавники — это подход для компенсации допусков, использующий эластическую деформацию.
+&amp;lt;a id=&quot;П2.10&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П2.10&lt;/strong&gt;]
+— Используйте захватные плавники для прессовых посадок, которые нужно собирать повторно.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;3. Оптимизация процесса&lt;/h2&gt;
+&lt;p&gt;Мы говорили о проектировании для прочности и точности. Теперь давайте перейдём ближе к самому производственному процессу. Следующая глава рассмотрит способы улучшения деталей, чтобы их 3D-печать стала проще, быстрее и чтобы детали с меньшей вероятностью приводили к неудачным отпечаткам.&lt;/p&gt;
+&lt;h3&gt;Поддержки&lt;/h3&gt;
+&lt;p&gt;Слон в комнате — это, конечно, тема поддержек. Поддержки используются как строительные леса для элементов детали, которые иначе висели бы в воздухе. После печати они удаляются, чтобы открыть окончательную форму.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/support-material.png&quot; alt=&quot;Поддержка&quot; /&gt; Поддержка (показана зелёным) используется для печати нависания, которое иначе было бы невозможно.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;К сожалению, использование поддержек имеет ряд недостатков:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Добавляет дополнительный этап постобработки после печати. Удаление поддержек может быть довольно трудоёмким.&lt;/li&gt;
+&lt;li&gt;Расходует дополнительный материал, который затем становится отходами.&lt;/li&gt;
+&lt;li&gt;Приводит к плохим допускам на поддерживаемых поверхностях, гораздо худшим, чем для остальной части детали.&lt;/li&gt;
+&lt;li&gt;Приводит к ухудшению качества поверхности на поддерживаемых поверхностях.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Для дизайнера вывод прост:
+&amp;lt;a id=&quot;П3.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.1&lt;/strong&gt;]
+— Избегайте необходимости использования поддержек.
+:::&lt;/p&gt;
+&lt;p&gt;Да, безусловно, есть много ситуаций, где использование опор уместно. Но чаще всего небольшие изменения дизайна могут устранить элементы, которые иначе потребовали бы опор.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Support-Optimization.png&quot; alt=&quot;Поддержка&quot; /&gt; Пример элемента, который можно оптимизировать, чтобы не требовать поддержку.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Большую роль в этом играет общая ориентация детали на столе печати. Это обсуждалось ранее в контексте прочности деталей, но это также влияет на необходимость опор. Балансировка между этими двумя аспектами часто бывает довольно сложной.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Support-Strength-Dilemma.png&quot; alt=&quot;Дилемма между поддержкой и прочностью&quot; /&gt;
+Дилемма оптимизации для прочности детали или избегания опор: ориентация крюка на левой детали не требует опор, но сила на крюке может разорвать слои. Ориентация справа идеальна для прочности, но требует поддержку.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В этом случае всё же была выбрана левая опция, потому что силы достаточно малы, чтобы не разорвать слои.&lt;/p&gt;
+&lt;p&gt;Один конструктивный приём, который удивительно эффективен, — это использование диагональной ориентации. Вместо того чтобы выравнивать прямоугольные формы детали по осям принтера, наклоните деталь вверх на 45°.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Diagonal-Orientation.png&quot; alt=&quot;Пример диагональной ориентации детали&quot; /&gt;
+Левая ориентация приводит к большому мосту, который оставит неточности и видимые артефакты. Простой наклон детали, чтобы все прямые края печатались диагонально, приводит к тому, что все стороны печатаются одинаково хорошо.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Этот метод не только позволяет избежать опор или слишком длинных мостов, но также приводит к более равномерной отделке детали, поскольку все грани теперь печатаются с одинаковой ориентацией. Легко различимые верхняя и нижняя поверхности изящно избегаются.&lt;/p&gt;
+&lt;p&gt;Конечно, это влияет на стабильность печати. Возможно, потребуется добавить кайму, чтобы такие детали не опрокидывались. Slant 3D более подробно исследует концепцию диагональной ориентации (&lt;a href=&quot;https://www.youtube.com/watch?v=8TIhkxQNINY&quot;&gt;YouTube&lt;/a&gt;).
+&amp;lt;a id=&quot;П3.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.2&lt;/strong&gt;]
+— Умная ориентация детали на поверхности печати может устранить необходимость в опорах.
+:::&lt;/p&gt;
+&lt;h3&gt;Разделяй и властвуй&lt;/h3&gt;
+&lt;p&gt;Даже при самых лучших намерениях не всегда возможно сделать деталь без необходимости поддержки. Хотя это может означать, что пора признать поражение и просто печатать с поддержкой, есть ещё одна опция, которую стоит оценить. Это, конечно, не всегда лучший путь, но его стоит рассмотреть:
+&amp;lt;a id=&quot;П3.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.3&lt;/strong&gt;]
+— Разделите деталь на несколько частей, если ни одна ориентация не может избежать опор.
+:::&lt;/p&gt;
+&lt;p&gt;Компромисс здесь между принятием недостатков поддержек и усложнением сборки. Оба решения потребуют некоторой работы после печати, но то, какое решение лучше, всегда будет зависеть от конкретных обстоятельств. Особенно для одноразовых или малосерийных дизайнов слегка более сложная сборка легко оправдывается.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/multiple-parts.jpg&quot; alt=&quot;Дизайн, где использовались несколько частей для избегания опор&quot; /&gt;
+Крюки были напечатаны отдельно и затем прикреплены винтами. Это позволило избежать опор и также помогло оптимизировать ориентацию печати для лучшей отделки поверхности в критических местах (например, конус крюка).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Жертвенные слои&lt;/h3&gt;
+&lt;p&gt;Множество ситуаций, когда избегание опор становится сложным, вызвано необходимостью печати контр-отверстий вверх ногами.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Upside-Down-Counterbore.png&quot; alt=&quot;Контр-отверстие вверх ногами&quot; /&gt; Контр-отверстие вверх ногами проблематично для печати из-за неподдерживаемых свешиваний.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;При рассмотрении поперечного сечения проблема легко видна: ступенька контр-отверстия неподдерживаема. Мосты не работают, потому что отверстие в середине мешает. Использование поддержки здесь было бы особенно неприятным, потому что удаление его изнутри отверстия может быть очень сложным.&lt;/p&gt;
+&lt;p&gt;Одно решение этой проблемы — использование &lt;em&gt;жертвенного слоя&lt;/em&gt;. Идея проста: вместо неподдерживаемого свешивания создаётся мост через всё отверстие. Этот мост имеет толщину всего одного слоя и служит только для поддержки меньшего диаметра отверстия сверху.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Sacrificial-Layer.png&quot; alt=&quot;Жертвенный слой&quot; /&gt;
+Мост толщиной в один слой был добавлен к контр-отверстию вверх ногами. Этот слой позволяет чисто напечатать элемент и легко удаляется после печати.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;После печати этот тонкий слой вырезается или высверливается из детали, оставляя желаемую геометрию.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/sacrificial-layer-real.jpg&quot; alt=&quot;Жертвенный слой после печати&quot; /&gt;
+Вот как выглядит жертвенный слой сразу после снятия с платформы печати. Следующий шаг — вырезать его ножом или удалить сверлом.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Конечно, контр-отверстия вверх ногами — не единственное место, где этот приём может быть полезен. Фактически, следующая глава покажет ещё лучшее решение для контр-отверстий вверх ногами. Но, для примера, я часто использовал жертвенные слои для эквивалента контр-отверстия для продолговатого отверстия.
+&amp;lt;a id=&quot;П3.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.4&lt;/strong&gt;]
+— Используйте жертвенные слои, чтобы избежать внутренних свешиваний, которые иначе потребовали бы опоры.
+:::&lt;/p&gt;
+&lt;h3&gt;Хитрость с нависающим контр-отверстием&lt;/h3&gt;
+&lt;p&gt;Жертвенные слои — полезный инструмент, но они требуют дополнительного этапа постобработки. Также могут возникнуть проблемы с нитями от мостов, которые отрываются при вырезании жертвенного слоя. К счастью, есть ещё более умный способ справиться с нависающими контр-отверстиями в частности.&lt;/p&gt;
+&lt;p&gt;Вместо моста через всё отверстие, закрывающего сквозное отверстие сверху, мосты размещаются только там, где они не мешают. Слой за слоем добавляются мосты, чтобы в конечном итоге получить круглое внутреннее отверстие.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/counterbore.png&quot; alt=&quot;Схема контр-отверстия&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Слои этого дизайна следующие, снизу вверх:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Сначала просто вырежьте круглое контр-отверстие на желаемую глубину.&lt;/li&gt;
+&lt;li&gt;Затем сделайте вырез толщиной в один слой (обычно 0,2 мм) так, чтобы материал остался только там, где мосты не проходят через внутреннее отверстие. Две полоски мостов останутся, проходя слева и справа от внутреннего отверстия.&lt;/li&gt;
+&lt;li&gt;На следующем слое сделайте ещё один вырез толщиной в один слой с длиной стороны, соответствующей диаметру внутреннего отверстия. Это оставит мосты, проходящие сверху и снизу внутреннего отверстия, перпендикулярно мостам на предыдущем слое.&lt;/li&gt;
+&lt;li&gt;Наконец, начиная со следующего слоя, внутреннее отверстие будет печататься как круг. Это работает, потому что оставшиеся мосты достаточно малы, чтобы не вызывать проблем.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/counterbore-real.jpg&quot; alt=&quot;Результат контр-отверстия&quot; /&gt;
+Вот как выглядит хитрость с нависающим контр-отверстием снизу после печати. Вы можете видеть мосты, пересекающиеся перпендикулярно.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Этот приём особенно элегантен, потому что не требует постобработки и печатается исключительно чисто. Конечно, есть предел, в основном с увеличением диаметров. Но если нет веских причин против, этот метод должен быть вашим выбором для любых нависающих контр-отверстий.
+&amp;lt;a id=&quot;П3.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.5&lt;/strong&gt;]
+— Используйте хитрость с нависающим контр-отверстием.
+:::&lt;/p&gt;
+&lt;h3&gt;Слои мостов&lt;/h3&gt;
+&lt;p&gt;Концепция нависающих контр-отверстий может быть обобщена до ещё более мощного метода. Основная идея мостов, поддерживающих другие мосты, может использоваться для довольно сложной геометрии, не требующей опор. Это также называют &lt;em&gt;последовательным мостованием&lt;/em&gt; в некоторых местах.&lt;/p&gt;
+&lt;p&gt;Впечатляющий пример — микроскоп OpenFlexure (&lt;a href=&quot;https://openflexure.org/projects/microscope/&quot;&gt;Сайт&lt;/a&gt;), где этот подход к дизайну используется широко. Лучший способ понять, как это работает, — скачать их модели и просмотреть слои после обработки модели в слайсере (&lt;a href=&quot;https://build.openflexure.org/openflexure-microscope/v7.0.0-beta1/models/main_body.html&quot;&gt;STL Загрузка&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-1.png&quot; alt=&quot;OpenFlexure слой 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-2.png&quot; alt=&quot;OpenFlexure слой 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-3.png&quot; alt=&quot;OpenFlexure слой 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-4.png&quot; alt=&quot;OpenFlexure слой 4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-5.png&quot; alt=&quot;OpenFlexure слой 5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/openflexure-6.png&quot; alt=&quot;OpenFlexure слой 6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Особенно для больших мостов хорошая идея — сначала нарастить мост на несколько слоёв, прежде чем начинать следующий. Это придаёт нижнему мосту больше прочности и больше времени для остывания, прежде чем он будет нагружен элементами сверху.
+&amp;lt;a id=&quot;П3.6&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.6&lt;/strong&gt;]&lt;br /&gt;
+— Мосты поверх других мостов позволяют создавать сложную геометрию без дополнительной структуры поддержки.
+:::&lt;/p&gt;
+&lt;h3&gt;Хорошо продуманная экономия материала&lt;/h3&gt;
+&lt;p&gt;Мы уже оценивали форму двутавра в контексте 3D-печати. Вывод был в том, что простое удаление объёма — это традиционный подход к дизайну, который плохо применим к 3D-печати. Есть и другие случаи, когда эта тема всплывает. Вырезы, предназначенные для экономии материала, часто добавляются, но на самом деле не достигают своей цели в дизайнах для 3D-печати. Фактически, они могут привести к противоположному: большему расходу материала и увеличению времени печати.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Adapter-Comparison.png&quot; alt=&quot;Сравнение времени печати для детали с отверстиями и без&quot; /&gt;
+Реальный пример детали, где отверстия были добавлены с целью экономии материала. Но после сравнения моделей становится ясно, что отверстия на самом деле увеличили расход материала и время печати.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Необходимо переключить фокус с объёма на площадь поверхности, так как именно там материал наиболее плотный в деталях, напечатанных на 3D-принтере. Следует стремиться уменьшить площадь поверхности, делая формы толстыми и объёмными.
+&amp;lt;a id=&quot;П3.7&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.7&lt;/strong&gt;]&lt;br /&gt;
+— Сведите площадь поверхности к минимуму. Проектируйте объёмно. Не делайте вырезы в попытке сэкономить материал.
+:::&lt;/p&gt;
+&lt;h3&gt;Оптимизация адгезии к столу&lt;/h3&gt;
+&lt;p&gt;Наконец, тема, которая становится особенно актуальной, когда нужно напечатать много деталей. Чтобы оптимизировать удаление конечной детали с поверхности печати, можно учесть определённые соображения.&lt;/p&gt;
+&lt;p&gt;Прежде всего, площадь поверхности, касающейся стола, должна быть тщательно сбалансирована. Слишком маленькая площадь приведёт к тому, что детали будут опрокидываться во время печати. Слишком большая площадь усложнит отсоединение детали. Slant 3D предлагает несколько хороших советов по этому поводу (&lt;a href=&quot;https://www.youtube.com/watch?v=SZwXREFoWKA&quot;&gt;YouTube&lt;/a&gt;).
+&amp;lt;a id=&quot;П3.8&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.8&lt;/strong&gt;]
+— Уменьшайте площадь поверхности, касающейся стола печати, при массовом производстве.
+:::&lt;/p&gt;
+&lt;h4&gt;Мышиные уши&lt;/h4&gt;
+&lt;p&gt;В связи с этим, если вы используете каймы для предотвращения отсоединения деталей, подход с &lt;em&gt;мышиными ушами&lt;/em&gt;, представленный Slant 3D (&lt;a href=&quot;https://www.youtube.com/watch?v=MCcFMDv_4eo&quot;&gt;YouTube&lt;/a&gt;), — это переносимая альтернатива, которая также уменьшает усилия на постобработку.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Mouse-Ears.png&quot; alt=&quot;Мышиные уши как альтернатива кайме&quot; /&gt;
+Два типа мышиных ушей: правый размещён непосредственно на детали. Левый имеет небольшой выступ, который ещё больше облегчает удаление.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Мышиные уши проектируются непосредственно в CAD-модель детали, поэтому их не нужно добавлять позже при нарезке.
+&amp;lt;a id=&quot;П3.9&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П3.9&lt;/strong&gt;]
+— Добавляйте мышиные уши к деталям, у которых есть проблемы с адгезией к столу.
+:::&lt;/p&gt;
+&lt;h2&gt;4. Функциональная интеграция&lt;/h2&gt;
+&lt;h3&gt;Общие соображения&lt;/h3&gt;
+&lt;p&gt;Функциональная интеграция — это искусство проектирования так, чтобы каждая деталь выполняла как можно больше необходимых функций. Цель — сократить количество деталей. Это ускоряет сборку и часто приводит к снижению производственных затрат.&lt;/p&gt;
+&lt;p&gt;Повсеместный пример функциональной интеграции — зажимы в литых пластиковых деталях. Они заменяют дополнительный соединительный элемент, который в противном случае потребовался бы. По этой причине они играют большую роль в удешевлении и упрощении производства продуктов. Зажимы будут обсуждаться подробнее позже.&lt;/p&gt;
+&lt;p&gt;3D-печать особенно хорошо подходит для функциональной интеграции, потому что дополнительная геометрическая сложность почти не влияет на стоимость производства. Это контрастирует, например, с субтрактивной обработкой, где дополнительные геометрические элементы обычно увеличивают стоимость. Поэтому стремление к максимальной функциональной интеграции обычно хорошая идея при 3D-печати.&lt;/p&gt;
+&lt;p&gt;Однако есть некоторые нюансы. Печать всего в одной детали ограничивает ориентацию печати для некоторых элементов. Это может негативно повлиять на прочность, допуски и геометрическую свободу. Кроме того, сильно интегрированная деталь сложнее для прототипирования, потому что каждая итерация требует перепечатки большой модели. А позже в жизненном цикле ремонт сломанной детали требует замены большего компонента, чем было бы необходимо с дизайном из множества мелких деталей, соединённых вместе. Не раз я специально разделял определённые функции на отдельные детали, чтобы облегчить прототипирование или ремонт.&lt;/p&gt;
+&lt;p&gt;Тем не менее, следующие главы продемонстрируют некоторые идеи дизайна, которые позволяют интегрировать определённые функции.&lt;/p&gt;
+&lt;h3&gt;Каналы для стяжек&lt;/h3&gt;
+&lt;p&gt;Первая идея, которую я продемонстрирую, — довольно простой приём. Вы можете добавить небольшие каналы к поверхностям детали, которые позволяют закрепить стяжку для фиксации кабелей или проводов. Отличное видео об этом есть у Алана Райнера (&lt;a href=&quot;https://www.youtube.com/watch?v=qgt9P6jsyaY&quot;&gt;YouTube&lt;/a&gt;). Демо-модель &lt;em&gt;Zip Tie City&lt;/em&gt; доступна для скачивания (&lt;a href=&quot;https://www.printables.com/model/248291-zip-tie-city&quot;&gt;Printables&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/ziptie-channels.jpg&quot; alt=&quot;Каналы для стяжек на реальной детали&quot; /&gt;
+Каналы для стяжек используются для фиксации кабелей к движущейся сборке. Вы можете заметить один неиспользуемый канал для стяжки слева.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Дизайн канала довольно прост — это участок полого цилиндра. Размеры, подходящие для маленьких стяжек (100 мм), можно взять из чертежа ниже.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/ziptie-channels.png&quot; alt=&quot;Размеры канала для стяжек&quot; /&gt;
+Размеры канала для стяжек для типичных 100 мм стяжек.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Важное замечание: следует учитывать ориентацию каналов для стяжек. Когда канал печатается так, что периметры не перекрывают его, он становится значительно слабее. В этой ориентации мост может легко оторваться, что я уже видел на практике.
+&amp;lt;a id=&quot;П4.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.1&lt;/strong&gt;]&lt;br /&gt;
+— Используйте каналы для стяжек, чтобы закреплять кабели на детали.
+:::&lt;/p&gt;
+&lt;h3&gt;Гибкие элементы&lt;/h3&gt;
+&lt;p&gt;Обычно механические детали проектируются так, чтобы их можно было считать полностью жёсткими в приближении. Гибкие элементы — это конструктивные элементы, которые явно используют эластичность детали для интеграции определённых свобод движения (&lt;a href=&quot;https://en.wikipedia.org/wiki/Flexure&quot;&gt;Википедия&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;В целом, 3D-печать идеально подходит для дизайнов, включающих гибкие элементы. Тонкие элементы, необходимые для гибкости, легко печатаются, тогда как их сложно создать другими методами производства.
+&amp;lt;a id=&quot;П4.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.2&lt;/strong&gt;]&lt;br /&gt;
+— Используйте гибкие элементы для интеграции подвижных функций в деталь.
+:::&lt;/p&gt;
+&lt;p&gt;Два типа гибких элементов, которые очень распространены, будут рассмотрены подробнее ниже: зажимы и так называемые &quot;живые петли&quot;. Но сначала несколько общих моментов о гибких элементах в 3D-печати.&lt;/p&gt;
+&lt;p&gt;Объём движения, разрешённый гибким элементом, в основном ограничен тем, насколько возможно отклонение без пластической деформации. Более толстый гибкий элемент начнёт пластически деформироваться гораздо раньше. Поэтому очень важно делать гибкие элементы как можно тоньше, когда требуется большое движение. Силу можно увеличить, складывая несколько тонких гибких элементов, вместо создания одного толстого. Альтернативно, расстояние перемещения более толстого гибкого элемента можно увеличить, увеличив его длину — возможно, даже в змеевидном узоре.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/cable-comb-hooks.jpg&quot; alt=&quot;Двойной гибкий элемент для большей жёсткости&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Крюки на этом кабельном гребне сделаны из двух параллельных гибких элементов. Это более жёстко, чем один гибкий элемент, но имеет тот же ход в эластической области.
+&amp;lt;a id=&quot;П4.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.3&lt;/strong&gt;]&lt;br /&gt;
+— Проектируйте гибкие элементы так, чтобы они деформировались только эластично при использовании.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Чтобы гибкие элементы были долговечными, важно обеспечить, чтобы их нельзя было перемещать слишком далеко. Элементы должны быть стратегически размещены как ограничители движения гибкого элемента. Таким образом, движение всегда остаётся в эластической области, и гибкий элемент прослужит гораздо дольше.
+&amp;lt;a id=&quot;П4.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.4&lt;/strong&gt;]&lt;br /&gt;
+— Убедитесь, что гибкие элементы имеют жёсткие ограничители, предотвращающие их поломку.
+:::&lt;/p&gt;
+&lt;p&gt;Ещё одно использование гибких элементов — обход проблем с допусками. Это работает только тогда, когда на соединение не действуют значительные силы, но может быть хорошим инструментом для дешёвого решения проблем с точностью. Примером этого являются ранее обсуждавшиеся &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing/#grip-fins&quot;&gt;&quot;захватные плавники&quot;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Зажимы&lt;/h3&gt;
+&lt;p&gt;Вероятно, наибольшее количество гибких элементов проявляется в виде зажимов. Зажимы произвели революцию в массовом производстве, потому что они обеспечивают способ соединения деталей без крепежа. Либо постоянно, либо так, чтобы их можно было многократно открывать и закрывать. По той же причине зажимы популярны в дизайнах для 3D-печати — избегание дополнительного крепежного оборудования часто желательно.&lt;/p&gt;
+&lt;p&gt;Однако при проектировании зажимов нужно проявлять осторожность. Расстояние перемещения зажима, сила удержания и размер элемента должны быть тщательно сбалансированы. Ещё одним значительным фактором является ориентация зажима относительно поверхности печати. Особенно зажимы, построенные поперёк слоёв, очень хрупкие. Во многих случаях лучше минимизировать перемещение зажима и вместо этого работать с большей силой удержания.
+&amp;lt;a id=&quot;П4.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.5&lt;/strong&gt;]&lt;br /&gt;
+— Убедитесь, что зажимы не сломаются от использования. Оптимизируйте дизайны для минимального движения зажима.
+:::&lt;/p&gt;
+&lt;p&gt;Для зажимов, которые удерживают за счёт геометрической формы, отличная идея — предусмотреть способ разблокировки зажима. Обычно это можно достичь, предоставив пространство для доступа к зажиму инструментом, например, отвёрткой, чтобы отодвинуть его назад.
+&amp;lt;a id=&quot;П4.6&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.6&lt;/strong&gt;]&lt;br /&gt;
+— Предусмотрите способ разблокировки зажимов, фиксирующих по форме.
+:::&lt;/p&gt;
+&lt;h3&gt;Живые петли&lt;/h3&gt;
+&lt;p&gt;Ещё один тип гибкого элемента, который стал невероятно популярным в оптимизации для массового производства, — это &quot;живые петли&quot;. Это петли, которые двигаются за счёт пластической деформации, а не за счёт вращения отдельных частей на оси. Любой дешёвый пластиковый контейнер с крышкой, вероятно, использует одну или две такие петли, потому что они намного экономичнее и проще, чем настоящие шарнирные соединения.&lt;/p&gt;
+&lt;p&gt;Мы также можем использовать живые петли в дизайне для 3D-печати, но есть несколько ограничений: петля абсолютно должна лежать плоско на столе печати, чтобы получить тонкий лист пластика, который надёжно деформируется. Эксперименты проводились с живыми петлями, сделанными из мостовых слоёв, но они работают значительно хуже.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/living-hinge.png&quot; alt=&quot;Живая петля&quot; /&gt;
+Пример коробки с большой живой петлёй от &lt;a href=&quot;https://www.printables.com/model/124607-1-piece-box-with-living-hinge&quot;&gt;@3DMakerNoob&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Engineers Grow обсудили живые петли для 3D-печати (&lt;a href=&quot;https://www.youtube.com/watch?v=E2CqXgaQsyI&quot;&gt;YouTube&lt;/a&gt;), как и Slant 3D (&lt;a href=&quot;https://www.youtube.com/watch?v=TiEyFle6lTM&quot;&gt;YouTube&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;Напечатанные подшипники&lt;/h3&gt;
+&lt;p&gt;Ещё один элемент дизайна, который иногда подходит для интеграции, — это подшипники. Особенно там, где требуются подшипники большого диаметра, может быть эффективнее интегрировать подшипник в дизайн сопрягаемых деталей, вместо использования готового компонента.&lt;/p&gt;
+&lt;p&gt;Для интеграции подшипника дорожки становятся элементами дизайна детали. Во время сборки вставляются стандартные стальные шарики подшипника. При необходимости может потребоваться напечатанный сепаратор для обеспечения правильного расстояния между шариками.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/printed-bearing.jpg&quot; alt=&quot;Напечатанный подшипник&quot; /&gt;
+Пример напечатанного на 3D-принтере подшипника от &lt;a href=&quot;https://www.youtube.com/@Positive_Altitude&quot;&gt;Positive Altitude&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Positive Altitude опубликовал видео, где дизайн напечатанных подшипников обсуждается более подробно (&lt;a href=&quot;https://youtu.be/0KhV6JW2sHg&quot;&gt;YouTube&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;Механизмы, напечатанные на месте&lt;/h3&gt;
+&lt;p&gt;Как последний тип функциональной интеграции, который будет обсуждён, &lt;em&gt;механизмы, напечатанные на месте&lt;/em&gt;, — это ещё одна уникальная возможность 3D-печати. Несколько частей взаимосвязанного механизма могут быть напечатаны одновременно. Постобработка для сборки не требуется.&lt;/p&gt;
+&lt;p&gt;Механизмы, напечатанные на месте, могут включать соединения, которые были бы невозможны для сборки после печати. Хитрость в том, что взаимосвязанные части печатаются уже в соединённом положении. Это может быть невероятно полезным инструментом дизайна для создания прочных механизмов без сложной сборки.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Herringbone-Gears.jpg&quot; alt=&quot;Планетарная передача с шевронными зубьями&quot; /&gt;
+Стандартный пример механизма, напечатанного на месте, — это планетарная передача с шевронными зубьями. Эту модель невозможно собрать из её частей после печати.
+Дизайн от &lt;a href=&quot;https://www.thingiverse.com/thing:53451&quot;&gt;Emmett Lalish&lt;/a&gt; и фото от &lt;a href=&quot;https://www.printables.com/model/3119-herringbone-planetary-gear&quot;&gt;Prusa Research&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Большой недостаток механизмов, напечатанных на месте, — это дополнительная сложность дизайна. Ориентация детали фиксирована, что затрудняет избегание опор и проектирование для прочности. Особенно там, где встречаются взаимосвязанные части, может быть сложно адекватно поддерживать плавающую геометрию. Иногда между частями размещаются специальные &lt;em&gt;поверхности разрыва&lt;/em&gt;. Их затем нужно сломать силой после печати.
+&amp;lt;a id=&quot;П4.7&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.7&lt;/strong&gt;]
+— Используйте поверхности разрыва для поддержки плавающей геометрии в дизайнах, напечатанных на месте.
+:::&lt;/p&gt;
+&lt;p&gt;Ещё одна критическая тема для дизайна, напечатанного на месте, — это необходимый зазор между взаимодействующими частями. Печать нескольких поверхностей очень близко друг к другу может быть сложной для некоторых принтеров. Похоже, что зазор в 0,3 мм должен позволить большинству современных принтеров напечатать дизайн.
+&amp;lt;a id=&quot;П4.8&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П4.8&lt;/strong&gt;]
+— Обеспечьте достаточный зазор между элементами в дизайнах, напечатанных на месте.
+:::&lt;/p&gt;
+&lt;h2&gt;5. За пределами пластика — Машинные элементы&lt;/h2&gt;
+&lt;p&gt;После долгого обсуждения особенностей деталей, напечатанных на 3D-принтере, пришло время расширить горизонты. Большинство функциональных дизайнов не будут полностью напечатаны на 3D-принтере, но также будут включать другие компоненты. Наиболее многочисленными, вероятно, будут &lt;em&gt;машинные элементы&lt;/em&gt;. Винты, гайки, подшипники и все другие стандартные детали, оптимизированные для определённых функций. В следующей главе будут рассмотрены аспекты проектирования, связанные с использованием таких машинных элементов.&lt;/p&gt;
+&lt;h3&gt;Гайки и болты&lt;/h3&gt;
+&lt;p&gt;Пожалуй, наиболее распространёнными машинными элементами являются винты. В основном они используются для соединения различных компонентов друг с другом. Хотя легко просто выбрать ближайший подходящий винт и спроектировать детали вокруг него, есть нюансы, если соединение должно быть долговечным. В традиционном машиностроении выбор винтов сам по себе может быть наукой. Особенно, когда винт сильно нагружен или критичен для безопасности. В проектировании для 3D-печати технически всё то же самое — но, к счастью, часто можно обойтись, игнорируя большую часть этой сложности. Тем не менее, я считаю важным хотя бы знать ограничения и некоторые общие рекомендации о том, что хорошо или плохо для винтового соединения деталей, напечатанных на 3D-принтере.&lt;/p&gt;
+&lt;h4&gt;Предварительная нагрузка винта&lt;/h4&gt;
+&lt;p&gt;В теории винтов одним из наиболее важных параметров является предварительная нагрузка (&lt;a href=&quot;https://en.wikipedia.org/wiki/Bolted_joint#Theory&quot;&gt;Википедия&lt;/a&gt;). Это сила зажима, создаваемая винтом в состоянии покоя после затяжки. Для работы винтового соединения предварительная нагрузка должна быть больше любых сил, действующих на соединение во время эксплуатации.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Spring_Analogy_for_a_Bolted_Joint.jpg&quot; alt=&quot;Аналогия пружины для винтового соединения&quot; /&gt;
+Винтовое соединение можно моделировать с помощью пружин. Предварительная нагрузка сжимает детали и удлиняет винт. Пока внешняя нагрузка не превышает предварительную нагрузку, соединение остаётся неподвижным.
+Изображение от &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Spring_Analogy_for_a_Bolted_Joint.jpg&quot;&gt;Stephen Mckelvey&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В соединениях металл-металл эта предварительная нагрузка достигается за счёт удлинения винта. В 3D-печати и других применениях термопластов элементы соединения значительно менее жёсткие, чем винт, поэтому предварительная нагрузка в основном возникает за счёт сжатия пластиковых деталей. Это означает, что традиционные методы расчёта предварительной нагрузки здесь в основном бесполезны.&lt;/p&gt;
+&lt;p&gt;Попытка достичь необходимой предварительной нагрузки быстро приводит к превышению предела текучести напечатанных деталей, что вызывает деформацию или хуже. Хотя достижимая предварительная нагрузка обычно достаточна для статических нагрузок, она часто не справляется с динамическими нагрузками. Вибрации или удары обычно являются худшими нарушителями.&lt;/p&gt;
+&lt;p&gt;Решение — это метод, часто используемый для дополнительной безопасности металлических соединений: использование дополнительных мер фиксации винтов, таких как контргайки или клеи для фиксации резьбы.
+&amp;lt;a id=&quot;П5.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.1&lt;/strong&gt;]
+— Защищайте динамически нагруженные винты дополнительными мерами фиксации, такими как клей для резьбы.
+:::&lt;/p&gt;
+&lt;h4&gt;Длина винта&lt;/h4&gt;
+&lt;p&gt;Ещё один важный параметр винтовых соединений — длина винта, или, точнее, длина сжатой секции деталей, напечатанных на 3D-принтере. Как правило, следует проектировать соединение так, чтобы винт был как можно длиннее.&lt;/p&gt;
+&lt;p&gt;Есть два эффекта, которые делают это разумным выбором:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Длинный винт обеспечивает сжатие детали полностью в компрессии, а не в растяжении. Когда затем применяется внешняя нагрузка, она противодействует сжатию. С коротким винтом внешняя нагрузка просто добавила бы больше растяжения, с которым напечатанные детали часто плохо справляются.&lt;/li&gt;
+&lt;li&gt;Более длинный винт требует большего количества оборотов для сжатия детали за предел её предела текучести. Это снижает вероятность случайного перетягивания соединения.
+&amp;lt;a id=&quot;П5.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.2&lt;/strong&gt;]
+— Проектируйте винтовые соединения для максимальной длины винта.
+:::&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Резьбы в напечатанных деталях&lt;/h4&gt;
+&lt;p&gt;С винтами и термопластами важным аспектом является резьба, к которой винт должен крепиться. В металлических изделиях резьба часто просто нарезается в сопрягаемой детали. В деталях, напечатанных на 3D-принтере, это тоже возможно, но резьбы из термопластов значительно слабее. Это означает, что резьбы легко срываются при перетягивании винта.&lt;/p&gt;
+&lt;p&gt;Тем не менее, пластиковые резьбы — это вариант. Их можно нарезать в деталь, если напечатано отверстие подходящего размера и толщина стенки достаточна. Для резьб большего диаметра (M8 и выше) можно моделировать резьбы в CAD и печатать их, хотя качество таких резьб не всегда хорошее. Прочность термопластиковых резьб на удивление хороша — однако они не любят многократную сборку, и проблема перетягивания не должна недооцениваться.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/thread-tapping.jpg&quot; alt=&quot;Нарезание резьбы в напечатанной детали&quot; /&gt;
+Нарезание резьбы в напечатанной детали.
+&amp;lt;a id=&quot;П5.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.3&lt;/strong&gt;]
+— Нарезайте резьбы в напечатанные детали с помощью метчика для быстрого проектирования соединений с низкой повторяемостью.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Формирование резьбы рёбрами&lt;/h4&gt;
+&lt;p&gt;Альтернативой нарезанию резьбы является комбинация ранее обсуждавшегося концепта &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing/#crush-ribs&quot;&gt;рёбер сминания&lt;/a&gt; со стандартным винтом с резьбой. Винт может деформировать рёбра сминания, создавая собственную резьбу. Формирование резьбы рёбрами работает на удивление хорошо, как продемонстрировал Томас Санладерер (&lt;a href=&quot;https://www.youtube.com/watch?v=HgEEtk85rAY&quot;&gt;YouTube&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/rib-threads.png&quot; alt=&quot;Рёбра резьбы в детали&quot; /&gt;
+Деталь, спроектированная для формирования резьбы рёбрами, рядом с сквозными отверстиями с трюком капли, обсуждавшимся ранее. Рёбра резьбы начинаются сужающимися, чтобы облегчить введение винта.
+&amp;lt;a id=&quot;П5.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.4&lt;/strong&gt;]
+— Используйте формирование резьбы рёбрами для резьб с низкой повторяемостью без постобработки в напечатанных деталях.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Резьбовые вставки&lt;/h4&gt;
+&lt;p&gt;Поскольку недостатки пластиковых резьб хорошо известны из литья под давлением, появились альтернативные решения. Наиболее популярны небольшие металлические резьбовые вставки, которые добавляются к детали для создания прочной и долговечной резьбы. Обычно эти вставки устанавливаются нагревом в отверстие подходящего размера.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/threaded-inserts.jpg&quot; alt=&quot;Резьбовые вставки&quot; /&gt;
+Резьбовые вставки M5, установленные нагревом в деталь, напечатанную на 3D-принтере.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Резьбовые вставки значительно прочнее пластиковых резьб. Они не легко срываются при перетягивании и выдерживают многократную повторную сборку.&lt;/p&gt;
+&lt;p&gt;Такие резьбовые вставки стали очень популярны в сообществе 3D-печати. Стефан из CNC Kitchen написал хороший обзор об использовании вставок, устанавливаемых нагревом (&lt;a href=&quot;https://www.cnckitchen.com/blog/tipps-amp-tricks-fr-gewindeeinstze-im-3d-druck-3awey&quot;&gt;CNC Kitchen&lt;/a&gt;).
+&amp;lt;a id=&quot;П5.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.5&lt;/strong&gt;]
+— Используйте резьбовые вставки, устанавливаемые нагревом, для добавления высоко повторяемых и прочных резьб в деталь.
+:::&lt;/p&gt;
+&lt;p&gt;Ограничение дизайна резьбовых вставок заключается в том, что они ненадёжны для винтов, вставляемых с обратной стороны. При установке вставки часто выдавливают немного расплавленного пластика в отверстие под ними, что препятствует лёгкому введению винта с обратной стороны. Хотя диаметр отверстия можно настроить, чтобы предотвратить это, мой опыт показывает, что это не очень переносимо на другие 3D-принтеры.&lt;/p&gt;
+&lt;h4&gt;Встроенные гайки&lt;/h4&gt;
+&lt;p&gt;Более экономичной альтернативой резьбовым вставкам является встраивание стандартных гаек в детали, напечатанные на 3D-принтере. Обычно это делается путём подготовки подходящего выреза, в который гайка может быть вставлена после или во время печати.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/embedded-nut.jpg&quot; alt=&quot;Встроенная гайка&quot; /&gt;
+Стандартная гайка M4, встроенная в деталь. Она была вставлена через вырез на боковой поверхности, видимый на изображении.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Встроенные гайки не только дёшевы, но и являются отличной альтернативой для упомянутого ограничения дизайна резьбовых вставок. Гайка идеально подходит для размещения на дальней стороне детали, что упрощает создание сквозных соединений с длинными винтами. Это также играет на преимущества использования длинных винтов.&lt;/p&gt;
+&lt;p&gt;В моих дизайнах появились два типа вырезов:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Вырезы на боковой поверхности — прямоугольные вырезы, идущие с боковой стороны детали для горизонтальной вставки гайки.&lt;/li&gt;
+&lt;li&gt;Вырезы на задней поверхности — шестиугольные карманы на выходе сквозного отверстия для винта.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/Nut-Slot-Options.png&quot; alt=&quot;Встроенные гайки&quot; /&gt;
+Поперечное сечение различных вырезов для встроенных гаек. Слева вырезы с боковой стороны. Справа — с задней стороны винта.
+&amp;lt;a id=&quot;П5.6&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.6&lt;/strong&gt;]&lt;br /&gt;
+— Делайте вырезы для встраивания стандартных гаек в деталь.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Большой недостаток подхода со встроенными гайками в том, что они часто выпадают из своих вырезов во время сборки. Настройка размеров выреза обычно не работает хорошо — единственным реальным решением является &quot;закупоривание&quot; вырезов путём вставки гаек на полпути печати. Однако это значительно усложняет процесс печати и сборки, поэтому часто это не желательный выбор.&lt;/p&gt;
+&lt;h4&gt;Прочность резьбы&lt;/h4&gt;
+&lt;p&gt;Учитывая все эти варианты добавления резьб и множество связанных с ними аспектов дизайна, последний фактор, который играет роль, — это прочность резьб. К счастью, все обсуждавшиеся варианты почти всегда имеют прочность, превышающую требования дизайна, при этом другие факторы более значимы.&lt;/p&gt;
+&lt;p&gt;Стефан из CNC Kitchen написал хороший обзор своих экспериментов на эту тему (&lt;a href=&quot;https://www.cnckitchen.com/blog/helicoils-threaded-insets-and-embedded-nuts-in-3d-prints-strength-amp-strength-assessment&quot;&gt;CNC Kitchen&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;Штифты&lt;/h3&gt;
+&lt;p&gt;Теперь рассмотрим машинные элементы, помимо винтов. Хотя использование штифтов в дизайне для 3D-печати довольно редкое, их всё же стоит упомянуть. В традиционном машиностроении они являются стандартным решением для точного и повторяемого позиционирования одной детали относительно другой.&lt;/p&gt;
+&lt;p&gt;Поскольку допуски 3D-печати часто делают такую точность излишней, использование штифтов здесь ограничено. Кроме того, такие штифты требуют инженерной посадки, которую сложно достичь в 3D-печати. Лучшим решением являются ранее упомянутые &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing/#circles-considered-harmful&quot;&gt;шестиугольные отверстия&lt;/a&gt; или &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing/#crush-ribs&quot;&gt;рёбра сминания&lt;/a&gt;, или постобработка напечатанных деталей.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/engraving-jig.png&quot; alt=&quot;Встроенные гайки&quot; /&gt;
+Приспособление для точного выравнивания детали для лазерной гравировки. Штифты использовались как надёжные позиционирующие элементы.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Встроенное оборудование&lt;/h3&gt;
+&lt;p&gt;С &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing/#embedded-nuts&quot;&gt;встроенными гайками&lt;/a&gt; мы уже обсудили один элемент, который можно вставить в деталь во время печати. Этот концепт можно использовать и для многих других вещей — множество дизайнов были опубликованы, использующие этот метод каким-либо образом.&lt;/p&gt;
+&lt;p&gt;Чтобы быстро повторить концепт, он работает следующим образом:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;В дизайне оставляется полость для размещения компонента.&lt;/li&gt;
+&lt;li&gt;При нарезке в слайсере настраивается пауза непосредственно перед слоем над полостью.&lt;/li&gt;
+&lt;li&gt;Когда принтер достигает паузы, вставляется оборудование.&lt;/li&gt;
+&lt;li&gt;Затем печать возобновляется, заключая оборудование и часто навсегда сплавляя деталь с ним.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Для вдохновения посмотрите на окно в этом &lt;a href=&quot;https://www.printables.com/model/894202-modern-gridfinity-case&quot;&gt;Modern Gridfinity Case&lt;/a&gt; от Matthew. Оно сделано из прозрачного листа PETG, который вставляется в печать. Дизайн даже включает небольшие выступы, чтобы удерживать лист на месте сразу после вставки. Это делает дизайн очень прочным, и результат трудно достичь другими методами.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/modern-gridfinity-case.jpg&quot; alt=&quot;Современный кейс Gridfinity&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./images/insert-transparent-sheet.gif&quot; alt=&quot;Вставка прозрачного листа&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Конечно, множество других компонентов можно встраивать в 3D-печать. Назову несколько:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;Запертые крепежи&quot; вставляются так, чтобы они не могли выпасть из детали, что затрудняет их потерю.&lt;/li&gt;
+&lt;li&gt;Магниты&lt;/li&gt;
+&lt;li&gt;Металлическая сетка&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Очевидное преимущество встроенного оборудования в том, что можно избежать дополнительных средств соединения или крепления. Однако учтите недостаток: встроенное оборудование можно извлечь только разрушительно, и замена обычно невозможна.
+&amp;lt;a id=&quot;П5.7&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П5.7&lt;/strong&gt;]&lt;br /&gt;
+— Встраивайте оборудование в детали, напечатанные на 3D-принтере, чтобы избежать более сложных методов крепления или соединения.
+:::&lt;/p&gt;
+&lt;h3&gt;Печать на ткани&lt;/h3&gt;
+&lt;p&gt;Техника, очень похожая на встроенное оборудование, но заслуживающая отдельного внимания, — это включение ткани в 3D-печать. Это создаёт детали с уникальной гибкостью, особенно интересной для носимых приложений. По этой причине печать на ткани довольно популярна в сцене косплея.&lt;/p&gt;
+&lt;p&gt;Суть в том, что печать, состоящая из множества отдельных частей, приостанавливается примерно через 2-3 слоя. Затем кусок тюлевой ткани накидывается на начальные слои. При возобновлении печати новые слои сверху сплавятся с нижними, закрепляя каждую часть на ткани.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/print-on-fabric.jpg&quot; alt=&quot;Печать на ткани&quot; /&gt;
+Демонстрация некоторых деталей для косплея, напечатанных на ткани. Изображение от &lt;a href=&quot;https://www.youtube.com/@UncleJessy&quot;&gt;Uncle Jessy&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Гибкость результирующего дизайна можно точно контролировать геометрией твёрдых напечатанных форм. Другие уже много экспериментировали с этой техникой, например, вы можете посмотреть видеоурок от Uncle Jessy (&lt;a href=&quot;https://www.youtube.com/watch?v=CjH5KGw3Psw&quot;&gt;YouTube&lt;/a&gt;).&lt;/p&gt;
+&lt;h2&gt;6. Внешний вид&lt;/h2&gt;
+&lt;h4&gt;Сложные формы&lt;/h4&gt;
+&lt;p&gt;Хотя внешний вид не является главной заботой функционального дизайна, ни одна деталь не должна проектироваться без учёта её внешнего вида. 3D-печать уникально позволяет добавлять сложные формы поверхности &quot;бесплатно&quot;. Внезапно вопрос больше не о увеличении производственных затрат, единственным оставшимся фактором является время, необходимое для проектирования таких форм.&lt;/p&gt;
+&lt;p&gt;Конечно, сложные формы всё ещё должны соответствовать основным ограничениям процесса — избегать свесов и не требовать поддержек. Но помимо этого нет причин ограничивать дизайны прямыми и прямоугольными формами традиционных функциональных деталей.&lt;/p&gt;
+&lt;p&gt;Есть даже места, где сложные, возможно органические, формы имеют применение помимо внешнего вида: для эргономичного дизайна такие формы обычно гораздо лучше подходят.
+&amp;lt;a id=&quot;П6.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П6.1&lt;/strong&gt;]&lt;br /&gt;
+— Сложные формы часто &quot;бесплатны&quot; в 3D-печати. Используйте их для улучшения внешнего вида или эргономики.
+:::&lt;/p&gt;
+&lt;h4&gt;Теневые линии&lt;/h4&gt;
+&lt;p&gt;Один трюк, который мы можем позаимствовать из традиционных практик дизайна продуктов, — это &lt;em&gt;теневые линии&lt;/em&gt;. Они улучшают внешний вид швов между сопрягаемыми поверхностями нескольких соединённых деталей. Когда две поверхности прижимаются друг к другу напрямую, результат никогда не выглядит великолепно из-за несовершенств с обеих сторон, ведущих к неровному шву.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Теневые линии&lt;/em&gt; улучшают это, оставляя контролируемый больший зазор между поверхностями и скрывая фактическое механическое соединение за небольшим выступом. Больший зазор достаточно широк, чтобы мелкие несовершенства поверхности больше не были различимы. Это придаёт результату очень ровный вид без необходимости экстремальной точности.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/shadow-line-valve.jpg&quot; alt=&quot;Пример детали с теневой линией&quot; /&gt;
+Верхняя и нижняя половины корпуса привода клапана имеют равномерно распределённый зазор между ними. Настоящий шов фактически скрыт за теневой линией.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Может быть достаточно разместить один выступ на теневой линии, чтобы скрыть настоящий шов. Если защита от пыли важна, второй выступ на внутренней стороне может превратить теневую линию в своего рода лабиринтное уплотнение, обеспечивая больше, чем просто эстетику.&lt;/p&gt;
+&lt;p&gt;Теневые линии также могут использоваться на деталях, соединённых под углом, например, крышка, плоско лежащая на коробке. В этом случае между размером крышки и окружающей коробкой оставляется постоянный зазор, а выравнивающие выступы внутри обеспечивают центрирование крышки.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/shadow-line-electronics.jpg&quot; alt=&quot;Теневая линия на крышке электронного корпуса&quot; /&gt;
+Крышка окружена ещё одним равномерно распределённым зазором. Чтобы она оставалась центрированной, внутренние рёбра выравнивания точно её позиционируют.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Чтобы узнать больше об этом концепте, Teaching Tech снял видео на эту тему (&lt;a href=&quot;https://youtu.be/8dhFhU7Nl_0&quot;&gt;YouTube&lt;/a&gt;).
+&amp;lt;a id=&quot;П6.2&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П6.2&lt;/strong&gt;]&lt;br /&gt;
+— Создавайте теневые линии вдоль соединительного края между двумя деталями.
+:::&lt;/p&gt;
+&lt;h4&gt;Текстура поверхности&lt;/h4&gt;
+&lt;p&gt;Ещё один значительный фактор для внешнего вида — текстура поверхности. В 3D-печати у нас обычно мало контроля над ними. Особенно вертикальные поверхности всегда будут явно показывать линии слоёв, присущие процессу.&lt;/p&gt;
+&lt;p&gt;С помощью специальных печатных столов, таких как текстурированные стальные листы, можно улучшить нижнюю поверхность деталей. Это позволяет получить очень чистую текстуру, но, конечно, ограничено, поскольку только одна поверхность каждой детали может получить такую обработку. Иногда даже желательно избегать поверхности стола на детали, чтобы все стороны выглядели более равномерно. Один из способов — повернуть детали под диагональным углом относительно печатного стола.&lt;/p&gt;
+&lt;p&gt;Для вертикальных поверхностей, где линии слоёв иногда разрушают эстетику детали, был разработан трюк, чтобы скрыть их. &lt;em&gt;Нечёткая оболочка&lt;/em&gt; добавляет неровности к каждому периметру слоя, создавая поверхность, которая выглядит более шероховатой, но без заметных линий слоёв.&lt;/p&gt;
+&lt;p&gt;Нечёткая оболочка также приятна на ощупь, если правильно настроена, что сделало её популярным выбором для напечатанных рукояток и ручек.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/fuzzy_skin_preview.jpg&quot; alt=&quot;Деталь с нечёткой оболочкой&quot; /&gt;
+Нечёткая оболочка на рукоятке инструмента создаёт приятный внешний вид и ощущение при держании.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Изображение от &lt;a href=&quot;https://help.prusa3d.com/article/fuzzy-skin_246186&quot;&gt;Prusa Research&lt;/a&gt;
+&amp;lt;a id=&quot;П6.3&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П6.3&lt;/strong&gt;]
+— Используйте текстуру поверхности, чтобы детали выглядели менее напечатанными на 3D-принтере.
+:::&lt;/p&gt;
+&lt;h4&gt;Напечатанный текст&lt;/h4&gt;
+&lt;p&gt;Ещё одно приятное побочное следствие природы 3D-печати — это то, что добавление текста или символов к детали невероятно просто. Нет необходимости в наклейках, декалях или трудоёмкой гравировке. Нет оправданий, чтобы не добавлять текст к напечатанной детали.&lt;/p&gt;
+&lt;p&gt;Начните с привычки добавлять номера деталей в каждую часть большого дизайна. Так легче держать всё в порядке. Особенно при многократной итерации детали, нанесение индекса ревизии на неё может значительно уменьшить путаницу.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/engraved-text.jpg&quot; alt=&quot;Деталь с напечатанным текстом&quot; /&gt;
+Корпус с текстовой меткой, выгравированной в него.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Есть два способа добавления текста или символов: либо текст вырезается в поверхность, что называется гравировкой, либо текст может быть приподнят над поверхностью, что называется тиснением. В основном гравировка даёт гораздо более чистые результаты в 3D-печати. Это особенно верно, когда размер шрифта уменьшается.
+&amp;lt;a id=&quot;П6.4&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П6.4&lt;/strong&gt;]&lt;br /&gt;
+— Предпочитайте гравировку текста тиснению.
+:::&lt;/p&gt;
+&lt;p&gt;Что касается ориентации, лучшие результаты достигаются размещением текста вертикально к поверхности печати. Таким образом, он печатается как часть линий периметра, где принтер может достичь наибольшей детализации.
+&amp;lt;a id=&quot;П6.5&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П6.5&lt;/strong&gt;]&lt;br /&gt;
+— Размещайте гравированный/тиснёный текст вертикально к поверхности печати.
+:::&lt;/p&gt;
+&lt;p&gt;Опыт показывает, что большинство принтеров могут печатать текст с минимальной шириной штриха 0,6 мм и гравировкой глубиной 0,5 мм без проблем.&lt;/p&gt;
+&lt;h2&gt;7. Дополнительно: Дизайн в режиме вазы&lt;/h2&gt;
+&lt;p&gt;В последней главе я хочу исследовать совершенно другой подход к дизайну для 3D-печати — дизайн в режиме вазы. По своей сути процесс FFF 3D-печати не является объёмным. Объёмные детали достигаются только использованием линий пластика, сплавленных вместе так, что возникает объём. Но является ли это наиболее эффективным способом использования процесса 3D-печати — вопрос, который стоит задать.&lt;/p&gt;
+&lt;p&gt;Режим вазы — это альтернативный подход, при котором печатается только полая оболочка детали, используя одну линию периметра. Вместо отдельных слоёв высота Z медленно увеличивается, так что филамент укладывается по спирали. Это имеет ряд выгодных последствий:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Это очень эффективно, потому что 100% времени печати тратится на экструзию филамента.&lt;/li&gt;
+&lt;li&gt;Из-за отсутствия отдельных слоёв на поверхности нет шва.&lt;/li&gt;
+&lt;li&gt;Поскольку принтер никогда не останавливает печать, проблемы с нитями не возникают.&lt;/li&gt;
+&lt;li&gt;Это очень быстро, потому что используется минимальное количество пластика для представления формы детали.&lt;/li&gt;
+&lt;li&gt;Это также приводит к очень лёгким деталям из-за уменьшенного использования филамента.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Большой недостаток, конечно, в том, что детали становятся очень нестабильными из-за отсутствия внутренней поддержки. Для определённых видов деталей, особенно художественных, это может не быть проблемой. Даже для функциональных деталей, таких как вазы — откуда эта техника получила своё название — прочности может быть достаточно.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/vase.png&quot; alt=&quot;Ваза в режиме вазы&quot; /&gt;
+Дизайн вазы от &lt;a href=&quot;https://www.printables.com/model/866587-sculptural-vase-vase-mode&quot;&gt;@Slimprint&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В режиме вазы наиболее важным фактором для прочности детали является геометрия поверхности. Поверхности, которые плоские или изгибаются только в одном направлении, работают хуже всего. Сложные формы часто показывают гораздо большую прочность. Это особенно видно на впечатляющей прочности, которую достигают некоторые дизайны ваз.&lt;/p&gt;
+&lt;h4&gt;Узоры бисера&lt;/h4&gt;
+&lt;p&gt;То, что вазы достигают через стиль, может быть использовано для технических дизайнов в виде &lt;em&gt;узоров бисера&lt;/em&gt;. Они описывают элементы, добавляемые к тонким листовым деталям для придания им дополнительной прочности. CNC-Kitchen снял видео об использовании узоров бисера для 3D-печати, где этот концепт исследуется подробнее (&lt;a href=&quot;https://www.youtube.com/watch?v=3-ygdNQThAs&quot;&gt;YouTube&lt;/a&gt;). Также есть немецкая веб-книга, подробно описывающая узоры бисера в целом (&lt;a href=&quot;https://4ming.de/de/forming-handbuch/leichtbau-durch-sicken-fachbuch&quot;&gt;4ming.de&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/beading-pattern.jpg&quot; alt=&quot;Узор бисера на напечатанной детали&quot; /&gt;
+Узор бисера на коробке, показанный &lt;a href=&quot;https://www.youtube.com/watch?v=3-ygdNQThAs&quot;&gt;CNC-Kitchen&lt;/a&gt;
+&amp;lt;a id=&quot;П7.1&quot;&amp;gt;&amp;lt;/a&amp;gt;
+:::tip[&lt;strong&gt;П7.1&lt;/strong&gt;]&lt;br /&gt;
+— Используйте узоры бисера, чтобы сделать детали в режиме вазы более жёсткими.
+:::&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Нетрадиционный режим вазы&lt;/h4&gt;
+&lt;p&gt;Интересно, что режим вазы можно адаптировать для ещё большего количества применений. Хитрость в том, чтобы рассматривать режим вазы как способ точного контроля над тем, как принтер экструдирует филамент. Деталь проектируется так, чтобы периметры её поверхности описывали путь для принтера, который в конечном итоге приводит к желаемой геометрии. Впечатляющий пример — штабелируемый поднос, спроектированный FPacheco (&lt;a href=&quot;https://www.printables.com/model/514142-vase-mode-stackable-hextray-60-mm-hexagons&quot;&gt;Printables&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./images/vase-mode-tray.jpg&quot; alt=&quot;Штабелируемый поднос в режиме вазы&quot; /&gt;
+Этот поднос совсем не похож на деталь в режиме вазы, но является результатом очень тщательного и умного дизайна.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Хотя результирующая деталь для таких дизайнов совсем не похожа на обычную деталь в режиме вазы, она всё ещё получает выгоду от 100% времени печати в режиме вазы. Особенно когда деталь должна производиться в больших количествах, это может иметь значительное влияние.&lt;/p&gt;
+&lt;h2&gt;Заключение&lt;/h2&gt;
+&lt;p&gt;Итак, вы добрались до конца. Ниже вы найдёте итоговое резюме всех правил дизайна, обсуждавшихся в этой статье. Используйте их как справочник для ваших дизайнов, как &quot;разумные значения по умолчанию&quot;, когда нет веских причин отклоняться. Но в то же время это не законы — есть множество ситуаций, где другой подход будет лучшим выбором. Ваша задача как инженера-дизайнера — принимать эти решения.&lt;/p&gt;
+&lt;p&gt;Я долго думал, где мне опубликовать эту информацию. Пока размещение её в моём блоге показалось самым простым выбором. Но такие &quot;правила&quot; живут благодаря обсуждениям, и я хотел бы услышать ваши мнения и начать говорить о них. Если возникнет достаточно интереса, я был бы заинтересован в превращении этого в &quot;книгу с открытым исходным кодом&quot;, где другие могут вносить свои собственные правила или предлагать изменения к существующим. Моя конечная цель — найти лучшие подходы к дизайну для 3D-печати. И такая задача достижима только сообществом в целом.&lt;/p&gt;
+&lt;h2&gt;Оглавление&lt;/h2&gt;
+&lt;p&gt;Список всех правил из статьи.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Проектирование для прочности деталей&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F1.1&quot;&gt;&lt;strong&gt;П1.1&lt;/strong&gt;&lt;/a&gt;
+—
+Силы растяжения должны быть выровнены параллельно поверхности печати.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F1.2&quot;&gt;&lt;strong&gt;П1.2&lt;/strong&gt;&lt;/a&gt;
+—
+Разделите деталь на несколько частей, если ни одна ориентация не идеальна для всех нагрузок.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F1.3&quot;&gt;&lt;strong&gt;П1.3&lt;/strong&gt;&lt;/a&gt;
+—
+Большая часть прочности детали исходит от её поверхности, а не от заполнения.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F1.4&quot;&gt;&lt;strong&gt;П1.4&lt;/strong&gt;&lt;/a&gt;
+—
+Направляйте силы по наиболее прямому пути.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F1.5&quot;&gt;&lt;strong&gt;П1.5&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте большие поперечные сечения. Предпочитайте толстые формы тонким.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Допуски производства и отделка деталей&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.1&quot;&gt;&lt;strong&gt;П2.1&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте фаски на краях, параллельных поверхности печати. Используйте скругления на краях, вертикальных к поверхности печати.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.2&quot;&gt;&lt;strong&gt;П2.2&lt;/strong&gt;&lt;/a&gt;
+—
+Улучшайте горизонтальные отверстия, используя форму капли или добавляя плоский потолок.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.3&quot;&gt;&lt;strong&gt;П2.3&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте форму капли для вертикальных отверстий, чтобы избежать неточностей из-за швов периметра.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.4&quot;&gt;&lt;strong&gt;П2.4&lt;/strong&gt;&lt;/a&gt;
+—
+Подумайте, где будет размещён шов. Если допуски строгие, предусмотрите острый вогнутый угол, чтобы спрятать шов.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.5&quot;&gt;&lt;strong&gt;П2.5&lt;/strong&gt;&lt;/a&gt;
+—
+Проектируйте геометрию детали для лёгких путей движения во время печати, чтобы улучшить точность размеров.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.6&quot;&gt;&lt;strong&gt;П2.6&lt;/strong&gt;&lt;/a&gt;
+—
+Предотвращайте коробление, делая детали объёмными и их поверхности плавными и округлыми. Идеальная форма — сфера.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.7&quot;&gt;&lt;strong&gt;П2.7&lt;/strong&gt;&lt;/a&gt;
+—
+Если вы не можете сделать это точно, сделайте это регулируемым.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.8&quot;&gt;&lt;strong&gt;П2.8&lt;/strong&gt;&lt;/a&gt;
+—
+Не используйте круглые отверстия для посадок с натягом. Используйте шестигранные или квадратные отверстия вместо них.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.9&quot;&gt;&lt;strong&gt;П2.9&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте рёбра сминания для прессовых посадок, которые собираются только один раз.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F2.10&quot;&gt;&lt;strong&gt;П2.10&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте захватные плавники для прессовых посадок, которые нужно собирать более одного раза.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Оптимизация процесса&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.1&quot;&gt;&lt;strong&gt;П3.1&lt;/strong&gt;&lt;/a&gt;
+—
+Избегайте необходимости использования поддержек.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.2&quot;&gt;&lt;strong&gt;П3.2&lt;/strong&gt;&lt;/a&gt;
+—
+Умная ориентация детали на поверхности печати может устранить необходимость в опорах.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.3&quot;&gt;&lt;strong&gt;П3.3&lt;/strong&gt;&lt;/a&gt;
+—
+Разделите деталь на несколько частей, если ни одна ориентация не может избежать опор.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.4&quot;&gt;&lt;strong&gt;П3.4&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте жертвенные слои, чтобы избежать внутренних свесов, которые иначе потребовали бы опоры.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.5&quot;&gt;&lt;strong&gt;П3.5&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте трюк с нависающим контр-отверстием.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.6&quot;&gt;&lt;strong&gt;П3.6&lt;/strong&gt;&lt;/a&gt;
+—
+Мосты поверх других мостов позволяют создавать сложную геометрию без дополнительной структуры поддержки.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.7&quot;&gt;&lt;strong&gt;П3.7&lt;/strong&gt;&lt;/a&gt;
+—
+Сведите площадь поверхности к минимуму. Проектируйте объёмно. Не делайте вырезы в попытке сэкономить материал.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.8&quot;&gt;&lt;strong&gt;П3.8&lt;/strong&gt;&lt;/a&gt;
+—
+Уменьшайте площадь поверхности, касающейся стола печати, при массовом производстве.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F3.9&quot;&gt;&lt;strong&gt;П3.9&lt;/strong&gt;&lt;/a&gt;
+—
+Добавляйте мышиные уши к деталям, у которых есть проблемы с адгезией к столу.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Функциональная интеграция&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.1&quot;&gt;&lt;strong&gt;П4.1&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте каналы для стяжек, чтобы закреплять кабели на детали.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.2&quot;&gt;&lt;strong&gt;П4.2&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте гибкие элементы для интеграции подвижных функций в деталь.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.3&quot;&gt;&lt;strong&gt;П4.3&lt;/strong&gt;&lt;/a&gt;
+—
+Проектируйте гибкие элементы так, чтобы они деформировались только эластично при использовании.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.4&quot;&gt;&lt;strong&gt;П4.4&lt;/strong&gt;&lt;/a&gt;
+—
+Убедитесь, что гибкие элементы имеют жесткие ограничители, предотвращающие их поломку.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.5&quot;&gt;&lt;strong&gt;П4.5&lt;/strong&gt;&lt;/a&gt;
+—
+Убедитесь, что зажимы не сломаются от использования. Оптимизируйте дизайны для минимального движения зажима.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.6&quot;&gt;&lt;strong&gt;П4.6&lt;/strong&gt;&lt;/a&gt;
+—
+Предусмотрите способ разблокировки зажимов, фиксирующих по форме.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.7&quot;&gt;&lt;strong&gt;П4.7&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте поверхности разрыва для поддержки плавающей геометрии в дизайнах, напечатанных на месте.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F4.8&quot;&gt;&lt;strong&gt;П4.8&lt;/strong&gt;&lt;/a&gt;
+—
+Обеспечьте достаточный зазор между элементами в дизайнах, напечатанных на месте.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;За пределы пластика — Машинные элементы&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.1&quot;&gt;&lt;strong&gt;П5.1&lt;/strong&gt;&lt;/a&gt;
+—
+Защищайте динамически нагруженные винты дополнительными мерами фиксации, такими как клей для резьбы.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.2&quot;&gt;&lt;strong&gt;П5.2&lt;/strong&gt;&lt;/a&gt;
+—
+Проектируйте винтовые соединения для максимальной длины винта.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.3&quot;&gt;&lt;strong&gt;П5.3&lt;/strong&gt;&lt;/a&gt;
+—
+Нарезайте резьбы в напечатанные детали с помощью метчика для быстрого проектирования соединений с низкой повторяемостью.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.4&quot;&gt;&lt;strong&gt;П5.4&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте формирование резьбы рёбрами для резьб с низкой повторяемостью без постобработки в напечатанных деталях.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.5&quot;&gt;&lt;strong&gt;П5.5&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте резьбовые вставки, устанавливаемые нагревом, для добавления высоко повторяемых и прочных резьб в деталь.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.6&quot;&gt;&lt;strong&gt;П5.6&lt;/strong&gt;&lt;/a&gt;
+—
+Делайте вырезы для встраивания стандартных гаек в деталь.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F5.7&quot;&gt;&lt;strong&gt;П5.7&lt;/strong&gt;&lt;/a&gt;
+—
+Встраивайте оборудование в детали, напечатанные на 3D-принтере, чтобы избежать более сложных методов крепления или соединения.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Внешний вид&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F6.1&quot;&gt;&lt;strong&gt;П6.1&lt;/strong&gt;&lt;/a&gt;
+—
+Сложные формы часто &quot;бесплатны&quot; в 3D-печати. Используйте их для улучшения внешнего вида или эргономики.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F6.2&quot;&gt;&lt;strong&gt;П6.2&lt;/strong&gt;&lt;/a&gt;
+—
+Создавайте теневые линии вдоль соединительного края между двумя деталями.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F6.3&quot;&gt;&lt;strong&gt;П6.3&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте текстуру поверхности, чтобы детали выглядели менее напечатанными на 3D-принтере.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F6.4&quot;&gt;&lt;strong&gt;П6.4&lt;/strong&gt;&lt;/a&gt;
+—
+Предпочитайте гравировку текста тиснению.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F6.5&quot;&gt;&lt;strong&gt;П6.5&lt;/strong&gt;&lt;/a&gt;
+—
+Размещайте гравированный/тиснённый текст вертикально к поверхности печати.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Дополнительно: Дизайн в режиме вазы&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%D0%9F7.1&quot;&gt;&lt;strong&gt;П7.1&lt;/strong&gt;&lt;/a&gt;
+—
+Используйте узоры бисера, чтобы сделать детали в режиме вазы более жёсткими.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>Ограничения Telegram</title><link>https://guilliman.ru/posts/tg_limits/</link><guid isPermaLink="true">https://guilliman.ru/posts/tg_limits/</guid><description>Полный список известных ограничений</description><pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Ссылка на оригинал статьи]
+&lt;a href=&quot;https://tginfo.me/limity/&quot;&gt;Дата обновления 03.04.2025&lt;/a&gt;
+:::&lt;/p&gt;
+&lt;h2&gt;Аккаунты&lt;/h2&gt;
+&lt;h4&gt;Атрибуты&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Юзернейм, длина&lt;/td&gt;
+&lt;td&gt;от 5 до 32 символов&lt;/td&gt;
+&lt;td&gt;для имён NFT — от 4 до 32 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;«О себе», длина&lt;/td&gt;
+&lt;td&gt;до 70 символов&lt;/td&gt;
+&lt;td&gt;до 140 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Имя, длина&lt;/td&gt;
+&lt;td&gt;до 64 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Фамилия, длина&lt;/td&gt;
+&lt;td&gt;до 64 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Видеоаватар, длительность&lt;/td&gt;
+&lt;td&gt;до 10 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Содержимое&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество сохраненных GIF&lt;/td&gt;
+&lt;td&gt;до 200 штук&lt;/td&gt;
+&lt;td&gt;до 400 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество видимых сообщений&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;До 2018 года — не более 1 миллиона. Общий лимит между личными чатами, ботами и обычными группами.См. https://twitter.com/telegram/status/1060910769410371584&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество эмодзи-паков, сохраненных в аккаунте&lt;/td&gt;
+&lt;td&gt;до 200 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество эмодзи в эмодзи-паке&lt;/td&gt;
+&lt;td&gt;до 200 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество стикер-паков, сохраненных в одном аккаунте&lt;/td&gt;
+&lt;td&gt;до 200 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество избранных стикеров&lt;/td&gt;
+&lt;td&gt;до 5&lt;/td&gt;
+&lt;td&gt;до 10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество публичных групп+каналов, которыми может одновременно владеть аккаунт&lt;/td&gt;
+&lt;td&gt;до 10&lt;/td&gt;
+&lt;td&gt;до 20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Действия&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество групп и каналов, которые можно создать в течение суток&lt;/td&gt;
+&lt;td&gt;до 50&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество каналов и супергрупп, в которых можно состоять&lt;/td&gt;
+&lt;td&gt;до 500&lt;/td&gt;
+&lt;td&gt;до 1000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок самоуничтожения аккаунта при отсутствии активности&lt;/td&gt;
+&lt;td&gt;1, 3, 6, 12, 18 или 24 месяца. По умолчанию — 18 месяцев.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок спам-бана&lt;/td&gt;
+&lt;td&gt;от 1 секунды до бесконечности&lt;/td&gt;
+&lt;td&gt;от 1 секунды до бесконечности&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество аккаунтов в одном приложении&lt;/td&gt;
+&lt;td&gt;до 3&lt;/td&gt;
+&lt;td&gt;до 6&lt;/td&gt;
+&lt;td&gt;Зависит от приложения и от наличия подписки у конкретных аккаунтов&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество закрепленных чатов в папке «Все чаты»&lt;/td&gt;
+&lt;td&gt;до 5 + 5 секретных&lt;/td&gt;
+&lt;td&gt;до 10 + 5 секретных&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество закрепленных чатов в любой папке, кроме «Все чаты»&lt;/td&gt;
+&lt;td&gt;до 100&lt;/td&gt;
+&lt;td&gt;до 200&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок резервирования юзернейма&lt;/td&gt;
+&lt;td&gt;Приблизительно 30-60 минут&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Если пользователь освобождает юзернейм, то этот юзернейм станет доступен другим пользователям через 30-60 минут после освобождения. В то же время тот пользователь, который его освободил, может его занять сразу же после освобождения.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальный срок владения юзернеймом, необходимый, чтобы выложить юзернейм на аукцион Fragment.com&lt;/td&gt;
+&lt;td&gt;14 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Чаты и каналы&lt;/h2&gt;
+&lt;h4&gt;Общее&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество закрепленных чатов в каждой папке&lt;/td&gt;
+&lt;td&gt;до 100 чатов&lt;/td&gt;
+&lt;td&gt;до 200 чатов&lt;/td&gt;
+&lt;td&gt;кроме папки «Все чаты»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длительность звукового уведомления (формат OGG) в настройках чата&lt;/td&gt;
+&lt;td&gt;до 5 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Название группы/канала&lt;/td&gt;
+&lt;td&gt;до 128 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Описание группы/канала&lt;/td&gt;
+&lt;td&gt;до 255 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок автоматического удаления сообщений (при включении соответствующей опции)&lt;/td&gt;
+&lt;td&gt;от 1 дня до 1 года&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество юзернеймов в одном сообщении&lt;/td&gt;
+&lt;td&gt;до 50&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;уведомления получат только первые 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество различных реакций, которые можно оставить под одним сообщением&lt;/td&gt;
+&lt;td&gt;не более 11&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество администраторов&lt;/td&gt;
+&lt;td&gt;до 50&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Личные чаты&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок автоматического уничтожения фото/видео&lt;/td&gt;
+&lt;td&gt;до 60 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Групповые чаты&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество участников в базовой группе&lt;/td&gt;
+&lt;td&gt;до 200&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Про отличия групп от супергрупп см. статью https://t.me/tginfo/2856&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество участников в супергруппе&lt;/td&gt;
+&lt;td&gt;до 200 тысяч&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество ботов, которые можно добавить в список администраторов существующей группы&lt;/td&gt;
+&lt;td&gt;до 20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Во время создания группы лимит не учитывается и можно добавлять ботов неограниченно&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Период, в течение которого доступно редактирование сообщения после его отправки&lt;/td&gt;
+&lt;td&gt;до 48 часов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Для администратора — бессрочно&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок, в течение которого действия в группе отображаются в разделе «Недавние действия»&lt;/td&gt;
+&lt;td&gt;48 часов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество сообщений&lt;/td&gt;
+&lt;td&gt;до 1000000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Через некоторое время после того, как сообщений станет больше миллиона, Телеграм автоматически удалит из группы такое количество порций по 500000 сообщений (начиная с самого старого сообщения), чтобы оставшееся количество сообщений не превышало миллиона.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество участников, при котором доступен раздел «Статистика»&lt;/td&gt;
+&lt;td&gt;500 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество участников, при котором отображается время просмотра сообщения каждым участником&lt;/td&gt;
+&lt;td&gt;99 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок хранения данных о прочтении сообщения&lt;/td&gt;
+&lt;td&gt;7 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество участников, при котором доступна опция «Антиспам-фильтр»&lt;/td&gt;
+&lt;td&gt;200 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество участников, при котором администраторы могут установить стикер-пак группы&lt;/td&gt;
+&lt;td&gt;100 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество участников, при котором доступна опция «Скрыть участников»&lt;/td&gt;
+&lt;td&gt;100 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Названия должности администратора&lt;/td&gt;
+&lt;td&gt;до 16 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество участников группы, при котором Telegram перестает отображать сообщения о вступлении новых участников в группу&lt;/td&gt;
+&lt;td&gt;10000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Каналы&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество подписчиков, которых видит администратор&lt;/td&gt;
+&lt;td&gt;200 подписчиков&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество подписчиков, при котором доступен раздел «Статистика»&lt;/td&gt;
+&lt;td&gt;50 подписчиков&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество подписчиков, которых можно принудительно добавить в канал&lt;/td&gt;
+&lt;td&gt;200 подписчиков&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Принудительно добавлять подписчиков на канал можно только если на канал подписано не более 200 пользователей&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Время, в течение которого доступен просмотр содержимого частных каналов без подписки на них&lt;/td&gt;
+&lt;td&gt;5 минут в сутки&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Только для каналов с более чем 200 подписчиками&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок, в течение которого изменения в посте канала будут автоматически применяться и к копии этого поста в привязанной группе&lt;/td&gt;
+&lt;td&gt;14 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество подписчиков, при котором владелец может гарантированно удалить свой канал без необходимости обращаться в поддержку Telegram&lt;/td&gt;
+&lt;td&gt;1000 подписчиков&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Если подписчиков больше 1000, то удаление может пройти успешно, а может и не пройти&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное число подписчиков публичного канала, при котором его посты можно найти в глобальном поиске по хештегу&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное число подписчиков публичного канала, при котором в его профиле могут отображаться похожие каналы&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное число подписчиков публичного канала, при котором из сообщения, пересланного на этот канал, можно перейти в профиль его автора&lt;/td&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Голосовые и видеочаты&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество участников, которые могут вести трансляцию (камера или экран устройства)&lt;/td&gt;
+&lt;td&gt;30 участников&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальный срок, на который может быть отложен старт трансляции&lt;/td&gt;
+&lt;td&gt;7-8 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Конец суток, отстоящих от текущего дня на 7 дней&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Сообщения&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина одного сообщения&lt;/td&gt;
+&lt;td&gt;до 4096 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина подписи к медиа&lt;/td&gt;
+&lt;td&gt;до 1024 символов&lt;/td&gt;
+&lt;td&gt;до 4096 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер отправляемого файла&lt;/td&gt;
+&lt;td&gt;до 2 гигабайт&lt;/td&gt;
+&lt;td&gt;до 4 гигабайт&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Имя файла&lt;/td&gt;
+&lt;td&gt;до 60 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;остальное будет обрезано при отправке&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длительность видеосообщения&lt;/td&gt;
+&lt;td&gt;до 60 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество медиа в одном сообщении&lt;/td&gt;
+&lt;td&gt;до 10 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество отложенных сообщений в одном чате&lt;/td&gt;
+&lt;td&gt;до 100 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок, на который может быть отложена отправка сообщения&lt;/td&gt;
+&lt;td&gt;до 365 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество кастомных эмодзи в одном сообщении&lt;/td&gt;
+&lt;td&gt;до 100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;остальные заменяются на соответствующие стандартные эмодзи&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество гиперссылок в одном сообщении&lt;/td&gt;
+&lt;td&gt;до 100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Папки&lt;/h2&gt;
+&lt;h4&gt;Обычные папки&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество папок&lt;/td&gt;
+&lt;td&gt;до 10 папок&lt;/td&gt;
+&lt;td&gt;до 30 папок&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина названия папки&lt;/td&gt;
+&lt;td&gt;от 1 до 12 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество чатов в одной папке&lt;/td&gt;
+&lt;td&gt;до 100 чатов&lt;/td&gt;
+&lt;td&gt;до 200 чатов&lt;/td&gt;
+&lt;td&gt;Не включает в себя чаты, добавленные в папку по своему типу (например, «каналы»). Включает в себя чаты, добавленные в раздел «Исключения»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество закрепленных чатов в любой папке, кроме «Все чаты»&lt;/td&gt;
+&lt;td&gt;до 100 чатов&lt;/td&gt;
+&lt;td&gt;до 200 чатов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество публичных папок, добавленных в аккаунт&lt;/td&gt;
+&lt;td&gt;до 2 папок&lt;/td&gt;
+&lt;td&gt;до 20 папок&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Публичные папки&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество публичных папок&lt;/td&gt;
+&lt;td&gt;до 2 папок&lt;/td&gt;
+&lt;td&gt;до 20 папок&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество чатов/каналов, которые можно добавить в публичную папку&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Топики&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество топиков в одной группе&lt;/td&gt;
+&lt;td&gt;до 1 000 000&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество отображаемых пользователей&lt;/td&gt;
+&lt;td&gt;до 100 пользователей&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина названия топика&lt;/td&gt;
+&lt;td&gt;до 128 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество закрепленных топиков&lt;/td&gt;
+&lt;td&gt;до 5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;~Люди рядом~&lt;/h2&gt;
+&lt;p&gt;Функция &lt;a href=&quot;https://t.me/tginfo/4114&quot;&gt;отключена&lt;/a&gt; администрацией Telegram.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Радиус видимости&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество отображаемых пользователей&lt;/td&gt;
+&lt;td&gt;до 100 пользователей&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество отображаемых геочатов&lt;/td&gt;
+&lt;td&gt;до 10 геочатов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Боты&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество ботов, которых может создать пользователь&lt;/td&gt;
+&lt;td&gt;до 20 штук&lt;/td&gt;
+&lt;td&gt;до 40 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Информация о боте&lt;/td&gt;
+&lt;td&gt;до 120 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Описание бота&lt;/td&gt;
+&lt;td&gt;до 512 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина команды&lt;/td&gt;
+&lt;td&gt;от 1 до 32 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина описания команды&lt;/td&gt;
+&lt;td&gt;от 1 до 256 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество команд бота&lt;/td&gt;
+&lt;td&gt;до 100 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество кнопок в одном сообщении бота&lt;/td&gt;
+&lt;td&gt;до 100 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество inline-результатов&lt;/td&gt;
+&lt;td&gt;до 50 элементов на страницу&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер файла, который может отправить бот без локального сервера Bot API&lt;/td&gt;
+&lt;td&gt;до 50 мегабайт&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер файла, который может принять бот без локального сервера Bot API&lt;/td&gt;
+&lt;td&gt;до 20 мегабайт&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер файла, который может отправить бот с локальным сервером Bot API&lt;/td&gt;
+&lt;td&gt;до 2000 мегабайт&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер файла, который может принять бот с локальным сервером Bot API&lt;/td&gt;
+&lt;td&gt;до 2000 мегабайт&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Скорость, с которой бот может отправлять сообщения в одну группу&lt;/td&gt;
+&lt;td&gt;до 20 сообщений в минуту&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Стикеры&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество стикер-паков, сохраненных в одном аккаунте&lt;/td&gt;
+&lt;td&gt;до 200 штук&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество избранных стикеров&lt;/td&gt;
+&lt;td&gt;до 5&lt;/td&gt;
+&lt;td&gt;до 10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество стикеров в одном стикер-паке&lt;/td&gt;
+&lt;td&gt;до 120 для простых, до 50 для анимированных&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Имя стикер-пака&lt;/td&gt;
+&lt;td&gt;до 64 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина адреса /addstickers&lt;/td&gt;
+&lt;td&gt;до 62 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер стикера&lt;/td&gt;
+&lt;td&gt;одна из сторон равна 512px, другая — 512px и меньше; для анимированных — строго 512х512&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длительность анимации стикера&lt;/td&gt;
+&lt;td&gt;до 3 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Размер файла стикера&lt;/td&gt;
+&lt;td&gt;до 512 KB для простых стикеров, до 64 KB для анимированных&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FPS анимированного стикера&lt;/td&gt;
+&lt;td&gt;30 или 60&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Истории&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;В каких странах публикация историй доступна без подписки Telegram Premium&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://tginfo.me/stories-by-countries&quot;&gt;Список стран&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество историй, которое можно опубликовать в сутки&lt;/td&gt;
+&lt;td&gt;1 история&lt;/td&gt;
+&lt;td&gt;до 100 историй&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество историй, которое можно опубликовать в неделю&lt;/td&gt;
+&lt;td&gt;до 3 историй&lt;/td&gt;
+&lt;td&gt;до 700 историй&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество историй, которое можно опубликовать в месяц&lt;/td&gt;
+&lt;td&gt;до 10 историй&lt;/td&gt;
+&lt;td&gt;до 3000 историй&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок, в течение которого история отображается в заголовке профиля&lt;/td&gt;
+&lt;td&gt;24 часа&lt;/td&gt;
+&lt;td&gt;6/12/24/48 часов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длительность истории&lt;/td&gt;
+&lt;td&gt;до 60 секунд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Срок, в течение которого можно просматривать список тех, кто просмотрел историю&lt;/td&gt;
+&lt;td&gt;24 часа&lt;/td&gt;
+&lt;td&gt;неограниченно&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длина текстового описания истории&lt;/td&gt;
+&lt;td&gt;до 200 символов&lt;/td&gt;
+&lt;td&gt;до 2048 символов&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Частота, с которой можно включать режим «Инкогнито»&lt;/td&gt;
+&lt;td&gt;режим недоступен&lt;/td&gt;
+&lt;td&gt;раз в 3 часа&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Длительность действия режима «Инкогнито»&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;30 минут&lt;/td&gt;
+&lt;td&gt;Все просмотры за последние 5 минут до включения режима исчезают, а просмотры в течение 25 минут после его включения не фиксируются&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Опросы&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество символов, допустимое в теле опроса&lt;/td&gt;
+&lt;td&gt;от 1 до 255&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество символов, допустимое в теле викторины&lt;/td&gt;
+&lt;td&gt;от 1 до 200&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество ответов, которое можно добавить в опросе&lt;/td&gt;
+&lt;td&gt;от 2 до 10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Количество символов, допустимое в теле варианта ответа&lt;/td&gt;
+&lt;td&gt;от 1 до 100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Подарки&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Лимит&lt;/th&gt;
+&lt;th&gt;Значение&lt;/th&gt;
+&lt;th&gt;Значение Premium&lt;/th&gt;
+&lt;th&gt;Комментарий&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальная цена за улучшение подарка&lt;/td&gt;
+&lt;td&gt;25 звёзд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальное количество закреплённых подарков в профиле&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Максимальный срок для продажи подарка&lt;/td&gt;
+&lt;td&gt;7 суток&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Подарок может быть продан за звёзды в течение 7 суток с момента его получения. Продавец получает 85% от изначальной цены подарка&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальный срок владения звёздами для их вывода&lt;/td&gt;
+&lt;td&gt;21 сутки&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Вывод звёзд становится доступен не раньше, чем через 21 сутки после того, как эти звёзды попали на счёт аккаунта в результате продажи подарка&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Минимальное количество звёзд для вывода&lt;/td&gt;
+&lt;td&gt;1000 звёзд&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Звёзды можно вывести со счёта только в том случае, если их 1000 или больше&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content:encoded></item><item><title>Установка Armbian на X96 mini</title><link>https://guilliman.ru/posts/x96mini_armbian/</link><guid isPermaLink="true">https://guilliman.ru/posts/x96mini_armbian/</guid><description>Гайд по установке Linux на ТВ приставку</description><pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Инструкция по базовой установке Armbian на приставку X96 mini на чипсете Amlogic S905W. Понадобится MicroSD карта, WiFi адаптер или Ethernet кабель. В дальнейшем приставку можно использовать для управления 3D принтером через Klipper или умным домом через Home Assistant.&lt;/p&gt;
+&lt;h3&gt;Подготовка MicroSD карты:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Скачиваем архив с последним релизом Armbian из &lt;a href=&quot;https://github.com/ophub/amlogic-s9xxx-armbian/releases&quot;&gt;этого репозитория&lt;/a&gt;. Нужный файл можно найти в списке &lt;strong&gt;Assets&lt;/strong&gt;, в нашем случае в названии файла должен быть &lt;strong&gt;amlogic_s905w&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Скачиваем программу &lt;a href=&quot;https://etcher.balena.io/#download-etcher&quot;&gt;Balena Etcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Распаковываем образ Armbian и записываем на MicroSD карту (минимум 8 Gb 10 класс) с помощью Balena Etcher. Дожидаемся записи и проверки, отключаем и подключаем заново карточку отказываясь от форматирования.&lt;/li&gt;
+&lt;li&gt;На диске &lt;strong&gt;BOOT&lt;/strong&gt; находим и переименовываем файл &lt;strong&gt;u-boot-s905x-s912.bin&lt;/strong&gt; в &lt;strong&gt;u-boot.ext&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;В директории &lt;strong&gt;extlinux&lt;/strong&gt; делаем копию файла &lt;strong&gt;extlinux.conf.bak&lt;/strong&gt; и называем его &lt;strong&gt;extlinux.conf&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Содержание файла &lt;strong&gt;extlinux.conf&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;label Armbian
+    kernel /zImage
+    initrd /uInitrd
+    fdt /dtb/amlogic/meson-gxl-s905w-tx3-mini.dtb
+    append root=UUID=86e1ce84-70ab-4966-9efc-ebc12da40498 rootflags=data=writeback rw rootfstype=ext4 console=ttyAML0,115200n8 console=tty0 no_console_suspend consoleblank=0 fsck.fix=yes fsck.repair=yes net.ifnames=0 max_loop=128 loglevel=1 voutmode=hdmi disablehpd=false overscan=100 sdrmode=auto
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Прошивка и настройка устройства:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Вставляем MicroSD карточку в выключенную ТВ приставку x96 mini&lt;/li&gt;
+&lt;li&gt;Аккуратно зажимаем кнопку внутри AV разъема с помощью спички или зубочистки и подключаем кабель питания, через 10 секунд отпускаем кнопку&lt;/li&gt;
+&lt;li&gt;Соединяем приставку с вашим роутером с помощью патч-корда.&lt;/li&gt;
+&lt;li&gt;На компьютере запускаем терминал и подключаемся по ssh к приставке и вводим пароль &lt;strong&gt;1234&lt;/strong&gt; для пользователя &lt;strong&gt;root&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;# команда подключения, вместо IP укажите адрес приставки внутри вашей локальной сети
+ssh root@&amp;lt;ip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проходим через мастер первичной настройки. Выбираем оболочку, создаём нового пользователя (рекомендуется называть его &lt;strong&gt;pi&lt;/strong&gt;, чтобы быть совместимым с приложениями для raspberry pi), выбираем временную зону и локаль консоли&lt;/li&gt;
+&lt;li&gt;После менеджера настроек можем войти под новым пользователем&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;su pi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;После чего можно выполнить обновление системы&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Встроенный wifi не работает, но можно подключить внешний wifi адаптер и настроить его с помощью &lt;strong&gt;nmtui&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo nmtui
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;p&gt;👌 Вот и всё. Ваша ТВ приставка x96 mini стала Linux сервером и готова к работе&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;ophub/amlogic-s9xxx-armbian&quot;}&lt;/p&gt;
+</content:encoded></item><item><title>Mikrotik + Telegram</title><link>https://guilliman.ru/posts/mikrotik_telegram/</link><guid isPermaLink="true">https://guilliman.ru/posts/mikrotik_telegram/</guid><description>Настройка уведомлений от Mikrotik через Telegram бота</description><pubDate>Thu, 24 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Вступление&lt;/h3&gt;
+&lt;p&gt;С помощью скриптов и расписания в Mikrotik можно настроить уведомления через Telegram. Меня интересуют две важных задачи: уведомление о новых версиях ПО и уведомления о неудачных попытках входа в админ панель.&lt;/p&gt;
+&lt;p&gt;Скрипты создаются через меню &lt;strong&gt;System &amp;gt; Scripts&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;:::note[Готовые скрипты]
+&lt;img src=&quot;./scripts.webp&quot; alt=&quot;scripts&quot; /&gt;
+:::&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;SendToTG&lt;/h3&gt;
+&lt;p&gt;Универсальный скрипт, который будут использовать другие скрипты для отправки сообщений в Телеграм. Извне скрипт принимает сообщение и отправляет его пользователю. Для настройки необходимо поменять токен бота и ID клиента пользователя которому будут приходить уведомления, других разрешений скрипт не требует&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:local BotToken &quot;YOUR_BOT_TOKEN&quot;;
+:local ChatID &quot;YOUR_TG_ID&quot;;
+:local ParseMode &quot;html&quot;;
+:local DisableWebPagePreview True;
+:local SendText $MessageText;
+:local tgUrl &quot;https://api.telegram.org/bot$BotToken/sendMessage?chat_id=$ChatID&amp;amp;text=$SendText&amp;amp;parse_mode=$ParseMode&amp;amp;disable_web_page_preview=$DisableWebPagePreview&quot;;
+/tool fetch http-method=get url=$tgUrl keep-result=no;
+:log info &quot;Send Telegram Message: $MessageText&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;CheckUpdates&lt;/h3&gt;
+&lt;p&gt;Скрипт для проверки новых версий RouterOS&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:local DeviceName [/system identity get name];
+:local Date [/system clock get date];
+:local Time [/system clock get time];
+:local CheckUpdate [/system package update check-for-updates as-value];
+:local Channel ($CheckUpdate -&amp;gt; &quot;channel&quot;);
+:local InstalledVersion ($CheckUpdate -&amp;gt; &quot;installed-version&quot;);
+:local LatestVersion ($CheckUpdate -&amp;gt; &quot;latest-version&quot;);
+:log info &quot;Script CheckUpdateFunctions - Run.&quot;;
+:if ($InstalledVersion != $LatestVersion) do={
+    :local TelegramMessageText &quot;MikroTik RouterOS - New version $LatestVersion is available! %0D%0A Installed version $InstalledVersion, channel $Channel. %0D%0A &amp;lt;a href=\&quot;https://mikrotik.com/download/changelogs\&quot;&amp;gt;Changelogs&amp;lt;/a&amp;gt;&quot;;
+
+    :log info &quot;Script CheckUpdateFunctions - New version is available, send notify.&quot;;
+
+    # START SEND TELEGRAM MESSAGE
+
+    :local  SendText &quot;\F0\9F\8C\9F &amp;lt;b&amp;gt;Update for $DeviceName! [$Date $Time]:&amp;lt;/b&amp;gt; %0D%0A $TelegramMessageText&quot;;
+
+    :local SendTelegramMessage [:parse [/system script  get SendToTG source]]; 
+
+    $SendTelegramMessage MessageText=$SendText;
+
+    # END SEND TELEGRAM MESSAGE
+
+    } else={
+
+:log info &quot;Script CheckUpdateFunctions - System is already up to date.&quot;;
+
+};
+
+:delay 1;
+
+:log info &quot;Script CheckUpdateFunctions - Completed.&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Чтобы проверка запускалась автоматически, переходим в &lt;strong&gt;System &amp;gt; Scheduler&lt;/strong&gt; и создаём задание на срабатывание, например каждые 24 часа и вводим команду:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/system script run CheckUpdates&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;:::note[Пример работы уведомления о новых версиях ПО]
+&lt;img src=&quot;./example.webp&quot; alt=&quot;example&quot; /&gt;
+:::&lt;/h2&gt;
+&lt;h3&gt;ParseLogLoginFailure&lt;/h3&gt;
+&lt;p&gt;Этот скрипт проверяет системный лог на наличие ошибок связанных с неудачными попытками входа&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;:local DeviceName [/system identity get name];
+:local Time [/system clock get time];
+:local Date [/system clock get date];
+:local TelegramMessageText;
+:global ParseLogLoginEndArrayID;
+:local IDsEvents [/log find where topics~&quot;critical&quot; message~&quot;login failure&quot;];
+:local LenArrayIDs [:len $IDsEvents];
+:local StartArrayID [:find $IDsEvents $ParseLogLoginEndArrayID];
+:local EndArrayID ($IDsEvents -&amp;gt; ($LenArrayIDs-1));
+#:log info &quot;Script ParseLogLoginFailure: running.&quot;;
+:if ($EndArrayID != $ParseLogLoginEndArrayID and [:tobool $ParseLogLoginEndArrayID] ) do={
+    #:log info &quot;Script ParseLogLoginFailure: new events found.&quot;;
+    :for KeyArray from=($StartArrayID+1) to=($LenArrayIDs-1) do={
+        :local IDMessage ($IDsEvents -&amp;gt;$KeyArray );
+        :set TelegramMessageText &quot;$TelegramMessageText %0D%0A$[/log get number=$IDMessage time] - $[/log get number=$IDMessage message];&quot;;
+        }
+    :set ParseLogLoginEndArrayID $EndArrayID;
+    #:log info &quot;Script ParseLogLoginFailure: events processed. Sending notifications.&quot;;
+    # START SEND TELEGRAM
+    :local MessageText &quot;\F0\9F\A4\AC &amp;lt;b&amp;gt;$DeviceName authentication error!&amp;lt;/b&amp;gt; $TelegramMessageText&quot;;
+    :local SendTelegramMessage [:parse [/system script get SendToTG source]];
+    $SendTelegramMessage MessageText=$MessageText;
+    # END SEND TELEGRAM
+} else={
+
+#:log info &quot;Script ParseLogLoginFailure: no new messages found.&quot;;
+};
+#:log info &quot;Script ParseLogLoginFailure: script completed successfully.&quot;;
+:set ParseLogLoginEndArrayID $EndArrayID;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Аналогично создаём задание например на каждые 5 минут:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/system script run ParseLogLoginFailure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;:::note[Пример работы уведомлений о неудачных попытках входа]
+&lt;img src=&quot;./example2.webp&quot; alt=&quot;example2&quot; /&gt;
+:::&lt;/p&gt;
+</content:encoded></item><item><title>Настройка VPS на примере Ubuntu</title><link>https://guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://guilliman.ru/posts/vps_setup/</guid><description>Создадим нового пользователя, настроим доступ по ssh, установим docker и neofetch</description><pubDate>Fri, 13 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Смена оболочки&lt;/h3&gt;
+&lt;p&gt;Если стандартная оболочка shell, можно поменять её на bash с помощью команды&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chsh -s /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Пользователь и доступ по SSH&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Создаём нового пользователя&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo adduser newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Даём возможность новому пользователю использовать sudo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo usermod -aG sudo newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Создаём скрытую директорию &lt;strong&gt;.ssh&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo mkdir /home/newuser/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем свой публичный ключ с помощью которого будем получать доступ к серверу без пароля&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;echo публичный_ключ &amp;gt;&amp;gt; /home/newuser/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Выдаём права на директорию .ssh только что созданному пользователю&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo chown -R newuser:newuser /home/newuser/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Теперь можно отключиться и подключиться к серверу от имени нового пользователя&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;exit
+ssh newuser@vps_ip
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Если в системе остались ненужные пользователи их можно удалить&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo deluser ubuntu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;И удалить его домашний каталог&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo rm -rf /home/ubuntu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Настройки сервера SSH&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Открываем файл конфига ssh&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;В основном конфиге может присутствовать импорт дополнительных параметров из других файлов. При необходимости удаляем строку, чтобы избежать конфликта настроек. Либо можно удалить дополнительные конфиги, которые были созданы провайдером.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Include /etc/ssh/sshd_config.d/*.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Запретить подключаться к серверу из под root&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;PermitRootLogin no
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Разрешить подключение с публичным ключом&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;PubkeyAuthentication yes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::warning
+13. Этот шаг запретит вход с помощью пароля, проверьте правильность введённого выше ключа&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PasswordAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Перезапускаем демон ssh&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl reload ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Docker и Docker Compose&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Удаляем старые версии&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt remove docker docker-engine docker.io containerd runc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Обновляем систему и устанавливаем зависимости&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update
+sudo apt install -y ca-certificates curl gnupg lsb-release
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем официальный репозиторий Docker&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем репозиторий в apt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;$UBUNTU_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Устанавливаем Docker Engine, CLI и Compose plugin&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверяем версию:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;docker --version
+docker compose version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем текущего пользователя в группу docker для запуска без sudo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo usermod -aG docker $USER
+newgrp docker
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;ZSH&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установка ZSH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install zsh -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Делаем ZSH оболочкой по умолчанию&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;chsh -s $(which zsh)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Homebrew&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установка&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем первую строку в настройки zsh&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sed -i &apos;1ieval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;&apos; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Oh My Posh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установка&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;curl -s https://ohmyposh.dev/install.sh | bash -s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавляем вторую строку в настройки zsh. Тема оформления&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sed -i &apos;2ieval eval &quot;$(oh-my-posh init zsh --config &quot;amro&quot;)&quot;&apos; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Neofetch&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;./neofetch.webp&quot; alt=&quot;neofetch&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Neofetch это инструмент для получения информации о системе. Я буду использовать его для красивой заставки после подключения по SSH&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установка&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install neofetch -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Создаём файл в папке motd&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/update-motd.d/99-neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Внутри пишем&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Делаем файл исполняемым&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo chmod +x /etc/update-motd.d/99-neofetch
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Редактирование docker контейнера</title><link>https://guilliman.ru/posts/edit_docker_container/</link><guid isPermaLink="true">https://guilliman.ru/posts/edit_docker_container/</guid><description>Внесение изменений в контейнер, создание нового образа и публикация в реестре</description><pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Шаг 1: Найдите ID контейнера&lt;/h3&gt;
+&lt;p&gt;Для начала необходимо определить ID контейнера, который нужно изменить:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker ps -a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Шаг 2: Внесение изменений в контейнер&lt;/h3&gt;
+&lt;p&gt;Теперь, зная ID контейнера, можно войти внутрь него и внести необходимые изменения:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -it id_контейнера /bin/sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Если нужно выполнить команду непосредственно из внешней среды:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -it id_контейнера sed -i &quot;s|https://api.ip.sb/ip|http://api.ipify.org|g&quot; /usr/local/bin/start-mtproxy.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Шаг 3: Перезапуск контейнера&lt;/h3&gt;
+&lt;p&gt;После внесения изменений нужно перезапустить контейнер, чтобы убедиться, что всё работает корректно:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker restart id_контейнера
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Шаг 4: Фиксация изменений&lt;/h3&gt;
+&lt;p&gt;При необходимости можно зафиксировать изменения создав новый образ:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker commit -m &apos;описание изменений&apos; -a &apos;имя_пользователя&apos; имя_пользователя/имя_образа
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Шаг 5: Публикация нового образа&lt;/h3&gt;
+&lt;p&gt;Логинимся в реестр и пушим обновленный образ:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker login
+docker push имя_пользователя/имя_образа
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item></channel></rss>
