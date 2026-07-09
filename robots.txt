@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guilliman.ru/sitemap-index.xml
+Sitemap: https://blog.guilliman.ru/sitemap-index.xml

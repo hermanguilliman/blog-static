@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал</title><description>Blog</description><link>https://guilliman.ru/</link><language>ru</language><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://blog.guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
 &lt;p&gt;Основная сложность при вязании узла «обезьяний кулак» заключается в определении необходимого количества витков для полного покрытия сердечника (обычно это сферический предмет, например, стеклянный шарик или металлический подшипниковый шар). Представленная ниже таблица послужит незаменимым помощником при создании вашего следующего узла «обезьяний кулак». Если вы часто вяжете такие узлы, рекомендуем добавить эту страницу в закладки. Поделитесь ей с друзьями, которым она может пригодиться!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;.//images/2.webp&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Таблица размеров для паракорда 550&lt;/h2&gt;
@@ -106,7 +106,7 @@
 &lt;li&gt;&lt;strong&gt;Проверка перед обрезкой:&lt;/strong&gt; убедитесь, что узел полностью затянут, прежде чем обрезать излишки шнура&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Сохраните эту таблицу для быстрого доступа при работе над проектами!&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>G-PASS TERMINAL</title><link>https://guilliman.ru/posts/password_generator/</link><guid isPermaLink="true">https://guilliman.ru/posts/password_generator/</guid><description>Киберпанк-генератор паролей: разбор под капотом</description><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Киберпанк-генератор паролей: разбор под капотом&lt;/h1&gt;
+</content:encoded></item><item><title>G-PASS TERMINAL</title><link>https://blog.guilliman.ru/posts/password_generator/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/password_generator/</guid><description>Киберпанк-генератор паролей: разбор под капотом</description><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Киберпанк-генератор паролей: разбор под капотом&lt;/h1&gt;
 &lt;p&gt;Короче, запилил генератор паролей. Но не очередную поделку &quot;возьми Math.random и склей буковки&quot;, а что-то более серьёзное. С криптографией, энтропией и тремя режимами на выбор. Давайте разберём, что там внутри.&lt;/p&gt;
 &lt;h2&gt;Три режима — три философии&lt;/h2&gt;
 &lt;h3&gt;1. Стандартный режим&lt;/h3&gt;
@@ -264,7 +264,7 @@ return `${(seconds / universe).toFixed(2)}x возраст Вселенной`;
 &lt;li&gt;Попробовать генератор можно &lt;a href=&quot;https://password.guilliman.ru/&quot;&gt;здесь&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::github{repo=&quot;hermanguilliman/passwordgenerator&quot;}&lt;/p&gt;
-</content:encoded></item><item><title>Фотобудка для STL/3MF</title><link>https://guilliman.ru/posts/stl-3mf-photo-booth/</link><guid isPermaLink="true">https://guilliman.ru/posts/stl-3mf-photo-booth/</guid><description>Бесплатный онлайн инструмент для красивых рендеров печатных моделей</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Что это вообще такое?&lt;/h2&gt;
+</content:encoded></item><item><title>Фотобудка для STL/3MF</title><link>https://blog.guilliman.ru/posts/stl-3mf-photo-booth/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/stl-3mf-photo-booth/</guid><description>Бесплатный онлайн инструмент для красивых рендеров печатных моделей</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Что это вообще такое?&lt;/h2&gt;
 &lt;p&gt;Это браузерный просмотрщик 3D-моделей формата STL и 3MF. Закинул файл, покрутил, настроил материал, сделал скриншот, ушёл. Данные никуда не уходят.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Основные фичи:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -457,7 +457,7 @@ composer.addPass(new OutputPass());
 &lt;h2&gt;Попробовать&lt;/h2&gt;
 &lt;p&gt;👉 &lt;strong&gt;&lt;a href=&quot;https://stl.guilliman.ru&quot;&gt;stl.guilliman.ru&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;hermanguilliman/STL-3MF-Photo-Booth&quot;}&lt;/p&gt;
-</content:encoded></item><item><title>Дизайн для 3D-печати</title><link>https://guilliman.ru/posts/design-for-3d-printing/</link><guid isPermaLink="true">https://guilliman.ru/posts/design-for-3d-printing/</guid><description>Перевод подробного руководства по проектированию функциональных деталей для 3D-печати (FDM/FFF), предлагающее эмпирические правила для оптимизации прочности, допусков и эффективности производства.</description><pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Это перевод статьи. Возможно, что в будущем будут вноситься правки.]
+</content:encoded></item><item><title>Дизайн для 3D-печати</title><link>https://blog.guilliman.ru/posts/design-for-3d-printing/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/design-for-3d-printing/</guid><description>Перевод подробного руководства по проектированию функциональных деталей для 3D-печати (FDM/FFF), предлагающее эмпирические правила для оптимизации прочности, допусков и эффективности производства.</description><pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Это перевод статьи. Возможно, что в будущем будут вноситься правки.]
 &lt;a href=&quot;https://blog.rahix.de/design-for-3d-printing&quot;&gt;Оригинал находится здесь - Design for 3D-Printing&lt;/a&gt;
 :::&lt;/p&gt;
 &lt;p&gt;За последние годы я всё глубже погружался в мир 3D-печати. Меня особенно увлекает, насколько этот процесс отличается от других методов производства. Это, в свою очередь, требует совершенно иного подхода к проектированию, чтобы создавать качественные детали для 3D-печати.&lt;/p&gt;
@@ -1386,7 +1386,7 @@ composer.addPass(new OutputPass());
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>Ограничения Telegram</title><link>https://guilliman.ru/posts/tg_limits/</link><guid isPermaLink="true">https://guilliman.ru/posts/tg_limits/</guid><description>Полный список известных ограничений</description><pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Ссылка на оригинал статьи]
+</content:encoded></item><item><title>Ограничения Telegram</title><link>https://blog.guilliman.ru/posts/tg_limits/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/tg_limits/</guid><description>Полный список известных ограничений</description><pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[Ссылка на оригинал статьи]
 &lt;a href=&quot;https://tginfo.me/limity/&quot;&gt;Дата обновления 03.04.2025&lt;/a&gt;
 :::&lt;/p&gt;
 &lt;h2&gt;Аккаунты&lt;/h2&gt;
@@ -2353,7 +2353,7 @@ composer.addPass(new OutputPass());
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>Установка Armbian на X96 mini</title><link>https://guilliman.ru/posts/x96mini_armbian/</link><guid isPermaLink="true">https://guilliman.ru/posts/x96mini_armbian/</guid><description>Гайд по установке Linux на ТВ приставку</description><pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Инструкция по базовой установке Armbian на приставку X96 mini на чипсете Amlogic S905W. Понадобится MicroSD карта, WiFi адаптер или Ethernet кабель. В дальнейшем приставку можно использовать для управления 3D принтером через Klipper или умным домом через Home Assistant.&lt;/p&gt;
+</content:encoded></item><item><title>Установка Armbian на X96 mini</title><link>https://blog.guilliman.ru/posts/x96mini_armbian/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/x96mini_armbian/</guid><description>Гайд по установке Linux на ТВ приставку</description><pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Инструкция по базовой установке Armbian на приставку X96 mini на чипсете Amlogic S905W. Понадобится MicroSD карта, WiFi адаптер или Ethernet кабель. В дальнейшем приставку можно использовать для управления 3D принтером через Klipper или умным домом через Home Assistant.&lt;/p&gt;
 &lt;h3&gt;Подготовка MicroSD карты:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Скачиваем архив с последним релизом Armbian из &lt;a href=&quot;https://github.com/ophub/amlogic-s9xxx-armbian/releases&quot;&gt;этого репозитория&lt;/a&gt;. Нужный файл можно найти в списке &lt;strong&gt;Assets&lt;/strong&gt;, в нашем случае в названии файла должен быть &lt;strong&gt;amlogic_s905w&lt;/strong&gt;&lt;/li&gt;
@@ -2398,7 +2398,7 @@ ssh root@&amp;lt;ip&amp;gt;
 &lt;hr /&gt;
 &lt;p&gt;👌 Вот и всё. Ваша ТВ приставка x96 mini стала Linux сервером и готова к работе&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;ophub/amlogic-s9xxx-armbian&quot;}&lt;/p&gt;
-</content:encoded></item><item><title>Mikrotik + Telegram</title><link>https://guilliman.ru/posts/mikrotik_telegram/</link><guid isPermaLink="true">https://guilliman.ru/posts/mikrotik_telegram/</guid><description>Настройка уведомлений от Mikrotik через Telegram бота</description><pubDate>Thu, 24 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Вступление&lt;/h3&gt;
+</content:encoded></item><item><title>Mikrotik + Telegram</title><link>https://blog.guilliman.ru/posts/mikrotik_telegram/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/mikrotik_telegram/</guid><description>Настройка уведомлений от Mikrotik через Telegram бота</description><pubDate>Thu, 24 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Вступление&lt;/h3&gt;
 &lt;p&gt;С помощью скриптов и расписания в Mikrotik можно настроить уведомления через Telegram. Меня интересуют две важных задачи: уведомление о новых версиях ПО и уведомления о неудачных попытках входа в админ панель.&lt;/p&gt;
 &lt;p&gt;Скрипты создаются через меню &lt;strong&gt;System &amp;gt; Scripts&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;:::note[Готовые скрипты]
@@ -2494,7 +2494,7 @@ ssh root@&amp;lt;ip&amp;gt;
 &lt;p&gt;:::note[Пример работы уведомлений о неудачных попытках входа]
 &lt;img src=&quot;./example2.webp&quot; alt=&quot;example2&quot; /&gt;
 :::&lt;/p&gt;
-</content:encoded></item><item><title>Настройка VPS на примере Ubuntu</title><link>https://guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://guilliman.ru/posts/vps_setup/</guid><description>Создадим нового пользователя, настроим доступ по ssh, установим docker и neofetch</description><pubDate>Fri, 13 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Смена оболочки&lt;/h3&gt;
+</content:encoded></item><item><title>Настройка VPS на примере Ubuntu</title><link>https://blog.guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup/</guid><description>Создадим нового пользователя, настроим доступ по ssh, установим docker и neofetch</description><pubDate>Fri, 13 Sep 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Смена оболочки&lt;/h3&gt;
 &lt;p&gt;Если стандартная оболочка shell, можно поменять её на bash с помощью команды&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;chsh -s /bin/bash
 &lt;/code&gt;&lt;/pre&gt;
@@ -2673,7 +2673,7 @@ neofetch
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;sudo chmod +x /etc/update-motd.d/99-neofetch
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Редактирование docker контейнера</title><link>https://guilliman.ru/posts/edit_docker_container/</link><guid isPermaLink="true">https://guilliman.ru/posts/edit_docker_container/</guid><description>Внесение изменений в контейнер, создание нового образа и публикация в реестре</description><pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Шаг 1: Найдите ID контейнера&lt;/h3&gt;
+</content:encoded></item><item><title>Редактирование docker контейнера</title><link>https://blog.guilliman.ru/posts/edit_docker_container/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/edit_docker_container/</guid><description>Внесение изменений в контейнер, создание нового образа и публикация в реестре</description><pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Шаг 1: Найдите ID контейнера&lt;/h3&gt;
 &lt;p&gt;Для начала необходимо определить ID контейнера, который нужно изменить:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker ps -a
 &lt;/code&gt;&lt;/pre&gt;
