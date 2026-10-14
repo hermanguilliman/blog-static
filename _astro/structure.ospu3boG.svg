@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Структура полезной техдокументации">
+  <rect width="1200" height="520" rx="24" fill="#f8fafc" />
+  <text x="600" y="48" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#0f172a">Полезный документ</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="420" y="70" width="360" height="54" rx="16" fill="#1d4ed8" />
+    <text x="600" y="104" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Цель читателя</text>
+
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8" />
+      </marker>
+    </defs>
+    <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M500,124 C440,155 330,165 185,180" />
+      <path d="M545,124 C525,155 485,165 465,180" />
+      <path d="M655,124 C675,155 715,165 745,180" />
+      <path d="M700,124 C760,155 875,165 1020,180" />
+      <path d="M185,242 L185,300" />
+      <path d="M465,242 L465,300" />
+      <path d="M745,242 L745,300" />
+      <path d="M1020,242 L1020,300" />
+    </g>
+
+    <g>
+      <rect x="60" y="180" width="250" height="82" rx="14" fill="#dbeafe" stroke="#2563eb" />
+      <text x="185" y="212" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">Контекст</text>
+      <text x="185" y="234" text-anchor="middle" font-size="13" fill="#334155">Зачем это нужно</text>
+    </g>
+
+    <g>
+      <rect x="340" y="180" width="250" height="82" rx="14" fill="#dbeafe" stroke="#2563eb" />
+      <text x="465" y="212" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">Шаги</text>
+      <text x="465" y="234" text-anchor="middle" font-size="13" fill="#334155">Команды и порядок</text>
+    </g>
+
+    <g>
+      <rect x="620" y="180" width="250" height="82" rx="14" fill="#dbeafe" stroke="#2563eb" />
+      <text x="745" y="208" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">Проверка</text>
+      <text x="745" y="230" text-anchor="middle" font-size="13" fill="#334155">Ожидаемый результат</text>
+      <text x="745" y="248" text-anchor="middle" font-size="13" fill="#334155">и health checks</text>
+    </g>
+
+    <g>
+      <rect x="895" y="180" width="250" height="82" rx="14" fill="#dbeafe" stroke="#2563eb" />
+      <text x="1020" y="212" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">Откат</text>
+      <text x="1020" y="234" text-anchor="middle" font-size="13" fill="#334155">Как вернуть назад</text>
+    </g>
+
+    <rect x="70" y="300" width="230" height="42" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="185" y="327" text-anchor="middle" font-size="13" fill="#334155">Что сломается</text>
+
+    <rect x="350" y="300" width="230" height="42" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="465" y="327" text-anchor="middle" font-size="13" fill="#334155">Порядок</text>
+
+    <rect x="630" y="300" width="230" height="42" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="745" y="327" text-anchor="middle" font-size="13" fill="#334155">Health checks</text>
+
+    <rect x="905" y="300" width="230" height="42" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="1020" y="327" text-anchor="middle" font-size="13" fill="#334155">Backups и rollback</text>
+
+    <text x="600" y="410" text-anchor="middle" font-size="15" fill="#64748b">
+      Если в документе нет проверки и отката, он не помогает через год - он лишь создаёт уверенность.
+    </text>
+  </g>
+</svg>
