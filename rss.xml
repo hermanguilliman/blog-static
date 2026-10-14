@@ -1,4 +1,255 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://blog.guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Настройка VPS на примере Ubuntu — расширенное руководство</title><link>https://blog.guilliman.ru/posts/vps_setup_new/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup_new/</guid><description>Полная и безопасная настройка VPS: пользователь с sudo, SSH-ключи, UFW, Docker, Zsh, Oh My Posh, Homebrew и Neofetch</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+&lt;p&gt;Это руководство поможет сделать новый VPS безопасным и удобным для повседневной работы. Мы настраиваем сервер с чистого Ubuntu и превращаем его в рабочую среду для запуска проектов, Docker-контейнеров и удалённой разработки.&lt;/p&gt;
+&lt;p&gt;Что и для чего делается:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Смена root-входа на отдельного пользователя&lt;/strong&gt; — чтобы не работать постоянно под root и ограничить возможный ущерб при компрометации.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH-ключ вместо пароля&lt;/strong&gt; — защищает от брутфорса и убирает необходимость вводить пароль при подключении.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Отключение входа root и парольной аутентификации&lt;/strong&gt; — закрывает самые частые векторы атаки по SSH.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UFW&lt;/strong&gt; — ограничивает входящие соединения только теми портами, которые действительно нужны.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker и Compose&lt;/strong&gt; — упрощают запуск и обновление приложений в изолированных контейнерах.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zsh, Oh My Posh и Homebrew&lt;/strong&gt; — делают терминал удобнее и дают доступ к дополнительным инструментам.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Neofetch в MOTD&lt;/strong&gt; — показывает наглядную информацию о системе сразу после входа по SSH.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;В результате мы получаем VPS, который безопасно принимает подключения, готов к деплою проектов и удобен для работы в терминале.&lt;/p&gt;
+&lt;h3&gt;Соглашения об этом руководстве&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Команды выполняются в оболочке root после &lt;code&gt;ssh root@VPS_IP&lt;/code&gt;, если не указано иное.&lt;/li&gt;
+&lt;li&gt;Если вы уже работаете от имени обычного пользователя с правами &lt;code&gt;sudo&lt;/code&gt;, добавляйте &lt;code&gt;sudo&lt;/code&gt; к системным командам.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;...&amp;gt;&lt;/code&gt; означает значение, которое нужно подставить самостоятельно.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Перед&lt;/strong&gt; отключением пароля проверьте вход по SSH-ключу в отдельном окне.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Исходная подготовка сервера&lt;/h3&gt;
+&lt;p&gt;Обновите систему и установите базовые утилиты:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt update
+apt full-upgrade -y
+apt install -y ca-certificates curl gnupg lsb-release ufw apt-transport-https
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;При желании задайте часовой пояс:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;timedatectl set-timezone Europe/Moscow
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Пользователь и доступ по SSH&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте нового пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;adduser --gecos &quot;&quot; newuser
+usermod -aG sudo newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте каталог &lt;code&gt;.ssh&lt;/code&gt; с правильным владельцем и правами:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;install -d -m 700 -o newuser -g newuser /home/newuser/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте открытый ключ нового пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;printf &apos;%s\n&apos; &apos;ssh-ed25519 AAAA... ваш_ключ&apos; &amp;gt; /home/newuser/.ssh/authorized_keys
+chown newuser:newuser /home/newuser/.ssh/authorized_keys
+chmod 600 /home/newuser/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::warning
+Не удаляйте парольный вход до того, как отдельно проверите вход по ключу.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте вход по ключу в другом терминале:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;ssh newuser@VPS_IP
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Только после успешной проверки переходите к настройке &lt;code&gt;sshd&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Изучите, нет ли уже настроек в drop-in-файлах:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;grep -RniE &apos;PermitRootLogin|PasswordAuthentication|PubkeyAuthentication|KbdInteractiveAuthentication&apos; \
+  /etc/ssh/sshd_config /etc/ssh/sshd_config.d 2&amp;gt;/dev/null || true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте основной конфиг:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Если &lt;code&gt;Include /etc/ssh/sshd_config.d/*.conf&lt;/code&gt; находится в начале файла, параметры из drop-in-файлов имеют приоритет. В таком случае либо удалите конфликтующий &lt;code&gt;Include&lt;/code&gt;, либо исправьте нужные значения в файле из &lt;code&gt;sshd_config.d&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите безопасные значения:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте синтаксис и перезагрузите демон:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sshd -t
+systemctl reload ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::tip
+&lt;code&gt;systemctl reload ssh&lt;/code&gt; не обрывает уже открытые сессии, поэтому его можно выполнять, не закрывая текущее подключение.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Если исходный пользователь больше не нужен, удалите его вместе с домашним каталогом:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;deluser --remove-home ubuntu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::warning
+Запускайте эту команду только после того, как убедились, что вход под &lt;code&gt;newuser&lt;/code&gt; работает. Имя &lt;code&gt;ubuntu&lt;/code&gt; замените на реального исходного пользователя, если оно другое.
+:::&lt;/p&gt;
+&lt;h3&gt;Файрвол UFW&lt;/h3&gt;
+&lt;p&gt;Разрешите SSH и включите UFW:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw enable
+ufw status verbose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Если используете нестандартный порт SSH, замените &lt;code&gt;22/tcp&lt;/code&gt; на нужный порт до &lt;code&gt;ufw enable&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Docker и Docker Compose&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Удалите конфликтующие старые пакеты:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
+  apt remove -y &quot;$pkg&quot; 2&amp;gt;/dev/null || true
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте официальный репозиторий Docker:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; \
+  &amp;gt; /etc/apt/sources.list.d/docker.list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Docker Engine и Compose plugin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt update
+apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте установку:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;docker --version
+docker compose version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Разрешите &lt;code&gt;newuser&lt;/code&gt; запускать Docker без &lt;code&gt;sudo&lt;/code&gt; и проверьте отдельной оболочкой:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;usermod -aG docker newuser
+runuser -l newuser -c &apos;docker run --rm hello-world&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Zsh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Zsh:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt install -y zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Сделайте Zsh оболочкой по умолчанию для &lt;code&gt;newuser&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;chsh -s &quot;$(command -v zsh)&quot; newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Зайдите в новую сессию или переключитесь:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;su - newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Homebrew&lt;/h3&gt;
+&lt;p&gt;Homebrew нельзя устанавливать от root, поэтому выполняйте установку от целевого пользователя.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Homebrew:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
+  &apos;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
+  grep -q &quot;linuxbrew/.linuxbrew/bin/brew shellenv&quot; &quot;$HOME/.zshrc&quot; || \
+    printf &apos;\&apos;&apos;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Oh My Posh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Oh My Posh для пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
+  &apos;curl -s https://ohmyposh.dev/install.sh | bash -s&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
+  grep -q &quot;oh-my-posh init zsh&quot; &quot;$HOME/.zshrc&quot; || \
+    printf &apos;\&apos;&apos;eval &quot;$(oh-my-posh init zsh --config amro)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::note
+&lt;code&gt;eval &quot;$(oh-my-posh init zsh --config amro)&quot;&lt;/code&gt; должен встречаться один раз. Двойной &lt;code&gt;eval&lt;/code&gt; не нужен.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте новую сессию Zsh или перезайдите:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;exec zsh -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Neofetch&lt;/h3&gt;
+&lt;p&gt;Neofetch — инструмент для вывода информации о системе. Я использую его для красивой заставки в MOTD после подключения по SSH.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Neofetch:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt install -y neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::note
+В Ubuntu 24.04 Neofetch находится в репозитории &lt;code&gt;universe&lt;/code&gt;. Если пакет не найден, подключите репозиторий:
+&lt;code&gt;add-apt-repository universe&lt;/code&gt; и повторите &lt;code&gt;apt update&lt;/code&gt;.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте MOTD-скрипт:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;cat &amp;gt; /etc/update-motd.d/99-neofetch &amp;lt;&amp;lt;&apos;EOF&apos;
+#!/bin/sh
+neofetch
+EOF
+chmod 0755 /etc/update-motd.d/99-neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте вывод MOTD:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;run-parts /etc/update-motd.d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Проверка после настройки&lt;/h3&gt;
+&lt;p&gt;Выполните финальную проверку от имени &lt;code&gt;newuser&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  id
+  groups
+  docker --version
+  docker compose version
+  zsh --version
+  command -v oh-my-posh || true
+  neofetch | head -n 5
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Проверьте статус SSH и файрвола:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;systemctl is-active ssh
+ufw status verbose
+ss -tulpn | grep &quot;:22&quot; || true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Чек-лист безопасности&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Вход по паролю отключён.&lt;/li&gt;
+&lt;li&gt;[ ] Вход root по SSH отключён.&lt;/li&gt;
+&lt;li&gt;[ ] SSH-ключ проверен в отдельном окне.&lt;/li&gt;
+&lt;li&gt;[ ] UFW включён и разрешает нужный SSH-порт.&lt;/li&gt;
+&lt;li&gt;[ ] Обычный пользователь входит без &lt;code&gt;sudo&lt;/code&gt; только там, где это действительно нужно.&lt;/li&gt;
+&lt;li&gt;[ ] Docker проверен от имени обычного пользователя.&lt;/li&gt;
+&lt;li&gt;[ ] Есть резервная копия или snapshot VPS перед существенными изменениями.&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://blog.guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
 &lt;p&gt;Основная сложность при вязании узла «обезьяний кулак» заключается в определении необходимого количества витков для полного покрытия сердечника (обычно это сферический предмет, например, стеклянный шарик или металлический подшипниковый шар). Представленная ниже таблица послужит незаменимым помощником при создании вашего следующего узла «обезьяний кулак». Если вы часто вяжете такие узлы, рекомендуем добавить эту страницу в закладки. Поделитесь ей с друзьями, которым она может пригодиться!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;.//images/2.webp&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Таблица размеров для паракорда 550&lt;/h2&gt;
