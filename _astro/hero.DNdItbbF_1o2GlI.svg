@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Yandex Mini 2 Adventures">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a0a" />
+      <stop offset="55%" stop-color="#5b1111" />
+      <stop offset="100%" stop-color="#c62828" />
+    </linearGradient>
+    <linearGradient id="device" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5" />
+      <stop offset="100%" stop-color="#bdbdbd" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="32" fill="url(#bg)" />
+
+  <g opacity="0.12">
+    <circle cx="1020" cy="90" r="130" fill="#ff8a80" />
+    <circle cx="180" cy="330" r="120" fill="#ffcdd2" />
+  </g>
+
+  <!-- Device -->
+  <g filter="url(#shadow)">
+    <rect x="760" y="110" width="290" height="200" rx="26" fill="url(#device)" />
+    <rect x="790" y="140" width="230" height="95" rx="14" fill="#263238" />
+    <circle cx="905" cy="270" r="16" fill="#c62828" />
+    <text x="905" y="195" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#80cbc4">Yandex</text>
+    <text x="905" y="225" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#b0bec5">Mini 2</text>
+  </g>
+
+  <!-- Terminal -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="120" width="520" height="200" rx="16" fill="#0b1020" stroke="#455a64" stroke-width="2" />
+    <circle cx="88" cy="148" r="7" fill="#ff5f56" />
+    <circle cx="112" cy="148" r="7" fill="#ffbd2e" />
+    <circle cx="136" cy="148" r="7" fill="#27c93f" />
+    <text x="85" y="185" font-family="Consolas, monospace" font-size="22" fill="#80cbc4">$ adb connect 192.168.1.123:5555</text>
+    <text x="85" y="215" font-family="Consolas, monospace" font-size="22" fill="#aed581">connected to 192.168.1.123:5555</text>
+    <text x="85" y="245" font-family="Consolas, monospace" font-size="22" fill="#80cbc4">$ adb shell</text>
+    <text x="85" y="275" font-family="Consolas, monospace" font-size="22" fill="#ffcc80"># whoami</text>
+    <text x="85" y="305" font-family="Consolas, monospace" font-size="26" font-weight="700" fill="#ef5350">root</text>
+  </g>
+
+  <text x="90" y="95" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff">Yandex Mini 2</text>
+  <text x="90" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#ffcdd2">root-доступ через серверную конфигурацию ADB</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffebee">
+    <text x="640" y="360">remoteActivation · network · quasar · AArch64</text>
+  </g>
+</svg>

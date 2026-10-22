@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Недорогие микроконтроллеры для DIY: от выбора до первого устройства</title><link>https://blog.guilliman.ru/posts/budget_mcu_diy/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/budget_mcu_diy/</guid><description>Полный гид по бюджетным MCU для самодельных устройств: сравнение RP2040, ESP32, STM32, CH32 и AVR с рекомендациями по проектам</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Как быстро выбрать&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Yandex Mini 2 Adventures</title><link>https://blog.guilliman.ru/posts/yandex_mini2_root/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/yandex_mini2_root/</guid><description>Получение root-доступа к Яндекс Станции Мини 2 через серверную конфигурацию ADB: от утечки сертификатов до shell</description><pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Источник: &lt;a href=&quot;https://iamtsunde.re/blog/yamini2adventures&quot;&gt;iamtsunde.re/blog/yamini2adventures&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Эпизод 1. Утечка сертификатов&lt;/h2&gt;
+&lt;p&gt;В Telegram появился пересланный пост об утечке сертификата центра сертификации eMudhra:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;THIS IS NOT A DRILL: CA certificate leaked. Update everything.&lt;/p&gt;
+&lt;p&gt;https://emudhra.we-have-a-problem.com/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Источник: https://t.me/lina_shitpost/3634&lt;/p&gt;
+&lt;p&gt;После появления этой информации возник вопрос о наличии сертификатов Яндекса в доверенных корневых центрах сертификации и возможности создания собственного бэкенда для Quasar.&lt;/p&gt;
+&lt;h2&gt;Эпизод 2. Утечка приватных ключей&lt;/h2&gt;
+&lt;p&gt;Позже появилась информация об утечке приватных ключей:&lt;/p&gt;
+&lt;p&gt;https://chaos.social/@fluepke/117474156947559280&lt;/p&gt;
+&lt;p&gt;Автор использовал репозиторий с сертификатами для необходимых поддоменов Яндекса и начал разработку собственного API для управления устройством без зависимости от официального бэкенда.&lt;/p&gt;
+&lt;p&gt;В ходе работы исследовался протокол &lt;code&gt;uni.ws&lt;/code&gt;, определения которого распределены по множеству файлов &lt;code&gt;.proto&lt;/code&gt;. При анализе также изучались декомпилированный код и конфигурация устройства.&lt;/p&gt;
+&lt;h2&gt;Эпизод 3. Активация ADB через серверную конфигурацию&lt;/h2&gt;
+&lt;p&gt;В процессе анализа выяснилось, что настройки ADB можно переопределить с помощью серверной конфигурации.&lt;/p&gt;
+&lt;p&gt;Для этого была реализована следующая функция на Rust:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pub(super) async fn get_sync_info() -&amp;gt; Json&amp;lt;serde_json::Value&amp;gt; {
+    Json(serde_json::json!({
+        &quot;status&quot;: &quot;ok&quot;,
+        &quot;config&quot;: {
+            &quot;account_config&quot;: { &quot;spotter&quot;: &quot;alisa&quot; },
+            &quot;device_config&quot;: { &quot;name&quot;: &quot;quasar&quot; },
+            &quot;system_config&quot;: {
+                &quot;adbd&quot;: { &quot;remoteActivation&quot;: true, &quot;network&quot;: true }
+            }
+        },
+        &quot;subscription&quot;: { &quot;mode&quot;: &quot;transaction&quot; }
+    }))
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;После перезагрузки станция получила конфигурацию от бэкенда.&lt;/p&gt;
+&lt;h2&gt;Результат&lt;/h2&gt;
+&lt;p&gt;Подключение к устройству через ADB:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lain@m68k ~/D/p/rebulbazaur (trunk)&amp;gt; adb connect 192.168.1.123:5555
+connected to 192.168.1.123:5555
+lain@m68k ~/D/p/rebulbazaur (trunk)&amp;gt; adb shell
+#
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Вывод &lt;code&gt;dmesg&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# dmesg | head -n13
+[    0.000000@0] Booting Linux on physical CPU 0x0
+[    0.000000@0] Linux version 4.9.68 (sandbox@sandbox1149-18-04-12074239767-0) (gcc version 6.3.1 20170109 (Linaro GCC 6.3-2017.02) ) #1 SMP PREEMPT Tue Oct 13 15:26:40 MSK 2026
+[    0.000000@0] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000@0] efi: Getting EFI parameters from FDT:
+[    0.000000@0] efi: UEFI not found.
+[    0.000000@0] Reserved memory: created CMA memory pool at 0x0000000005000000, size 20 MiB
+[    0.000000@0] OF: reserved mem: initialized node linux,secmon, compatible id shared-dma-pool
+[    0.000000@0] cma: Reserved 4 MiB at 0x000000000f800000
+[    0.000000@0] On node 0 totalpages: 65536
+[    0.000000@0]   DMA zone: 1024 pages used for memmap
+[    0.000000@0]   DMA zone: 0 pages reserved
+[    0.000000@0]   DMA zone: 65536 pages, LIFO batch:15
+[    0.000000@0] psci: probing for conduit method from DT.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Информация о системе:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# uname -a
+Linux yandex-mini2-ZBCK 4.9.68 #1 SMP PREEMPT Tue Oct 13 15:26:40 MSK 2026 aarch64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Проверка пользователя:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# whoami
+root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Содержимое корневой директории:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# ls
+bin        dev        lib32      mnt        root       sys       tmp
+bkupgrade  etc        linuxrc    opt        run        system    usr
+data       lib        media      proc       sbin       tee       var
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Содержимое &lt;code&gt;/system/vendor/quasar/&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# cd system/vendor/quasar/
+# ls
+VERSION                 ledpatterns             set_monotonic_time.sh
+activate_adb.sh         libs                    set_volume.sh
+activate_aux_as_usb.sh  maind                   sounds
+adb_options.inc         matter                  spotter_models
+bio_lingware            metrics_collector       tcp_alsa_writer
+ca-certificates.crt     onboot.sh               unbound
+certs                   ota_script.pub          version_full
+chrony-status           platformKey.h.sha256    vqe_models
+clock_led_util          quasar.cfg              wireless_iface_up.sh
+device_ota_update.sh    quasar_client           yio_iptables_count.sh
+keymaster_proxy_app     quasar_launcher2        yio_iptables_init.sh
+led_util                reboot.sh
+ledconfigs              run.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Итог&lt;/h2&gt;
+&lt;p&gt;В результате эксперимента автор получил сетевой доступ к ADB и root-оболочке Яндекс Станции Мини 2. Ключевым этапом стало обнаружение возможности изменять настройки ADB через серверную конфигурацию устройства.&lt;/p&gt;
+&lt;p&gt;Представленные результаты относятся к конкретному экземпляру устройства и конфигурации, использованной автором.&lt;/p&gt;
+</content:encoded></item><item><title>Недорогие микроконтроллеры для DIY: от выбора до первого устройства</title><link>https://blog.guilliman.ru/posts/budget_mcu_diy/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/budget_mcu_diy/</guid><description>Полный гид по бюджетным MCU для самодельных устройств: сравнение RP2040, ESP32, STM32, CH32 и AVR с рекомендациями по проектам</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Как быстро выбрать&lt;/h3&gt;
 &lt;p&gt;Начните с таблицы. Выберите задачу и читайте подробный обзор нужной платформы.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
