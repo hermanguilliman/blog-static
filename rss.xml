@@ -87,6 +87,595 @@ ledconfigs              run.sh
 &lt;h2&gt;Итог&lt;/h2&gt;
 &lt;p&gt;В результате эксперимента автор получил сетевой доступ к ADB и root-оболочке Яндекс Станции Мини 2. Ключевым этапом стало обнаружение возможности изменять настройки ADB через серверную конфигурацию устройства.&lt;/p&gt;
 &lt;p&gt;Представленные результаты относятся к конкретному экземпляру устройства и конфигурации, использованной автором.&lt;/p&gt;
+</content:encoded></item><item><title>Как писать техдокументацию, чтобы через год всё ещё понимать</title><link>https://blog.guilliman.ru/posts/docs_that_last/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/docs_that_last/</guid><description>Практический подход к документации, который сохраняет проект понятным через 6-12 месяцев: структура, шаблоны, проверки, откат и примеры</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Коротко о главном&lt;/h3&gt;
+&lt;p&gt;Документация, которая переживает полгода, отвечает на четыре вопроса без поиска в чатах и логах:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;зачем это сделано;&lt;/li&gt;
+&lt;li&gt;как это запущено;&lt;/li&gt;
+&lt;li&gt;как проверить, что оно работает;&lt;/li&gt;
+&lt;li&gt;как откатиться или починить, если сломалось.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Без этих пунктов документ превращается в мёртвый текст: его не читают, а если и открывают, то только в крайнем случае.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./structure.svg&quot; alt=&quot;Структура полезного документа&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;Почему документация умирает&lt;/h3&gt;
+&lt;p&gt;Документация умирает не потому, что никто не пишет. Обычно её убивают пять типичных ошибок:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Пишут для себя в моменте.&lt;/strong&gt; Автор помнит контекст, читатель через год - нет.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Описывают команды, но не результат.&lt;/strong&gt; Команда без ожидаемого вывода бесполезна.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Нет отката.&lt;/strong&gt; Без rollback шага документ описывает только happy path.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Нет проверок.&lt;/strong&gt; «Работает на моей машине» - это не проверка.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Нет ответственного.&lt;/strong&gt; Если непонятно, кто обновляет документ, он не обновляется.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Грубый, но рабочий тест: если ваш репозиторий можно передать коллеге, и он сможет запустить проект с нуля по документу без звонка вам, документ хороший. Если нужен звонок, документ слабый.&lt;/p&gt;
+&lt;h3&gt;Что гарантирует полезность документа&lt;/h3&gt;
+&lt;p&gt;Четыре признака повышают шанс, что документ выживет:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Он короткий.&lt;/strong&gt; Чем меньше текста, тем больше шанс, что его прочитают.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Он привязан к коду.&lt;/strong&gt; Команды копируются из документа и запускаются.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Он содержит проверочные шаги.&lt;/strong&gt; «curl вернул 200» лучше, чем «сайт поднялся».&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Он обновляется вместе с изменением.&lt;/strong&gt; Документ обновляют вместе с патчем, а не отдельной задачей.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Пишите так, чтобы читатель мог открыть терминал, выполнить пару команд и понять, на каком шаге он находится.&lt;/p&gt;
+&lt;h3&gt;Железные правила&lt;/h3&gt;
+&lt;h4&gt;1. Каждая важная инструкция начинается с цели&lt;/h4&gt;
+&lt;p&gt;Не пишите: «Установите Nginx».&lt;/p&gt;
+&lt;p&gt;Пишите: «Нужно обрабатывать запросы по домену example.com, отдать статику и прокинуть API в контейнер на порт 3000».&lt;/p&gt;
+&lt;p&gt;Цель сокращает ошибки и показывает, что можно выкинуть из инструкции.&lt;/p&gt;
+&lt;h4&gt;2. Команды должны быть копируемыми&lt;/h4&gt;
+&lt;p&gt;Команда в документе должна запускаться copy-paste. Если в команде есть &lt;code&gt;&amp;lt;VPS_IP&amp;gt;&lt;/code&gt;, читатель обязан понять, что подставлять. Если есть &lt;code&gt;${USER}&lt;/code&gt;, читатель должен знать, откуда берётся переменная.&lt;/p&gt;
+&lt;p&gt;Плохо:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh user@server
+docker compose up
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Лучше:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh deploy@203.0.113.10
+cd /opt/app
+docker compose up -d
+docker compose ps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Последняя строка объясняет, как проверить результат.&lt;/p&gt;
+&lt;h4&gt;3. Показывайте ожидаемый результат&lt;/h4&gt;
+&lt;p&gt;После команды пишите ожидаемый вывод или признак успеха.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -I https://example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ожидается: HTTP/2 200 и заголовок &lt;code&gt;server: Caddy&lt;/code&gt; или &lt;code&gt;server: nginx&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Если результат непредсказуем, пишите: «Там должно появиться сообщение &lt;code&gt;Container app started&lt;/code&gt;».&lt;/p&gt;
+&lt;h4&gt;4. Документируйте откат&lt;/h4&gt;
+&lt;p&gt;Для каждой необратимой операции пишите rollback.&lt;/p&gt;
+&lt;p&gt;Чек-лист отката:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;изменение сделано;&lt;/li&gt;
+&lt;li&gt;как итог - что changed;&lt;/li&gt;
+&lt;li&gt;rollback - восстановить из backup;&lt;/li&gt;
+&lt;li&gt;проверить - health check;&lt;/li&gt;
+&lt;li&gt;записать в issue или changelog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Если отката нет, пишите это явно: «Отката нет: после команды данные удалены навсегда». Это лучше ложной надежды.&lt;/p&gt;
+&lt;h4&gt;5. Дата и автор не должны быть декорацией&lt;/h4&gt;
+&lt;p&gt;В начале документа укажите:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;дата изменения;&lt;/li&gt;
+&lt;li&gt;автор;&lt;/li&gt;
+&lt;li&gt;версия;&lt;/li&gt;
+&lt;li&gt;для какого окружения написано.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Тогда через полгода будет ясно, актуален ли текст.&lt;/p&gt;
+&lt;h3&gt;Шаблон хорошего runbook&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# Название задачи
+
+Дата: 2026-10-14
+Автор: ansible
+
+## Цель
+
+Что мы делаем и какой результат ожидаем.
+
+## Контекст
+
+- где находится система;
+- какие ограничения;
+- что уже настроено;
+- какие доступы нужны.
+
+## Предусловия
+
+- root/ssh;
+- backup сделан;
+- домен указывает на IP.
+
+## Шаги
+
+1. Сделать backup.
+2. Применить изменение.
+3. Проверить.
+
+## Проверка
+
+- команда 1;
+- команда 2;
+- ожидаемый вывод.
+
+## Откат
+
+- шаг 1;
+- шаг 2;
+- проверка отката.
+
+## Чек-лист
+
+- [ ] backup есть
+- [ ] тесты прошли
+- [ ] логи чисты
+
+## Ссылки
+
+- репозиторий;
+- dashboard;
+- backup job.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Шаблон работает, если держать его коротким и конкретным.&lt;/p&gt;
+&lt;h3&gt;Таблица: типы документации&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Тип документа&lt;/th&gt;
+&lt;th&gt;Когда нужен&lt;/th&gt;
+&lt;th&gt;Отличный признак&lt;/th&gt;
+&lt;th&gt;Частая ошибка&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;README&lt;/td&gt;
+&lt;td&gt;Вход в проект&lt;/td&gt;
+&lt;td&gt;Первые 5 минут запуска&lt;/td&gt;
+&lt;td&gt;Дублировать всё&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Runbook&lt;/td&gt;
+&lt;td&gt;Операционные задачи&lt;/td&gt;
+&lt;td&gt;Пошаговые команды&lt;/td&gt;
+&lt;td&gt;Нет отката&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ADR&lt;/td&gt;
+&lt;td&gt;Решения&lt;/td&gt;
+&lt;td&gt;Причина, альтернативы&lt;/td&gt;
+&lt;td&gt;Пишут вместо кода&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;API docs&lt;/td&gt;
+&lt;td&gt;Публичные интерфейсы&lt;/td&gt;
+&lt;td&gt;Примеры запроса/ответа&lt;/td&gt;
+&lt;td&gt;Тела запроса без примеров&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Run-and-trace&lt;/td&gt;
+&lt;td&gt;Инциденты&lt;/td&gt;
+&lt;td&gt;Что делать сейчас&lt;/td&gt;
+&lt;td&gt;Путают с архитектурой&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Architecture&lt;/td&gt;
+&lt;td&gt;Большая система&lt;/td&gt;
+&lt;td&gt;Схемы и границы&lt;/td&gt;
+&lt;td&gt;Нет связи с кодом&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;README должен отвечать на вопрос «как запустить». Runbook - «как применить на проде». ADR - «почему так сделали».&lt;/p&gt;
+&lt;h3&gt;Пример плохого и хорошего документа&lt;/h3&gt;
+&lt;p&gt;Плохой:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Деплой
+
+Запусти compose. Загрузи образ. Проверь.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Читатель не знает, какой compose, куда загрузить, как проверить.&lt;/p&gt;
+&lt;p&gt;Хороший:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Деплой релиза 1.4.0
+
+Дата: 2026-10-14
+Сервер: app-01
+
+### 1. Сделать backup базы
+
+```bash
+pg_dump -Fc production &amp;gt; /backup/db-$(date +%F).dump
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ожидается файл размером более 100 МБ.&lt;/p&gt;
+&lt;h3&gt;2. Обновить код&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cd /opt/app
+git fetch --tags
+git checkout v1.4.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;3. Перезапустить&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker compose up -d
+docker compose ps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ожидается: все контейнеры в статусе running.&lt;/p&gt;
+&lt;h3&gt;Откат&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git checkout v1.3.9
+docker compose up -d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+Это длиннее, но читается за минуту и не требует догадок.
+
+### Как выбирать уровень деталей
+
+Не каждое действие нужно расписывать. Используйте три уровня детализации:
+
+- **Уровень 0**: очевидно. Не пишите «как открыть терминал».
+- **Уровень 1**: стандартная задача. Пишите шаги без лишних пояснений.
+- **Уровень 2**: рискованная операция. Пишите проверки, откат и ожидания.
+
+Если документ всё время повторяет стандартные действия, вырастает шум. Если не покрывает рискованные шаги, он опасен.
+
+### Конкретные приёмы, которые работают
+
+#### Думайте о будущем читателе
+
+Перед публикацией задайте себе вопросы:
+
+- что этот документ решает;
+- какие команды реально запустятся;
+- где чаще всего ломаются;
+- что нужно проверить руками;
+- что будет, если шаг пропустить.
+
+Если ответ на любой вопрос неясен, текст незавершён.
+
+#### Пишите решения, а не уроки
+
+Обучающий материал требует контекста, исключений и «почему». Операционный документ требует «что сделать», «как проверить» и «как откатить». Не смешивайте.
+
+#### Держите единый стиль команд
+
+Используйте единообразно:
+
+- регистр;
+- отступы;
+- имена;
+- формат дат.
+
+Если в одном документе встречаются и `docker-compose`, и `docker compose`, это мелочь, но она размывает стиль.
+
+#### Делайте снимки системных состояний
+
+Храните:
+
+- docker compose ps;
+- systemctl status;
+- uname -a;
+- версию приложения;
+- checksum конфига.
+
+Так инцидент разбирать легче.
+
+#### Пишите маленькие коммиты
+
+Лучше 3 документа по 2 страницы, чем один гигант на 30. Гигант читается целиком только один раз - в день написания.
+
+### Чек-лист перед коммитом документа
+
+Проверьте:
+
+- [ ] заголовок ясный;
+- [ ] цель указана;
+- [ ] шаги пронумерованы;
+- [ ] команды копируются;
+- [ ] есть expected result;
+- [ ] есть rollback;
+- [ ] есть проверка;
+- [ ] дата актуальна;
+- [ ] нет абстрактных «настроить как следует»;
+- [ ] есть ссылки на код/дашборд;
+- [ ] документ можно удалить без потери знания, если проект удалён.
+
+Если не отмечено хотя бы два пункта, документ не готов к пушу.
+
+### Инструменты и процесс
+
+Полезные привычки:
+
+- хранить docs в том же репозитории, что код;
+- привязывать изменение документа к патчу;
+- использовать review, как для кода;
+- хранить шаблоны runbook в `docs/templates/`;
+- проверять команды на чистом окружении;
+- добавлять CLI-smoke tests для инструкций;
+- использовать `docs/` как источник истины, а wiki - как дополение.
+
+Wiki удобна, но быстро рассыпается. Если код и документ живут в одном репозитории, их проще синхронизировать.
+
+### Шаблон коммита для документации
+
+```text
+docs(runbook): update deploy steps for v1.4.0
+
+- added pre-backup
+- added rollback
+- fixed service name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Так коммит сразу рассказывает, зачем изменён документ.&lt;/p&gt;
+&lt;h3&gt;Частые вопросы&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Нужно ли вообще писать документацию, если есть код?&lt;/strong&gt;
+Код показывает, как что-то работает, но не объясняет, зачем, как запустить и как откатить. Без небольшой документации почти всегда придётся разбираться заново.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Сколько должен быть документ?&lt;/strong&gt;
+Коротко, но достаточно полно. Лучше один runbook на 2 страницы, чем гигант на 30.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Что важнее: подробность или краткость?&lt;/strong&gt;
+Для операционных задач важны краткость и проверки. Для архитектуры - краткость, границы и причины.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Как понять, что документ устарел?&lt;/strong&gt;
+Если при запуске хотя бы одна команда не работает или ожидаемый вывод изменился, документ устарел.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Можно ли один документ для всех?&lt;/strong&gt;
+Нет. У разных читателей разные цели. README - для нового разработчика, runbook - для on-call, ADR - для архитектора.&lt;/p&gt;
+&lt;h3&gt;Выводы&lt;/h3&gt;
+&lt;p&gt;Хорошая техдокументация - надёжный чек-лист. Она сохраняет знание, не заменяя его. Если документ содержит цель, шаги, проверку и откат, он помогает через год. Без них - только в первый день.&lt;/p&gt;
+&lt;p&gt;Минимум, который стоит записать:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Цель.&lt;/li&gt;
+&lt;li&gt;Предусловия.&lt;/li&gt;
+&lt;li&gt;Шаги.&lt;/li&gt;
+&lt;li&gt;Проверка.&lt;/li&gt;
+&lt;li&gt;Откат.&lt;/li&gt;
+&lt;li&gt;Дата и автор.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::note
+Документация полезна только тогда, когда её реально испытывают. Перед публикацией пройдите по ней с чистым окружением.
+:::&lt;/p&gt;
+&lt;p&gt;:::tip
+Лучший способ понять ценность docs - убрать себя из процесса запуска и посмотреть, где читатель застрянет.
+:::&lt;/p&gt;
+</content:encoded></item><item><title>Настройка VPS на примере Ubuntu — расширенное руководство</title><link>https://blog.guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup/</guid><description>Полная и безопасная настройка VPS: пользователь с sudo, SSH-ключи, UFW, Docker, Zsh, Oh My Posh, Homebrew и Neofetch</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+&lt;p&gt;Это руководство поможет сделать новый VPS безопасным и удобным для повседневной работы. Мы настраиваем сервер с чистого Ubuntu и превращаем его в рабочую среду для запуска проектов, Docker-контейнеров и удалённой разработки.&lt;/p&gt;
+&lt;p&gt;Что и для чего делается:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Смена root-входа на отдельного пользователя&lt;/strong&gt; — чтобы не работать постоянно под root и ограничить возможный ущерб при компрометации.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH-ключ вместо пароля&lt;/strong&gt; — защищает от брутфорса и убирает необходимость вводить пароль при подключении.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Отключение входа root и парольной аутентификации&lt;/strong&gt; — закрывает самые частые векторы атаки по SSH.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UFW&lt;/strong&gt; — ограничивает входящие соединения только теми портами, которые действительно нужны.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker и Compose&lt;/strong&gt; — упрощают запуск и обновление приложений в изолированных контейнерах.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zsh, Oh My Posh и Homebrew&lt;/strong&gt; — делают терминал удобнее и дают доступ к дополнительным инструментам.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Neofetch в MOTD&lt;/strong&gt; — показывает наглядную информацию о системе сразу после входа по SSH.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;В результате мы получаем VPS, который безопасно принимает подключения, готов к деплою проектов и удобен для работы в терминале.&lt;/p&gt;
+&lt;h3&gt;Соглашения об этом руководстве&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Команды выполняются в оболочке root после &lt;code&gt;ssh root@VPS_IP&lt;/code&gt;, если не указано иное.&lt;/li&gt;
+&lt;li&gt;Если вы уже работаете от имени обычного пользователя с правами &lt;code&gt;sudo&lt;/code&gt;, добавляйте &lt;code&gt;sudo&lt;/code&gt; к системным командам.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;...&amp;gt;&lt;/code&gt; означает значение, которое нужно подставить самостоятельно.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Перед&lt;/strong&gt; отключением пароля проверьте вход по SSH-ключу в отдельном окне.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Исходная подготовка сервера&lt;/h3&gt;
+&lt;p&gt;Обновите систему и установите базовые утилиты:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt update
+apt full-upgrade -y
+apt install -y ca-certificates curl gnupg lsb-release ufw apt-transport-https
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;При желании задайте часовой пояс:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;timedatectl set-timezone Europe/Moscow
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Пользователь и доступ по SSH&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте нового пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;adduser --gecos &quot;&quot; newuser
+usermod -aG sudo newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте каталог &lt;code&gt;.ssh&lt;/code&gt; с правильным владельцем и правами:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;install -d -m 700 -o newuser -g newuser /home/newuser/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте открытый ключ нового пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;printf &apos;%s\n&apos; &apos;ssh-ed25519 AAAA... ваш_ключ&apos; &amp;gt; /home/newuser/.ssh/authorized_keys
+chown newuser:newuser /home/newuser/.ssh/authorized_keys
+chmod 600 /home/newuser/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::warning
+Не удаляйте парольный вход до того, как отдельно проверите вход по ключу.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте вход по ключу в другом терминале:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;ssh newuser@VPS_IP
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Только после успешной проверки переходите к настройке &lt;code&gt;sshd&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Изучите, нет ли уже настроек в drop-in-файлах:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;grep -RniE &apos;PermitRootLogin|PasswordAuthentication|PubkeyAuthentication|KbdInteractiveAuthentication&apos; \
+  /etc/ssh/sshd_config /etc/ssh/sshd_config.d 2&amp;gt;/dev/null || true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте основной конфиг:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Если &lt;code&gt;Include /etc/ssh/sshd_config.d/*.conf&lt;/code&gt; находится в начале файла, параметры из drop-in-файлов имеют приоритет. В таком случае либо удалите конфликтующий &lt;code&gt;Include&lt;/code&gt;, либо исправьте нужные значения в файле из &lt;code&gt;sshd_config.d&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите безопасные значения:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте синтаксис и перезагрузите демон:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sshd -t
+systemctl reload ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::tip
+&lt;code&gt;systemctl reload ssh&lt;/code&gt; не обрывает уже открытые сессии, поэтому его можно выполнять, не закрывая текущее подключение.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Если исходный пользователь больше не нужен, удалите его вместе с домашним каталогом:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;deluser --remove-home ubuntu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::warning
+Запускайте эту команду только после того, как убедились, что вход под &lt;code&gt;newuser&lt;/code&gt; работает. Имя &lt;code&gt;ubuntu&lt;/code&gt; замените на реального исходного пользователя, если оно другое.
+:::&lt;/p&gt;
+&lt;h3&gt;Файрвол UFW&lt;/h3&gt;
+&lt;p&gt;Разрешите SSH и включите UFW:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw enable
+ufw status verbose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Если используете нестандартный порт SSH, замените &lt;code&gt;22/tcp&lt;/code&gt; на нужный порт до &lt;code&gt;ufw enable&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Docker и Docker Compose&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Удалите конфликтующие старые пакеты:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
+  apt remove -y &quot;$pkg&quot; 2&amp;gt;/dev/null || true
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте официальный репозиторий Docker:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; \
+  &amp;gt; /etc/apt/sources.list.d/docker.list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Docker Engine и Compose plugin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt update
+apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте установку:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;docker --version
+docker compose version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Разрешите &lt;code&gt;newuser&lt;/code&gt; запускать Docker без &lt;code&gt;sudo&lt;/code&gt; и проверьте отдельной оболочкой:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;usermod -aG docker newuser
+runuser -l newuser -c &apos;docker run --rm hello-world&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Zsh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Zsh:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt install -y zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Сделайте Zsh оболочкой по умолчанию для &lt;code&gt;newuser&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;chsh -s &quot;$(command -v zsh)&quot; newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Зайдите в новую сессию или переключитесь:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;su - newuser
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Homebrew&lt;/h3&gt;
+&lt;p&gt;Homebrew нельзя устанавливать от root, поэтому выполняйте установку от целевого пользователя.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Homebrew:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
+  &apos;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
+  grep -q &quot;linuxbrew/.linuxbrew/bin/brew shellenv&quot; &quot;$HOME/.zshrc&quot; || \
+    printf &apos;\&apos;&apos;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Oh My Posh&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Oh My Posh для пользователя:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
+  &apos;curl -s https://ohmyposh.dev/install.sh | bash -s&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
+  grep -q &quot;oh-my-posh init zsh&quot; &quot;$HOME/.zshrc&quot; || \
+    printf &apos;\&apos;&apos;eval &quot;$(oh-my-posh init zsh --config amro)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::note
+&lt;code&gt;eval &quot;$(oh-my-posh init zsh --config amro)&quot;&lt;/code&gt; должен встречаться один раз. Двойной &lt;code&gt;eval&lt;/code&gt; не нужен.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте новую сессию Zsh или перезайдите:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;exec zsh -l
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Neofetch&lt;/h3&gt;
+&lt;p&gt;Neofetch — инструмент для вывода информации о системе. Я использую его для красивой заставки в MOTD после подключения по SSH.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установите Neofetch:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;apt install -y neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::note
+В Ubuntu 24.04 Neofetch находится в репозитории &lt;code&gt;universe&lt;/code&gt;. Если пакет не найден, подключите репозиторий:
+&lt;code&gt;add-apt-repository universe&lt;/code&gt; и повторите &lt;code&gt;apt update&lt;/code&gt;.
+:::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте MOTD-скрипт:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;cat &amp;gt; /etc/update-motd.d/99-neofetch &amp;lt;&amp;lt;&apos;EOF&apos;
+#!/bin/sh
+neofetch
+EOF
+chmod 0755 /etc/update-motd.d/99-neofetch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте вывод MOTD:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;run-parts /etc/update-motd.d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Проверка после настройки&lt;/h3&gt;
+&lt;p&gt;Выполните финальную проверку от имени &lt;code&gt;newuser&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
+  id
+  groups
+  docker --version
+  docker compose version
+  zsh --version
+  command -v oh-my-posh || true
+  neofetch | head -n 5
+&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Проверьте статус SSH и файрвола:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;systemctl is-active ssh
+ufw status verbose
+ss -tulpn | grep &quot;:22&quot; || true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Чек-лист безопасности&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Вход по паролю отключён.&lt;/li&gt;
+&lt;li&gt;[ ] Вход root по SSH отключён.&lt;/li&gt;
+&lt;li&gt;[ ] SSH-ключ проверен в отдельном окне.&lt;/li&gt;
+&lt;li&gt;[ ] UFW включён и разрешает нужный SSH-порт.&lt;/li&gt;
+&lt;li&gt;[ ] Обычный пользователь входит без &lt;code&gt;sudo&lt;/code&gt; только там, где это действительно нужно.&lt;/li&gt;
+&lt;li&gt;[ ] Docker проверен от имени обычного пользователя.&lt;/li&gt;
+&lt;li&gt;[ ] Есть резервная копия или snapshot VPS перед существенными изменениями.&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>Недорогие микроконтроллеры для DIY: от выбора до первого устройства</title><link>https://blog.guilliman.ru/posts/budget_mcu_diy/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/budget_mcu_diy/</guid><description>Полный гид по бюджетным MCU для самодельных устройств: сравнение RP2040, ESP32, STM32, CH32 и AVR с рекомендациями по проектам</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Как быстро выбрать&lt;/h3&gt;
 &lt;p&gt;Начните с таблицы. Выберите задачу и читайте подробный обзор нужной платформы.&lt;/p&gt;
 &lt;table&gt;
@@ -882,595 +1471,6 @@ ledconfigs              run.sh
 &lt;p&gt;:::tip
 Не выбирайте микроконтроллер по цене из таблицы, пока не уверены, что сможете его прошить, питать и отлаживать в вашем городе.
 :::&lt;/p&gt;
-</content:encoded></item><item><title>Как писать техдокументацию, чтобы через год всё ещё понимать</title><link>https://blog.guilliman.ru/posts/docs_that_last/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/docs_that_last/</guid><description>Практический подход к документации, который сохраняет проект понятным через 6-12 месяцев: структура, шаблоны, проверки, откат и примеры</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Коротко о главном&lt;/h3&gt;
-&lt;p&gt;Документация, которая переживает полгода, отвечает на четыре вопроса без поиска в чатах и логах:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;зачем это сделано;&lt;/li&gt;
-&lt;li&gt;как это запущено;&lt;/li&gt;
-&lt;li&gt;как проверить, что оно работает;&lt;/li&gt;
-&lt;li&gt;как откатиться или починить, если сломалось.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Без этих пунктов документ превращается в мёртвый текст: его не читают, а если и открывают, то только в крайнем случае.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./structure.svg&quot; alt=&quot;Структура полезного документа&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;Почему документация умирает&lt;/h3&gt;
-&lt;p&gt;Документация умирает не потому, что никто не пишет. Обычно её убивают пять типичных ошибок:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Пишут для себя в моменте.&lt;/strong&gt; Автор помнит контекст, читатель через год - нет.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Описывают команды, но не результат.&lt;/strong&gt; Команда без ожидаемого вывода бесполезна.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Нет отката.&lt;/strong&gt; Без rollback шага документ описывает только happy path.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Нет проверок.&lt;/strong&gt; «Работает на моей машине» - это не проверка.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Нет ответственного.&lt;/strong&gt; Если непонятно, кто обновляет документ, он не обновляется.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Грубый, но рабочий тест: если ваш репозиторий можно передать коллеге, и он сможет запустить проект с нуля по документу без звонка вам, документ хороший. Если нужен звонок, документ слабый.&lt;/p&gt;
-&lt;h3&gt;Что гарантирует полезность документа&lt;/h3&gt;
-&lt;p&gt;Четыре признака повышают шанс, что документ выживет:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Он короткий.&lt;/strong&gt; Чем меньше текста, тем больше шанс, что его прочитают.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Он привязан к коду.&lt;/strong&gt; Команды копируются из документа и запускаются.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Он содержит проверочные шаги.&lt;/strong&gt; «curl вернул 200» лучше, чем «сайт поднялся».&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Он обновляется вместе с изменением.&lt;/strong&gt; Документ обновляют вместе с патчем, а не отдельной задачей.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Пишите так, чтобы читатель мог открыть терминал, выполнить пару команд и понять, на каком шаге он находится.&lt;/p&gt;
-&lt;h3&gt;Железные правила&lt;/h3&gt;
-&lt;h4&gt;1. Каждая важная инструкция начинается с цели&lt;/h4&gt;
-&lt;p&gt;Не пишите: «Установите Nginx».&lt;/p&gt;
-&lt;p&gt;Пишите: «Нужно обрабатывать запросы по домену example.com, отдать статику и прокинуть API в контейнер на порт 3000».&lt;/p&gt;
-&lt;p&gt;Цель сокращает ошибки и показывает, что можно выкинуть из инструкции.&lt;/p&gt;
-&lt;h4&gt;2. Команды должны быть копируемыми&lt;/h4&gt;
-&lt;p&gt;Команда в документе должна запускаться copy-paste. Если в команде есть &lt;code&gt;&amp;lt;VPS_IP&amp;gt;&lt;/code&gt;, читатель обязан понять, что подставлять. Если есть &lt;code&gt;${USER}&lt;/code&gt;, читатель должен знать, откуда берётся переменная.&lt;/p&gt;
-&lt;p&gt;Плохо:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ssh user@server
-docker compose up
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Лучше:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ssh deploy@203.0.113.10
-cd /opt/app
-docker compose up -d
-docker compose ps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Последняя строка объясняет, как проверить результат.&lt;/p&gt;
-&lt;h4&gt;3. Показывайте ожидаемый результат&lt;/h4&gt;
-&lt;p&gt;После команды пишите ожидаемый вывод или признак успеха.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -I https://example.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ожидается: HTTP/2 200 и заголовок &lt;code&gt;server: Caddy&lt;/code&gt; или &lt;code&gt;server: nginx&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Если результат непредсказуем, пишите: «Там должно появиться сообщение &lt;code&gt;Container app started&lt;/code&gt;».&lt;/p&gt;
-&lt;h4&gt;4. Документируйте откат&lt;/h4&gt;
-&lt;p&gt;Для каждой необратимой операции пишите rollback.&lt;/p&gt;
-&lt;p&gt;Чек-лист отката:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;изменение сделано;&lt;/li&gt;
-&lt;li&gt;как итог - что changed;&lt;/li&gt;
-&lt;li&gt;rollback - восстановить из backup;&lt;/li&gt;
-&lt;li&gt;проверить - health check;&lt;/li&gt;
-&lt;li&gt;записать в issue или changelog.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Если отката нет, пишите это явно: «Отката нет: после команды данные удалены навсегда». Это лучше ложной надежды.&lt;/p&gt;
-&lt;h4&gt;5. Дата и автор не должны быть декорацией&lt;/h4&gt;
-&lt;p&gt;В начале документа укажите:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;дата изменения;&lt;/li&gt;
-&lt;li&gt;автор;&lt;/li&gt;
-&lt;li&gt;версия;&lt;/li&gt;
-&lt;li&gt;для какого окружения написано.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Тогда через полгода будет ясно, актуален ли текст.&lt;/p&gt;
-&lt;h3&gt;Шаблон хорошего runbook&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# Название задачи
-
-Дата: 2026-10-14
-Автор: ansible
-
-## Цель
-
-Что мы делаем и какой результат ожидаем.
-
-## Контекст
-
-- где находится система;
-- какие ограничения;
-- что уже настроено;
-- какие доступы нужны.
-
-## Предусловия
-
-- root/ssh;
-- backup сделан;
-- домен указывает на IP.
-
-## Шаги
-
-1. Сделать backup.
-2. Применить изменение.
-3. Проверить.
-
-## Проверка
-
-- команда 1;
-- команда 2;
-- ожидаемый вывод.
-
-## Откат
-
-- шаг 1;
-- шаг 2;
-- проверка отката.
-
-## Чек-лист
-
-- [ ] backup есть
-- [ ] тесты прошли
-- [ ] логи чисты
-
-## Ссылки
-
-- репозиторий;
-- dashboard;
-- backup job.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Шаблон работает, если держать его коротким и конкретным.&lt;/p&gt;
-&lt;h3&gt;Таблица: типы документации&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Тип документа&lt;/th&gt;
-&lt;th&gt;Когда нужен&lt;/th&gt;
-&lt;th&gt;Отличный признак&lt;/th&gt;
-&lt;th&gt;Частая ошибка&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;README&lt;/td&gt;
-&lt;td&gt;Вход в проект&lt;/td&gt;
-&lt;td&gt;Первые 5 минут запуска&lt;/td&gt;
-&lt;td&gt;Дублировать всё&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Runbook&lt;/td&gt;
-&lt;td&gt;Операционные задачи&lt;/td&gt;
-&lt;td&gt;Пошаговые команды&lt;/td&gt;
-&lt;td&gt;Нет отката&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ADR&lt;/td&gt;
-&lt;td&gt;Решения&lt;/td&gt;
-&lt;td&gt;Причина, альтернативы&lt;/td&gt;
-&lt;td&gt;Пишут вместо кода&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;API docs&lt;/td&gt;
-&lt;td&gt;Публичные интерфейсы&lt;/td&gt;
-&lt;td&gt;Примеры запроса/ответа&lt;/td&gt;
-&lt;td&gt;Тела запроса без примеров&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Run-and-trace&lt;/td&gt;
-&lt;td&gt;Инциденты&lt;/td&gt;
-&lt;td&gt;Что делать сейчас&lt;/td&gt;
-&lt;td&gt;Путают с архитектурой&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Architecture&lt;/td&gt;
-&lt;td&gt;Большая система&lt;/td&gt;
-&lt;td&gt;Схемы и границы&lt;/td&gt;
-&lt;td&gt;Нет связи с кодом&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;README должен отвечать на вопрос «как запустить». Runbook - «как применить на проде». ADR - «почему так сделали».&lt;/p&gt;
-&lt;h3&gt;Пример плохого и хорошего документа&lt;/h3&gt;
-&lt;p&gt;Плохой:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Деплой
-
-Запусти compose. Загрузи образ. Проверь.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Читатель не знает, какой compose, куда загрузить, как проверить.&lt;/p&gt;
-&lt;p&gt;Хороший:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Деплой релиза 1.4.0
-
-Дата: 2026-10-14
-Сервер: app-01
-
-### 1. Сделать backup базы
-
-```bash
-pg_dump -Fc production &amp;gt; /backup/db-$(date +%F).dump
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ожидается файл размером более 100 МБ.&lt;/p&gt;
-&lt;h3&gt;2. Обновить код&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd /opt/app
-git fetch --tags
-git checkout v1.4.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;3. Перезапустить&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;docker compose up -d
-docker compose ps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ожидается: все контейнеры в статусе running.&lt;/p&gt;
-&lt;h3&gt;Откат&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;git checkout v1.3.9
-docker compose up -d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;
-Это длиннее, но читается за минуту и не требует догадок.
-
-### Как выбирать уровень деталей
-
-Не каждое действие нужно расписывать. Используйте три уровня детализации:
-
-- **Уровень 0**: очевидно. Не пишите «как открыть терминал».
-- **Уровень 1**: стандартная задача. Пишите шаги без лишних пояснений.
-- **Уровень 2**: рискованная операция. Пишите проверки, откат и ожидания.
-
-Если документ всё время повторяет стандартные действия, вырастает шум. Если не покрывает рискованные шаги, он опасен.
-
-### Конкретные приёмы, которые работают
-
-#### Думайте о будущем читателе
-
-Перед публикацией задайте себе вопросы:
-
-- что этот документ решает;
-- какие команды реально запустятся;
-- где чаще всего ломаются;
-- что нужно проверить руками;
-- что будет, если шаг пропустить.
-
-Если ответ на любой вопрос неясен, текст незавершён.
-
-#### Пишите решения, а не уроки
-
-Обучающий материал требует контекста, исключений и «почему». Операционный документ требует «что сделать», «как проверить» и «как откатить». Не смешивайте.
-
-#### Держите единый стиль команд
-
-Используйте единообразно:
-
-- регистр;
-- отступы;
-- имена;
-- формат дат.
-
-Если в одном документе встречаются и `docker-compose`, и `docker compose`, это мелочь, но она размывает стиль.
-
-#### Делайте снимки системных состояний
-
-Храните:
-
-- docker compose ps;
-- systemctl status;
-- uname -a;
-- версию приложения;
-- checksum конфига.
-
-Так инцидент разбирать легче.
-
-#### Пишите маленькие коммиты
-
-Лучше 3 документа по 2 страницы, чем один гигант на 30. Гигант читается целиком только один раз - в день написания.
-
-### Чек-лист перед коммитом документа
-
-Проверьте:
-
-- [ ] заголовок ясный;
-- [ ] цель указана;
-- [ ] шаги пронумерованы;
-- [ ] команды копируются;
-- [ ] есть expected result;
-- [ ] есть rollback;
-- [ ] есть проверка;
-- [ ] дата актуальна;
-- [ ] нет абстрактных «настроить как следует»;
-- [ ] есть ссылки на код/дашборд;
-- [ ] документ можно удалить без потери знания, если проект удалён.
-
-Если не отмечено хотя бы два пункта, документ не готов к пушу.
-
-### Инструменты и процесс
-
-Полезные привычки:
-
-- хранить docs в том же репозитории, что код;
-- привязывать изменение документа к патчу;
-- использовать review, как для кода;
-- хранить шаблоны runbook в `docs/templates/`;
-- проверять команды на чистом окружении;
-- добавлять CLI-smoke tests для инструкций;
-- использовать `docs/` как источник истины, а wiki - как дополение.
-
-Wiki удобна, но быстро рассыпается. Если код и документ живут в одном репозитории, их проще синхронизировать.
-
-### Шаблон коммита для документации
-
-```text
-docs(runbook): update deploy steps for v1.4.0
-
-- added pre-backup
-- added rollback
-- fixed service name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Так коммит сразу рассказывает, зачем изменён документ.&lt;/p&gt;
-&lt;h3&gt;Частые вопросы&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Нужно ли вообще писать документацию, если есть код?&lt;/strong&gt;
-Код показывает, как что-то работает, но не объясняет, зачем, как запустить и как откатить. Без небольшой документации почти всегда придётся разбираться заново.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Сколько должен быть документ?&lt;/strong&gt;
-Коротко, но достаточно полно. Лучше один runbook на 2 страницы, чем гигант на 30.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Что важнее: подробность или краткость?&lt;/strong&gt;
-Для операционных задач важны краткость и проверки. Для архитектуры - краткость, границы и причины.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Как понять, что документ устарел?&lt;/strong&gt;
-Если при запуске хотя бы одна команда не работает или ожидаемый вывод изменился, документ устарел.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Можно ли один документ для всех?&lt;/strong&gt;
-Нет. У разных читателей разные цели. README - для нового разработчика, runbook - для on-call, ADR - для архитектора.&lt;/p&gt;
-&lt;h3&gt;Выводы&lt;/h3&gt;
-&lt;p&gt;Хорошая техдокументация - надёжный чек-лист. Она сохраняет знание, не заменяя его. Если документ содержит цель, шаги, проверку и откат, он помогает через год. Без них - только в первый день.&lt;/p&gt;
-&lt;p&gt;Минимум, который стоит записать:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Цель.&lt;/li&gt;
-&lt;li&gt;Предусловия.&lt;/li&gt;
-&lt;li&gt;Шаги.&lt;/li&gt;
-&lt;li&gt;Проверка.&lt;/li&gt;
-&lt;li&gt;Откат.&lt;/li&gt;
-&lt;li&gt;Дата и автор.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::note
-Документация полезна только тогда, когда её реально испытывают. Перед публикацией пройдите по ней с чистым окружением.
-:::&lt;/p&gt;
-&lt;p&gt;:::tip
-Лучший способ понять ценность docs - убрать себя из процесса запуска и посмотреть, где читатель застрянет.
-:::&lt;/p&gt;
-</content:encoded></item><item><title>Настройка VPS на примере Ubuntu — расширенное руководство</title><link>https://blog.guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup/</guid><description>Полная и безопасная настройка VPS: пользователь с sudo, SSH-ключи, UFW, Docker, Zsh, Oh My Posh, Homebrew и Neofetch</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
-&lt;p&gt;Это руководство поможет сделать новый VPS безопасным и удобным для повседневной работы. Мы настраиваем сервер с чистого Ubuntu и превращаем его в рабочую среду для запуска проектов, Docker-контейнеров и удалённой разработки.&lt;/p&gt;
-&lt;p&gt;Что и для чего делается:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Смена root-входа на отдельного пользователя&lt;/strong&gt; — чтобы не работать постоянно под root и ограничить возможный ущерб при компрометации.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SSH-ключ вместо пароля&lt;/strong&gt; — защищает от брутфорса и убирает необходимость вводить пароль при подключении.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Отключение входа root и парольной аутентификации&lt;/strong&gt; — закрывает самые частые векторы атаки по SSH.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;UFW&lt;/strong&gt; — ограничивает входящие соединения только теми портами, которые действительно нужны.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Docker и Compose&lt;/strong&gt; — упрощают запуск и обновление приложений в изолированных контейнерах.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Zsh, Oh My Posh и Homebrew&lt;/strong&gt; — делают терминал удобнее и дают доступ к дополнительным инструментам.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Neofetch в MOTD&lt;/strong&gt; — показывает наглядную информацию о системе сразу после входа по SSH.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;В результате мы получаем VPS, который безопасно принимает подключения, готов к деплою проектов и удобен для работы в терминале.&lt;/p&gt;
-&lt;h3&gt;Соглашения об этом руководстве&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Команды выполняются в оболочке root после &lt;code&gt;ssh root@VPS_IP&lt;/code&gt;, если не указано иное.&lt;/li&gt;
-&lt;li&gt;Если вы уже работаете от имени обычного пользователя с правами &lt;code&gt;sudo&lt;/code&gt;, добавляйте &lt;code&gt;sudo&lt;/code&gt; к системным командам.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;...&amp;gt;&lt;/code&gt; означает значение, которое нужно подставить самостоятельно.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Перед&lt;/strong&gt; отключением пароля проверьте вход по SSH-ключу в отдельном окне.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Исходная подготовка сервера&lt;/h3&gt;
-&lt;p&gt;Обновите систему и установите базовые утилиты:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;apt update
-apt full-upgrade -y
-apt install -y ca-certificates curl gnupg lsb-release ufw apt-transport-https
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;При желании задайте часовой пояс:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;timedatectl set-timezone Europe/Moscow
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Пользователь и доступ по SSH&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Создайте нового пользователя:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;adduser --gecos &quot;&quot; newuser
-usermod -aG sudo newuser
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Создайте каталог &lt;code&gt;.ssh&lt;/code&gt; с правильным владельцем и правами:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;install -d -m 700 -o newuser -g newuser /home/newuser/.ssh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Добавьте открытый ключ нового пользователя:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;printf &apos;%s\n&apos; &apos;ssh-ed25519 AAAA... ваш_ключ&apos; &amp;gt; /home/newuser/.ssh/authorized_keys
-chown newuser:newuser /home/newuser/.ssh/authorized_keys
-chmod 600 /home/newuser/.ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;:::warning
-Не удаляйте парольный вход до того, как отдельно проверите вход по ключу.
-:::&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Проверьте вход по ключу в другом терминале:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;ssh newuser@VPS_IP
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Только после успешной проверки переходите к настройке &lt;code&gt;sshd&lt;/code&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Изучите, нет ли уже настроек в drop-in-файлах:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;grep -RniE &apos;PermitRootLogin|PasswordAuthentication|PubkeyAuthentication|KbdInteractiveAuthentication&apos; \
-  /etc/ssh/sshd_config /etc/ssh/sshd_config.d 2&amp;gt;/dev/null || true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Откройте основной конфиг:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;nano /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Если &lt;code&gt;Include /etc/ssh/sshd_config.d/*.conf&lt;/code&gt; находится в начале файла, параметры из drop-in-файлов имеют приоритет. В таком случае либо удалите конфликтующий &lt;code&gt;Include&lt;/code&gt;, либо исправьте нужные значения в файле из &lt;code&gt;sshd_config.d&lt;/code&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите безопасные значения:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;PermitRootLogin no
-PubkeyAuthentication yes
-PasswordAuthentication no
-KbdInteractiveAuthentication no
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Проверьте синтаксис и перезагрузите демон:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sshd -t
-systemctl reload ssh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;:::tip
-&lt;code&gt;systemctl reload ssh&lt;/code&gt; не обрывает уже открытые сессии, поэтому его можно выполнять, не закрывая текущее подключение.
-:::&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Если исходный пользователь больше не нужен, удалите его вместе с домашним каталогом:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;deluser --remove-home ubuntu
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;:::warning
-Запускайте эту команду только после того, как убедились, что вход под &lt;code&gt;newuser&lt;/code&gt; работает. Имя &lt;code&gt;ubuntu&lt;/code&gt; замените на реального исходного пользователя, если оно другое.
-:::&lt;/p&gt;
-&lt;h3&gt;Файрвол UFW&lt;/h3&gt;
-&lt;p&gt;Разрешите SSH и включите UFW:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ufw default deny incoming
-ufw default allow outgoing
-ufw allow 22/tcp
-ufw enable
-ufw status verbose
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Если используете нестандартный порт SSH, замените &lt;code&gt;22/tcp&lt;/code&gt; на нужный порт до &lt;code&gt;ufw enable&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Docker и Docker Compose&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Удалите конфликтующие старые пакеты:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
-  apt remove -y &quot;$pkg&quot; 2&amp;gt;/dev/null || true
-done
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Добавьте официальный репозиторий Docker:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
-
-echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; \
-  &amp;gt; /etc/apt/sources.list.d/docker.list
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите Docker Engine и Compose plugin:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;apt update
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Проверьте установку:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;docker --version
-docker compose version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Разрешите &lt;code&gt;newuser&lt;/code&gt; запускать Docker без &lt;code&gt;sudo&lt;/code&gt; и проверьте отдельной оболочкой:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;usermod -aG docker newuser
-runuser -l newuser -c &apos;docker run --rm hello-world&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Zsh&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите Zsh:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;apt install -y zsh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Сделайте Zsh оболочкой по умолчанию для &lt;code&gt;newuser&lt;/code&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;chsh -s &quot;$(command -v zsh)&quot; newuser
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Зайдите в новую сессию или переключитесь:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;su - newuser
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Homebrew&lt;/h3&gt;
-&lt;p&gt;Homebrew нельзя устанавливать от root, поэтому выполняйте установку от целевого пользователя.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите Homebrew:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
-  &apos;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
-  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
-  grep -q &quot;linuxbrew/.linuxbrew/bin/brew shellenv&quot; &quot;$HOME/.zshrc&quot; || \
-    printf &apos;\&apos;&apos;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
-&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Oh My Posh&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите Oh My Posh для пользователя:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo -u newuser -H bash -c \
-  &apos;curl -s https://ohmyposh.dev/install.sh | bash -s&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Добавьте инициализацию в &lt;code&gt;~/.zshrc&lt;/code&gt; один раз:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
-  test -f &quot;$HOME/.zshrc&quot; || touch &quot;$HOME/.zshrc&quot;
-  grep -q &quot;oh-my-posh init zsh&quot; &quot;$HOME/.zshrc&quot; || \
-    printf &apos;\&apos;&apos;eval &quot;$(oh-my-posh init zsh --config amro)&quot;\n&apos;\&apos;&apos; &amp;gt;&amp;gt; &quot;$HOME/.zshrc&quot;
-&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;:::note
-&lt;code&gt;eval &quot;$(oh-my-posh init zsh --config amro)&quot;&lt;/code&gt; должен встречаться один раз. Двойной &lt;code&gt;eval&lt;/code&gt; не нужен.
-:::&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Откройте новую сессию Zsh или перезайдите:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;exec zsh -l
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Neofetch&lt;/h3&gt;
-&lt;p&gt;Neofetch — инструмент для вывода информации о системе. Я использую его для красивой заставки в MOTD после подключения по SSH.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Установите Neofetch:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;apt install -y neofetch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;:::note
-В Ubuntu 24.04 Neofetch находится в репозитории &lt;code&gt;universe&lt;/code&gt;. Если пакет не найден, подключите репозиторий:
-&lt;code&gt;add-apt-repository universe&lt;/code&gt; и повторите &lt;code&gt;apt update&lt;/code&gt;.
-:::&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Создайте MOTD-скрипт:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;cat &amp;gt; /etc/update-motd.d/99-neofetch &amp;lt;&amp;lt;&apos;EOF&apos;
-#!/bin/sh
-neofetch
-EOF
-chmod 0755 /etc/update-motd.d/99-neofetch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Проверьте вывод MOTD:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;run-parts /etc/update-motd.d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Проверка после настройки&lt;/h3&gt;
-&lt;p&gt;Выполните финальную проверку от имени &lt;code&gt;newuser&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;runuser -l newuser -c &apos;
-  id
-  groups
-  docker --version
-  docker compose version
-  zsh --version
-  command -v oh-my-posh || true
-  neofetch | head -n 5
-&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Проверьте статус SSH и файрвола:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;systemctl is-active ssh
-ufw status verbose
-ss -tulpn | grep &quot;:22&quot; || true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Чек-лист безопасности&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;[ ] Вход по паролю отключён.&lt;/li&gt;
-&lt;li&gt;[ ] Вход root по SSH отключён.&lt;/li&gt;
-&lt;li&gt;[ ] SSH-ключ проверен в отдельном окне.&lt;/li&gt;
-&lt;li&gt;[ ] UFW включён и разрешает нужный SSH-порт.&lt;/li&gt;
-&lt;li&gt;[ ] Обычный пользователь входит без &lt;code&gt;sudo&lt;/code&gt; только там, где это действительно нужно.&lt;/li&gt;
-&lt;li&gt;[ ] Docker проверен от имени обычного пользователя.&lt;/li&gt;
-&lt;li&gt;[ ] Есть резервная копия или snapshot VPS перед существенными изменениями.&lt;/li&gt;
-&lt;/ul&gt;
 </content:encoded></item><item><title>Обезьяний кулак - таблица размеров и расчетов</title><link>https://blog.guilliman.ru/posts/monkeyfist/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/monkeyfist/</guid><description>Точный расчет длины паракорда 550 и количества витков для каждого диаметра сердечника.</description><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Руководство по вязанию узла «Обезьяний кулак»: таблица размеров и расчетов&lt;/h1&gt;
 &lt;p&gt;Основная сложность при вязании узла «обезьяний кулак» заключается в определении необходимого количества витков для полного покрытия сердечника (обычно это сферический предмет, например, стеклянный шарик или металлический подшипниковый шар). Представленная ниже таблица послужит незаменимым помощником при создании вашего следующего узла «обезьяний кулак». Если вы часто вяжете такие узлы, рекомендуем добавить эту страницу в закладки. Поделитесь ей с друзьями, которым она может пригодиться!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;.//images/2.webp&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
