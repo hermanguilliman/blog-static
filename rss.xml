@@ -1691,68 +1691,18 @@ ss -tulpn | grep &quot;:22&quot; || true
 &lt;li&gt;&lt;strong&gt;Проверка перед обрезкой:&lt;/strong&gt; убедитесь, что узел полностью затянут, прежде чем обрезать излишки шнура&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Сохраните эту таблицу для быстрого доступа при работе над проектами!&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>G-PASS TERMINAL</title><link>https://blog.guilliman.ru/posts/password_generator/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/password_generator/</guid><description>Киберпанк-генератор паролей: разбор под капотом</description><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Киберпанк-генератор паролей: разбор под капотом&lt;/h1&gt;
-&lt;p&gt;Короче, запилил генератор паролей. Но не очередную поделку &quot;возьми Math.random и склей буковки&quot;, а что-то более серьёзное. С криптографией, энтропией и тремя режимами на выбор. Давайте разберём, что там внутри.&lt;/p&gt;
-&lt;h2&gt;Три режима — три философии&lt;/h2&gt;
-&lt;h3&gt;1. Стандартный режим&lt;/h3&gt;
-&lt;p&gt;Классика жанра: берём пул символов, кидаем кости, получаем &lt;code&gt;Xk#9mP$2nL&lt;/code&gt;. Но есть нюансы.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Гарантия категорий.&lt;/strong&gt; Если выбраны нижний регистр, верхний, цифры и символы — пароль &lt;em&gt;гарантированно&lt;/em&gt; будет содержать минимум по одному символу из каждой категории. Никаких &quot;опс, а цифр-то и нет&quot;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// Сначала берём по одному из каждой категории
-let chars: string[] = categories.map((c) =&amp;gt; getSecureRandomChar(c.chars));
-
-// Потом добиваем из общего пула
-while (chars.length &amp;lt; length) {
-    chars.push(getSecureRandomChar(pool));
-}
-
-// И перемешиваем Fisher-Yates
-for (let i = chars.length - 1; i &amp;gt; 0; i--) {
-    const j = secureRandomInt(i + 1);
-    [chars[i], chars[j]] = [chars[j], chars[i]];
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Поддержка кириллицы.&lt;/strong&gt; Переключаешь тумблер — и вместо 52 латинских букв получаешь 66 кириллических. Пул символов увеличивается, энтропия растёт. А ещё это ломает мозг злоумышленнику, который ожидает латиницу.&lt;/p&gt;
-&lt;h3&gt;2. XKCD-режим&lt;/h3&gt;
-&lt;p&gt;Помните &lt;a href=&quot;https://xkcd.com/936/&quot;&gt;тот самый комикс&lt;/a&gt;? &lt;code&gt;correct horse battery staple&lt;/code&gt; — легко запомнить, сложно подобрать. Реализовал именно этот подход.&lt;/p&gt;
-&lt;p&gt;Словарь — ~180 слов из кибер/техно-тематики:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;correct horse battery staple system hacking cyber neural matrix logic 
-ghost shell neon laser future data access denied granted protocol...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Размер словаря = &lt;strong&gt;180 слов&lt;/strong&gt; → &lt;strong&gt;~7.49 бит на слово&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;5 слов = ~37.5 бит только от слов. Добавляем случайную капитализацию (+5 бит) и число 00-99 (+6.6 бит) — получаем ~49 бит. Для онлайн-атак более чем достаточно.&lt;/p&gt;
-&lt;h3&gt;3. Фонетический режим&lt;/h3&gt;
-&lt;p&gt;Идея: генерировать не случайную кашу и не настоящие слова, а &lt;strong&gt;произносимые псевдослова&lt;/strong&gt;. &lt;code&gt;Bakemi-Toruva-Sinelo-42&lt;/code&gt; — не существует ни в одном языке, но ты можешь это произнести и запомнить.&lt;/p&gt;
-&lt;p&gt;Четыре паттерна слогов:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CV&lt;/strong&gt; — согласная + гласная (ба, ке, ми) — самый простой&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CVC&lt;/strong&gt; — согласная + гласная + согласная (бак, кем, мир)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CVCC&lt;/strong&gt; — согласная + гласная + две согласных (банк, керн)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CCVC&lt;/strong&gt; — две согласных + гласная + согласная (стар, крик)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;const generateSyllable = (): string =&amp;gt; {
-    switch (phoneticPattern) {
-        case &quot;cv&quot;:
-            return getSecureRandomChar(consonants) + getSecureRandomChar(vowels);
-        case &quot;cvc&quot;:
-            return getSecureRandomChar(consonants) + 
-                   getSecureRandomChar(vowels) + 
-                   getSecureRandomChar(consonants);
-        // ...
-    }
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Латинские согласные: 18 штук (&lt;code&gt;bcdfghjklmnprstvwz&lt;/code&gt;)
-Латинские гласные: 5 штук (&lt;code&gt;aeiou&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;Энтропия слога CV = log₂(18) + log₂(5) ≈ 4.17 + 2.32 = &lt;strong&gt;6.49 бит&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Три слова по три слога = 9 слогов = ~58 бит. Неплохо для чего-то, что можно произнести!&lt;/p&gt;
-&lt;p&gt;И да, тут тоже есть кириллица. Кириллические согласные/гласные дают чуть больше энтропии за счёт большего алфавита.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Криптографически безопасный RNG&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Math.random()&lt;/code&gt; — это PRNG (псевдослучайный генератор). Для паролей не годится. Используем Web Crypto API:&lt;/p&gt;
+</content:encoded></item><item><title>G-PASS TERMINAL v3.0: криптостойкий генератор паролей с честным расчётом энтропии и QR-передачей</title><link>https://blog.guilliman.ru/posts/password_generator/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/password_generator/</guid><description>Обзор G-PASS TERMINAL — браузерного генератора паролей. Четыре режима генерации (Standard, XKCD, Phonetic, ФИО), криптографический RNG без модульного смещения, детализация энтропии в битах и экспорт в QR-код.</description><pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+&lt;p&gt;Большинство онлайн-генераторов паролей страдают от двух крайностей: либо это примитивный скрипт на базе небезопасного &lt;code&gt;Math.random()&lt;/code&gt;, рисующий абстрактную зелёную полоску «Надёжный пароль», либо перегруженный комбайн с десятками лишних настроек. При этом мало какой сервис честно показывает, &lt;strong&gt;из чего именно складывается криптостойкость&lt;/strong&gt; вашей комбинации и сколько времени займёт её перебор на современном оборудовании.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://password.guilliman.ru/&quot;&gt;G-PASS TERMINAL v3.0&lt;/a&gt;&lt;/strong&gt; — это локальный генератор паролей из экосистемы &lt;strong&gt;Guilliman&apos;s Lab&lt;/strong&gt;, выполненный в индустриальной эстетике терминала и дизайн-системы &lt;em&gt;Nothing&lt;/em&gt; (монохромная база, матричный шрифт &lt;code&gt;Doto&lt;/code&gt;, моноширинный &lt;code&gt;JetBrains Mono&lt;/code&gt; и сигнальный акцент &lt;code&gt;#9ef523&lt;/code&gt;). Он сочетает строгую математику энтропии, четыре сценария генерации и мгновенную передачу пароля на смартфон через QR-код.&lt;/p&gt;
+&lt;h3&gt;Криптография под капотом: почему &lt;code&gt;Math.random()&lt;/code&gt; не подходит&lt;/h3&gt;
+&lt;p&gt;В основе любого качественного генератора лежит источник случайности. Стандартный &lt;code&gt;Math.random()&lt;/code&gt; в JavaScript является псевдослучайным (PRNG) и не предназначен для задач безопасности. В &lt;strong&gt;G-PASS&lt;/strong&gt; используется системный криптографический генератор браузера — Web Crypto API (&lt;code&gt;crypto.getRandomValues&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Но даже при использовании &lt;code&gt;Uint32Array&lt;/code&gt; многие разработчики допускают классическую ошибку — берут остаток от деления &lt;code&gt;randomBuffer[0] % max&lt;/code&gt;. Если &lt;code&gt;2^32&lt;/code&gt; не делится нацело на длину алфавита &lt;code&gt;max&lt;/code&gt;, возникает &lt;strong&gt;модульное смещение (modulo bias)&lt;/strong&gt;: некоторые символы выпадают чуть чаще остальных.&lt;/p&gt;
+&lt;p&gt;В &lt;strong&gt;G-PASS&lt;/strong&gt; реализован метод отбраковки (&lt;em&gt;rejection sampling&lt;/em&gt;), гарантирующий идеально равномерное распределение вероятностей:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;const secureRandomInt = (max: number): number =&amp;gt; {
     if (max &amp;lt;= 0) return 0;
     const randomBuffer = new Uint32Array(1);
-    const maxValid = Math.floor(0xffffffff / max) * max;
+    const range = 0x100000000; // 2^32
+    const maxValid = Math.floor(range / max) * max;
 
     do {
         crypto.getRandomValues(randomBuffer);
@@ -1761,94 +1711,75 @@ ghost shell neon laser future data access denied granted protocol...
     return randomBuffer[0] % max;
 };
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Rejection sampling&lt;/strong&gt; — важная штука. Если &lt;code&gt;max&lt;/code&gt; не делит 2³² нацело, простой &lt;code&gt;% max&lt;/code&gt; даёт смещение (bias). Например, для &lt;code&gt;max = 3&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;А для перемешивания гарантированных символов в стандартном режиме применяется криптостойкий алгоритм тасования Фишера — Йетса (Fisher–Yates shuffle).&lt;/p&gt;
+&lt;p&gt;:::important
+100% локальная работа: Пароли генерируются исключительно в оперативной памяти вашего браузера. Никаких сетевых запросов при генерации не отправляется, а внешние зависимости сведены к минимуму.
+:::&lt;/p&gt;
+&lt;h3&gt;Четыре режима генерации: от «каши» из символов до псевдо-имён&lt;/h3&gt;
+&lt;p&gt;Разные задачи требуют разных типов паролей: одно дело — мастер-пароль для менеджера паролей, который нужно помнить наизусть, и совсем другое — 64-символьный ключ для API или базы данных.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Режим&lt;/th&gt;
+&lt;th&gt;Принцип построения&lt;/th&gt;
+&lt;th&gt;Пример результата&lt;/th&gt;
+&lt;th&gt;Когда использовать&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;СТАНДАРТ&lt;/td&gt;
+&lt;td&gt;Случайный пул символов (LAT/КИР, 0-9, !@#) с гарантией всех выбранных категорий&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;k9#mP2$vL8@qX4!zR7&amp;amp;w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Менеджеры паролей, ключи шифрования, конфиги серверов&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;XKCD&lt;/td&gt;
+&lt;td&gt;Мнемоническая фраза из словаря + разделитель + число&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Quantum-Matrix-Orbit-Blade-42&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Мастер-пароли, учётные записи, которые приходится вводить руками&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ФОНЕТИК&lt;/td&gt;
+&lt;td&gt;Произносимые псевдо-слова по паттернам слогов (CV, CVC, CVCC, CCVC)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Bakmir-Kemton-Lardos-85&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Временные пароли для диктовки голосом или быстрого запоминания&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ФИО&lt;/td&gt;
+&lt;td&gt;Имитация имени, отчества и фамилии (N слогов CV + финальная согласная)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ковадан Милетор Саригон&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Сценарии, где пароль маскируется под реальные анкетные данные или никнейм&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Поддержка кириллицы&lt;/h4&gt;
+&lt;p&gt;В режимах СТАНДАРТ, ФОНЕТИК и ФИО можно в один клик переключить алфавит с латиницы (LAT) на кириллицу (КИР). За счёт большей мощности алфавита (33 буквы против 26 в латинице) каждый символ кириллицы приносит больше бит энтропии.&lt;/p&gt;
+&lt;p&gt;:::tip
+В режиме XKCD напротив каждой опции отображается её реальный вклад в криптостойкость. Например, обычные заглавные буквы (Capitalize) дают +0 бит, так как злоумышленнику известно правило «первая буква всегда заглавная». А вот опция «Случайный регистр» честно добавляет +1 бит на каждое слово в пароле.
+:::&lt;/p&gt;
+&lt;h3&gt;Честная математика энтропии&lt;/h3&gt;
+&lt;p&gt;Вместо абстрактных оценок G-PASS TERMINAL вычисляет точную информационную энтропию в битах и строит 36-сегментную шкалу с пороговыми отметками (50, 80, 128, 192 и до 256 бит).&lt;/p&gt;
+&lt;p&gt;Нажав на кнопку [+] РАСЧЁТ ЭНТРОПИИ, вы увидите полную математическую раскладку:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;0xFFFFFFFF % 3 = 0&lt;/li&gt;
-&lt;li&gt;Числа 0, 1, 2 будут выпадать не с равной вероятностью&lt;/li&gt;
+&lt;li&gt;В стандартном режиме учитывается вклад обязательных символов каждой выбранной категории $\log_2(|C_i|)$, оставшийся пул символов $(L - k) \cdot \log_2(N)$ и комбинаторная перестановка позиций через биномиальный коэффициент $\log_2 \binom{L}{k}$, ограниченная сверху теоретическим пределом $L \cdot \log_2(N)$.&lt;/li&gt;
+&lt;li&gt;В словарном и слоговых режимах складывается точная битность каждого слова/слога и логарифм диапазона добавленного числа.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Решение: отбрасываем значения ≥ &lt;code&gt;maxValid&lt;/code&gt; и генерируем заново. Да, теоретически может зациклиться навечно. Практически — вероятность даже одного retry около 0.0000002%.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Расчёт энтропии&lt;/h2&gt;
-&lt;p&gt;Энтропия — это не &quot;сколько символов в пароле&quot;, а &quot;сколько бит информации нужно угадать&quot;. Чем больше — тем лучше.&lt;/p&gt;
-&lt;h3&gt;Стандартный режим&lt;/h3&gt;
-&lt;p&gt;Наивный подход: &lt;code&gt;length × log₂(poolSize)&lt;/code&gt;. Но это неточно, потому что мы &lt;em&gt;гарантируем&lt;/em&gt; символы из каждой категории.&lt;/p&gt;
-&lt;p&gt;Правильный расчёт:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 1. Биты от обязательных символов
-for (const cat of categories) {
-    totalBits += Math.log2(cat.size);
-}
-
-// 2. Биты от остальных символов (из общего пула)
-if (L &amp;gt; k) {
-    totalBits += (L - k) * Math.log2(poolSize);
-}
-
-// 3. Биты от перестановок — C(L, k) способов расставить обязательные
-if (k &amp;gt; 0 &amp;amp;&amp;amp; L &amp;gt; k) {
-    totalBits += logBinomial(L, k);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Функция &lt;code&gt;logBinomial&lt;/code&gt; считает log₂(C(n,k)) без переполнения:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const logBinomial = (n: number, k: number): number =&amp;gt; {
-    let result = 0;
-    for (let i = 0; i &amp;lt; k; i++) {
-        result += Math.log2(n - i) - Math.log2(i + 1);
-    }
-    return result;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;XKCD и фонетический режимы&lt;/h3&gt;
-&lt;p&gt;Тут проще:&lt;/p&gt;
+&lt;p&gt;Параллельно калькулятор оценивает время полного перебора (brute-force) при скорости оффлайн-атаки $10^{10}$ хешей в секунду (мощный кластер видеокарт) — от миллисекунд и дней до веков и величин, кратных возрасту Вселенной ($13{,}8$ млрд лет).&lt;/p&gt;
+&lt;h3&gt;Удобные мелочи: умный журнал и QR-код&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Слова/слоги независимы → умножаем количество на биты каждого&lt;/li&gt;
-&lt;li&gt;Случайная капитализация: +1 бит на слово&lt;/li&gt;
-&lt;li&gt;Число: +log₂(range) бит&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Защита журнала от спама.&lt;/strong&gt; Когда вы двигаете ползунок длины пароля или переключаете чекбоксы, генератор работает в режиме «живого предпросмотра» (preview), не засоряя историю десятками промежуточных вариантов. В локальный журнал (localStorage, до 20 записей с дедупликацией) попадают только те пароли, которые вы осознанно сгенерировали кнопкой, скопировали или открыли в виде QR-кода.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Мгновенный перенос на телефон.&lt;/strong&gt; Перепечатывать 30-символьный пароль с монитора ПК на экран смартфона — настоящее мучение. Кнопка QR генерирует контрастный QR-код (чёрные модули на фирменном зелёном фоне &lt;code&gt;#9ef523&lt;/code&gt; с коррекцией ошибок уровня M) прямо внутри браузера через &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;. Достаточно навести камеру телефона — и пароль уже на мобильном устройстве.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Доступность и темы.&lt;/strong&gt; Увеличенная типографика в rem комфортна для чтения (в том числе при астигматизме), а для работы при ярком освещении предусмотрена контрастная светлая тема.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Оценка времени взлома&lt;/h2&gt;
-&lt;p&gt;Беру пессимистичный сценарий: офлайн-атака со скоростью &lt;strong&gt;10¹⁰ хешей/сек&lt;/strong&gt; (мощная GPU-ферма).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const combinations = Math.pow(2, entropyBits);
-const speed = 1e10; // 10 миллиардов в секунду
-const seconds = combinations / speed / 2; // В среднем находим за половину перебора
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Потом форматирую в человекочитаемый вид:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;if (seconds &amp;lt; universe) return `${(seconds / millennium).toFixed(0)} тысячелетий`;
-return `${(seconds / universe).toFixed(2)}x возраст Вселенной`;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;80 бит энтропии = ~1.9 миллиарда лет при 10¹⁰/сек. Думаю, достаточно.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Мелкие радости&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;QR-код&lt;/strong&gt; — сгенерировал пароль, показал QR, отсканировал телефоном. Удобно для переноса на устройства без синхронизации.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;История в localStorage&lt;/strong&gt; — последние 20 паролей сохраняются локально. Нажал — скопировал. Закрыл вкладку — история осталась.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Визуальная шкала энтропии&lt;/strong&gt; — от красного (&amp;lt; 20 бит, взлом мгновенный) до белого (256+ бит, AES-256 уровень). С маркерами на 50, 80, 128, 192 бита.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Что можно улучшить?&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Больший словарь для XKCD.&lt;/strong&gt; 180 слов — это ~7.5 бит. EFF wordlist даёт 7776 слов = ~12.9 бит на слово. Но тогда слова будут менее &quot;тематические&quot;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Passphrase с грамматикой.&lt;/strong&gt; &lt;code&gt;The lazy purple robot hacks silently&lt;/code&gt; — ещё запоминаемее, но сложнее реализовать.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Проверка на утечки.&lt;/strong&gt; Интеграция с Have I Been Pwned API (k-anonymity, конечно).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Экспорт в KeePass/Bitwarden.&lt;/strong&gt; Генерируешь — сразу в менеджер.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Итого&lt;/h2&gt;
-&lt;p&gt;Генератор получился с тремя режимами под разные задачи:&lt;/p&gt;
+&lt;h3&gt;Чек-лист: какой пароль выбрать?&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Стандартный&lt;/strong&gt; — для систем с жёсткими требованиями &quot;минимум 1 цифра, 1 символ...&quot;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;XKCD&lt;/strong&gt; — когда нужно запомнить без менеджера&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Фонетический&lt;/strong&gt; — компромисс между случайностью и произносимостью&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Для менеджера паролей&lt;/strong&gt; (Bitwarden, KeePass, 1Password): выберите режим СТАНДАРТ, длину от 20 до 32 символов и включите все 4 категории (это даст 128+ бит — уровень стойкости AES-128).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Для мастер-пароля или входа в систему&lt;/strong&gt;: выберите режим XKCD на 5–6 слов со случайным регистром и числом 00-99. Такой пароль легко запомнить, но его энтропия превысит 55–65 бит.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Для передачи доступа коллеге или настройки роутера&lt;/strong&gt;: используйте режим ФОНЕТИК (паттерн CVC, 3 слова по 2–3 слога) — его легко продиктовать без ошибок.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Для переноса на смартфон&lt;/strong&gt;: нажмите кнопку QR, отсканируйте код камерой и закройте модальное окно клавишей Esc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Попробовать генератор можно &lt;a href=&quot;https://password.guilliman.ru/&quot;&gt;здесь&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;::github{repo=&quot;hermanguilliman/passwordgenerator&quot;}&lt;/p&gt;
+&lt;p&gt;👉 &lt;a href=&quot;https://password.guilliman.ru/&quot;&gt;Открыть терминал: password.guilliman.ru&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Фотобудка для STL/3MF</title><link>https://blog.guilliman.ru/posts/stl-3mf-photo-booth/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/stl-3mf-photo-booth/</guid><description>Бесплатный онлайн инструмент для красивых рендеров печатных моделей</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Что это вообще такое?&lt;/h2&gt;
 &lt;p&gt;Это браузерный просмотрщик 3D-моделей формата STL и 3MF. Закинул файл, покрутил, настроил материал, сделал скриншот, ушёл. Данные никуда не уходят.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Основные фичи:&lt;/strong&gt;&lt;/p&gt;
