@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Kwork Helper 2.1: как я написал юзерскрипт с ИИ, чтобы не сливать 30 откликов впустую</title><link>https://blog.guilliman.ru/posts/kwork_helper/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/kwork_helper/</guid><description>История создания и обзор браузерного скрипта для биржи Kwork: визуальный радар адекватных заказчиков, индикатор конкуренции, фильтр спама, снайпер-режим и генерация откликов через нейросеть.</description><pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Guilliman Input Diagnostics: полная проверка мыши, клавиатуры, геймпада и камеры в браузере</title><link>https://blog.guilliman.ru/posts/input_tester/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/input_tester/</guid><description>Обзор и руководство по использованию веб-утилиты Guilliman Input Diagnostics: как проверить мышь на даблклик и срыв скролла, клавиатуру на дребезг и NKRO, стики геймпада на дрифт, а также протестировать тачскрин, микрофон и веб-камеру.</description><pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Когда левая кнопка мыши начинает случайно открывать два окна подряд, колесо прокрутки дергается в обратную сторону, а персонаж в игре медленно идет влево без вашего участия — пора проводить диагностику периферии.&lt;/p&gt;
+&lt;p&gt;Обычно для этого приходится искать десятки разных сайтов или скачивать сомнительные &lt;code&gt;.exe&lt;/code&gt;-утилиты. Чтобы решить эту задачу в одном окне, я создал &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/&quot;&gt;Guilliman Input Diagnostics&lt;/a&gt;&lt;/strong&gt; — бесплатный инструмент в эстетике &lt;em&gt;Nothing Design System&lt;/em&gt;, который объединяет 6 диагностических стендов прямо в браузере.&lt;/p&gt;
+&lt;p&gt;В этой статье разберем, как устроен сервис и как с его помощью выявить аппаратные проблемы ваших устройств.&lt;/p&gt;
+&lt;h2&gt;1. Мышь: даблклик, отскок энкодера и частота опроса (Hz)&lt;/h2&gt;
+&lt;p&gt;Со временем металлические пластины внутри микропереключателей мыши окисляются или изнашиваются, из-за чего возникает &lt;strong&gt;дребезг контактов (chatter)&lt;/strong&gt; — один физический клик регистрируется системой как два сверхбыстрых нажатия.&lt;/p&gt;
+&lt;p&gt;Во вкладке &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/#mouse&quot;&gt;Мышь&lt;/a&gt;&lt;/strong&gt; отслеживаются все 5 кнопок (&lt;code&gt;LMB&lt;/code&gt;, &lt;code&gt;MMB&lt;/code&gt;, &lt;code&gt;RMB&lt;/code&gt;, боковые &lt;code&gt;Back&lt;/code&gt; и &lt;code&gt;Forward&lt;/code&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Детектор Double Click:&lt;/strong&gt; измеряет интервал между нажатиями в миллисекундах (&lt;code&gt;min/max&lt;/code&gt;). Если задержка меньше заданного порога, карточка кнопки вспыхивает красным, а событие фиксируется в логе.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Отскок скролла (Scroll Bounce):&lt;/strong&gt; одна из самых частых болезней мышей — загрязнение энкодера колеса. Если при быстрой прокрутке вниз проскочит хотя бы один импульс вверх (быстрее чем за &lt;code&gt;55 мс&lt;/code&gt;), счетчик &lt;strong&gt;«Отскок»&lt;/strong&gt; зафиксирует ошибку.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Частота опроса (Polling Rate, Hz) и CPS:&lt;/strong&gt; при быстром движении курсора рассчитывается реальная частота опроса сенсора с фиксацией пикового значения (125 / 500 / 1000 Гц), а в клик-зоне — скорость кликов в секунду.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::tip
+Настоящий аппаратный дребезг микрика обычно происходит с интервалом &lt;strong&gt;от 2 до 50 мс&lt;/strong&gt;. По умолчанию ползунок порога установлен на &lt;strong&gt;65 мс&lt;/strong&gt; — это оптимальное значение, которое надежно ловит брак переключателя, но не дает ложных срабатываний при быстрой стрельбе или CPS-тесте.
+:::&lt;/p&gt;
+&lt;h2&gt;2. Клавиатура: 104 клавиши, NKRO и Key Chatter&lt;/h2&gt;
+&lt;p&gt;Вкладка &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/#keyboard&quot;&gt;Клавиатура&lt;/a&gt;&lt;/strong&gt; отображает полноразмерную раскладку из трех блоков (основной кластер, навигация со стрелками и цифровой блок &lt;code&gt;Numpad&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Что здесь можно проверить:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Работоспособность и залипание:&lt;/strong&gt; протестированные клавиши помечаются белой точкой в углу кейкапа, а зажатые в данный момент подсвечиваются инверсией.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;N-Key Rollover (NKRO):&lt;/strong&gt; счетчик одновременных нажатий. Офисные мембранные клавиатуры часто блокируют ввод при зажатии более 3–6 клавиш, тогда как игровые механики поддерживают полноценный NKRO.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Дребезг свитчей (Key Chatter):&lt;/strong&gt; механические переключатели клавиатур тоже подвержены двойному срабатыванию. Если повторное нажатие той же клавиши (&lt;code&gt;!e.repeat&lt;/code&gt;) происходит быстрее чем за &lt;strong&gt;38 мс&lt;/strong&gt; после отпускания, клавиша окрашивается в красный цвет, а счетчик &lt;code&gt;Chatter&lt;/code&gt; увеличивается.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::note
+Если во время теста вы случайно свернете браузер или переключитесь в другое окно (&lt;code&gt;Alt + Tab&lt;/code&gt;) с зажатыми клавишами, приложение автоматически сбросит «залипшие» состояния по событию потери фокуса окна (&lt;code&gt;blur&lt;/code&gt;).
+:::&lt;/p&gt;
+&lt;h2&gt;3. Геймпад: дрифт стиков, тест окружности и вибрация&lt;/h2&gt;
+&lt;p&gt;Во вкладке &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/#gamepad&quot;&gt;Геймпад&lt;/a&gt;&lt;/strong&gt; можно протестировать любые контроллеры (Xbox, DualShock, DualSense, 8BitDo и др.) через стандартный &lt;code&gt;Gamepad API&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Аналоговые триггеры и кнопки:&lt;/strong&gt; плавная шкала от &lt;code&gt;0.00&lt;/code&gt; до &lt;code&gt;1.00&lt;/code&gt; позволяет проверить линейность хода курков &lt;code&gt;LT&lt;/code&gt; и &lt;code&gt;RT&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Диагностика дрифта:&lt;/strong&gt; если отпустить стик, а его координаты не возвращаются в центр (отклонение в диапазоне &lt;code&gt;0.04–0.15&lt;/code&gt;), точка и подпись координат подсветятся предупреждающим желтым цветом.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Тест окружности (Circularity Error %):&lt;/strong&gt; при вращении стика по внешнему радиусу на холсте строится многоугольник его реальной зоны охвата и рассчитывается средняя погрешность относительно идеального круга.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Выбор устройства и вибрация:&lt;/strong&gt; если к ПК подключено несколько геймпадов, между ними можно переключаться в шапке панели, а кнопка &lt;strong&gt;«Вибрация»&lt;/strong&gt; проверит работу вибромоторов (&lt;code&gt;dual-rumble&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::important
+В целях безопасности браузеры скрывают подключенные геймпады от веб-страниц до тех пор, пока пользователь сам с ними не повзаимодействует. После подключения контроллера &lt;strong&gt;нажмите на нем любую кнопку&lt;/strong&gt;, чтобы панель диагностики активировалась.
+:::&lt;/p&gt;
+&lt;h2&gt;4. Тачскрин: мультитач, жесты и поиск битых зон&lt;/h2&gt;
+&lt;p&gt;Если открыть сервис со смартфона или планшета, вкладка &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/#touch&quot;&gt;Сенсор&lt;/a&gt;&lt;/strong&gt; автоматически станет первой:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Мультитач и координаты:&lt;/strong&gt; проверьте, сколько одновременных касаний реально распознает экран (обычно 5 или 10 точек), отслеживая координаты каждого пальца и силу нажатия (&lt;code&gt;pressure&lt;/code&gt;), если экран или стилус ее поддерживают.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Распознавание жестов:&lt;/strong&gt; определяются &lt;code&gt;Tap&lt;/code&gt;, &lt;code&gt;Double Tap&lt;/code&gt; (с учетом дистанции между точками), &lt;code&gt;Long Press&lt;/code&gt;, &lt;code&gt;Swipe&lt;/code&gt; (во всех 4 направлениях), а также сжатие (&lt;code&gt;Pinch&lt;/code&gt;) и разведение пальцев (&lt;code&gt;Zoom&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Полноэкранный режим рисования:&lt;/strong&gt; тумблер &lt;strong&gt;«Рисование»&lt;/strong&gt; разворачивает черный холст с размерной сеткой на весь экран. Проведите пальцем по всей площади дисплея: если линия внезапно прерывается, значит, в этой части тачскрина есть нерабочая зона.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::caution
+На некоторых мобильных браузерах (например, Firefox на Android или iOS Safari) системная тактильная отдача (&lt;code&gt;navigator.vibrate&lt;/code&gt;) заблокирована политиками приватности. Если вибрация недоступна, приложение покажет соответствующее уведомление.
+:::&lt;/p&gt;
+&lt;h2&gt;5. Микрофон и Веб-камера: экспресс-проверка перед созвоном&lt;/h2&gt;
+&lt;p&gt;Чтобы не спрашивать коллег в начале звонка &lt;em&gt;«Меня нормально слышно и видно?»&lt;/em&gt;, в приложение добавлены два медиа-стенда:&lt;/p&gt;
+&lt;h3&gt;Микрофон (&lt;code&gt;#mic&lt;/code&gt;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Шкала уровня сигнала в реальном времени с отображением текущего и пикового значения в &lt;strong&gt;dB&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Счетчик &lt;strong&gt;клиппинга (Clipping)&lt;/strong&gt; — фиксирует моменты перегрузки микрофона, когда звук начинает хрипеть.&lt;/li&gt;
+&lt;li&gt;Выбор конкретного аудиовхода из выпадающего списка, отображение частоты дискретизации (&lt;code&gt;Hz&lt;/code&gt;) и количества каналов.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::warning
+По умолчанию во вкладке микрофона включен тумблер &lt;strong&gt;«Авто-мьют»&lt;/strong&gt;. Если вы захотите отключить его, чтобы услышать собственный голос в реальном времени, обязательно &lt;strong&gt;наденьте наушники&lt;/strong&gt; — иначе звук из колонок попадет обратно в микрофон и вызовет резкий акустический свист (эффект Ларсена).
+:::&lt;/p&gt;
+&lt;h3&gt;Камера (&lt;code&gt;#camera&lt;/code&gt;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Выбор веб-камеры, проверка реального разрешения видеопотока и соотношения сторон.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Честный счетчик FPS:&lt;/strong&gt; использует браузерный API &lt;code&gt;requestVideoFrameCallback&lt;/code&gt;, благодаря чему показывает реальную частоту кадров вашей веб-камеры (например, 30 или 60 FPS), а не герцовку монитора.&lt;/li&gt;
+&lt;li&gt;Наложение композиционной сетки &lt;strong&gt;«Правило третей»&lt;/strong&gt;, режим &lt;strong&gt;«Зеркало»&lt;/strong&gt; и мгновенное сохранение скриншота в формате &lt;code&gt;PNG&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;6. Особенности архитектуры&lt;/h2&gt;
+&lt;p&gt;Как и другие утилиты экосистемы &lt;strong&gt;Guilliman&apos;s Lab&lt;/strong&gt;, проект написан на чистом HTML, CSS и JavaScript (ES6+) без единого внешнего фреймворка или сборщика:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Приватность:&lt;/strong&gt; видео с камеры, звук с микрофона и нажатия клавиш обрабатываются исключительно локально в вашем браузере и никуда не передаются.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Экономия ресурсов:&lt;/strong&gt; циклы отрисовки &lt;code&gt;requestAnimationFrame&lt;/code&gt; автоматически ставятся на паузу, когда вы переключаетесь на другую вкладку.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Прямые ссылки:&lt;/strong&gt; каждая вкладка привязана к URL-хэшу (&lt;code&gt;#mouse&lt;/code&gt;, &lt;code&gt;#keyboard&lt;/code&gt;, &lt;code&gt;#touch&lt;/code&gt;, &lt;code&gt;#gamepad&lt;/code&gt;, &lt;code&gt;#mic&lt;/code&gt;, &lt;code&gt;#camera&lt;/code&gt;), поэтому ссылкой на конкретный тест удобно делиться.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Мультиязычность и темы:&lt;/strong&gt; интерфейс мгновенно переключается между русским, английским и китайским языками, а также поддерживает OLED-темную и светлую темы («техническое руководство на бумаге»).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Попробовать инструмент в деле можно по адресу &lt;strong&gt;&lt;a href=&quot;https://input.guilliman.ru/&quot;&gt;input.guilliman.ru&lt;/a&gt;&lt;/strong&gt;. Если у вас есть идеи по новым тестам (например, поддержка Web MIDI или расширенная диагностика графических планшетов) — буду рад обратной связи!&lt;/p&gt;
+</content:encoded></item><item><title>Kwork Helper 2.1: как я написал юзерскрипт с ИИ, чтобы не сливать 30 откликов впустую</title><link>https://blog.guilliman.ru/posts/kwork_helper/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/kwork_helper/</guid><description>История создания и обзор браузерного скрипта для биржи Kwork: визуальный радар адекватных заказчиков, индикатор конкуренции, фильтр спама, снайпер-режим и генерация откликов через нейросеть.</description><pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
 &lt;p&gt;Время от времени я захожу на биржу Kwork в поисках интересной подработки. И каждый раз сталкиваюсь с одной и той же проблемой: на базовом уровне биржа дает &lt;strong&gt;всего 30 откликов (коннектов) в месяц&lt;/strong&gt;. При этом никто не гарантирует, что заказчик вообще прочитает ваше сообщение, не говоря уже о том, чтобы предложить работу.&lt;/p&gt;
 &lt;p&gt;Чтобы перестать тратить драгоценные отклики наугад и не вычитывать десятки мусорных ТЗ вручную, я написал юзерскрипт для Tampermonkey — &lt;strong&gt;Kwork Helper&lt;/strong&gt;. Недавно он дорос до версии &lt;strong&gt;2.1.2&lt;/strong&gt;, получив радар конкуренции, снайпер-режим, чёрный список покупателей и прокачанную связку с нейросетью. В этом посте расскажу, как он устроен и как помогает находить выгодные заказы за секунды.&lt;/p&gt;
 &lt;h3&gt;В чём главная боль стандартной ленты Kwork&lt;/h3&gt;
