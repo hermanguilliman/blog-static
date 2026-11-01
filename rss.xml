@@ -1,4 +1,132 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>KEYTAG: онлайн-конструктор бирок и вкладышей для ключей с точной печатью в миллиметрах</title><link>https://blog.guilliman.ru/posts/keytag/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/keytag/</guid><description>Как быстро создать, пронумеровать и распечатать бумажные вкладыши для ключевых бирок на листе А4. Обзор бесплатного веб-инструмента KEYTAG с точными размерами в мм, иконками и выгрузкой в PDF/PNG.</description><pubDate>Sat, 31 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Журнал Guilliman — 3D-печать, разработка, DIY</title><description>Blog</description><link>https://blog.guilliman.ru/</link><language>ru</language><item><title>Kwork Helper 2.1: как я написал юзерскрипт с ИИ, чтобы не сливать 30 откликов впустую</title><link>https://blog.guilliman.ru/posts/kwork_helper/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/kwork_helper/</guid><description>История создания и обзор браузерного скрипта для биржи Kwork: визуальный радар адекватных заказчиков, индикатор конкуренции, фильтр спама, снайпер-режим и генерация откликов через нейросеть.</description><pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+&lt;p&gt;Время от времени я захожу на биржу Kwork в поисках интересной подработки. И каждый раз сталкиваюсь с одной и той же проблемой: на базовом уровне биржа дает &lt;strong&gt;всего 30 откликов (коннектов) в месяц&lt;/strong&gt;. При этом никто не гарантирует, что заказчик вообще прочитает ваше сообщение, не говоря уже о том, чтобы предложить работу.&lt;/p&gt;
+&lt;p&gt;Чтобы перестать тратить драгоценные отклики наугад и не вычитывать десятки мусорных ТЗ вручную, я написал юзерскрипт для Tampermonkey — &lt;strong&gt;Kwork Helper&lt;/strong&gt;. Недавно он дорос до версии &lt;strong&gt;2.1.2&lt;/strong&gt;, получив радар конкуренции, снайпер-режим, чёрный список покупателей и прокачанную связку с нейросетью. В этом посте расскажу, как он устроен и как помогает находить выгодные заказы за секунды.&lt;/p&gt;
+&lt;h3&gt;В чём главная боль стандартной ленты Kwork&lt;/h3&gt;
+&lt;p&gt;Когда у тебя всего 30 попыток в месяц, каждый отклик на вес золота. Но стандартный интерфейс биржи словно специально мешает быстро принимать решения:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Слишком много визуального шума.&lt;/strong&gt; Заказы с бюджетом 500 рублей за полноценный сайт и заказы на 50 000 рублей выглядят абсолютно одинаково.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Скрытая конкуренция.&lt;/strong&gt; Можно долго вчитываться в ТЗ, писать осмысленный отклик, а потом заметить мелкую серую приписку внизу: &lt;code&gt;Предложений: 34&lt;/code&gt;. Откликаться 35-м в очередь — почти гарантированный способ сжечь коннект впустую.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Халявщики и вечные перевыкладыватели.&lt;/strong&gt; Фразы вроде &lt;em&gt;«работа за отзыв»&lt;/em&gt;, &lt;em&gt;«оплата за процент с продаж»&lt;/em&gt; или одни и те же покупатели с 0% найма, которые месяцами пересоздают один проект.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::important
+На фриланс-бирже выигрывает тот, кто откликается &lt;strong&gt;в числе первых&lt;/strong&gt;, но только на проекты от &lt;strong&gt;платежеспособных заказчиков&lt;/strong&gt; с &lt;strong&gt;высоким процентом найма&lt;/strong&gt;.
+:::&lt;/p&gt;
+&lt;h3&gt;Что меняет Kwork Helper 2.1&lt;/h3&gt;
+&lt;p&gt;Я решил переделать саму механику просмотра ленты так, чтобы за &lt;strong&gt;одну секунду взгляда на карточку&lt;/strong&gt; было понятно: стоит ли вообще открывать и читать этот заказ.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Параметр&lt;/th&gt;
+&lt;th&gt;Стандартный Kwork&lt;/th&gt;
+&lt;th&gt;С Kwork Helper 2.1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Оценка бюджета&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Одинаковый текст для всех цен&lt;/td&gt;
+&lt;td&gt;🟢 Зеленая полоса (&lt;code&gt;&amp;gt;= 3000 ₽&lt;/code&gt;) / 🔴 Красная полоса (&lt;code&gt;&amp;lt;= 500 ₽&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Надежность клиента&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Мелкий текст &lt;code&gt;Нанято: 70%&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Цветной бейдж &lt;code&gt;🛡️ Надежный (70% нанятых)&lt;/code&gt; или &lt;code&gt;⚠️ Риск&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Конкуренция&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Незаметная строка &lt;code&gt;Предложений: 34&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Яркий индикатор: от &lt;code&gt;🎯 Предложений: 2&lt;/code&gt; до &lt;code&gt;🔥 Предложений: 34&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Поиск своего стека&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Нужно вычитывать каждое описание&lt;/td&gt;
+&lt;td&gt;Золотая рамка и метка &lt;code&gt;⭐ Моё: python, парсинг&lt;/code&gt; в заголовке&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Борьба со спамом&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Вручную листать мимо мусора&lt;/td&gt;
+&lt;td&gt;Автофильтр стоп-слов + блокировка автора в 1 клик (&lt;code&gt;🚫&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Анализ ТЗ и питч&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Чтение и написание вручную&lt;/td&gt;
+&lt;td&gt;Разбор рисков через ИИ + готовый черновик отклика (&lt;code&gt;🤖&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;1. Светофор надежности и индикатор конкуренции&lt;/h4&gt;
+&lt;p&gt;Скрипт на лету парсит параметры карточки и заменяет скучный серый текст на цветные аналитические бейджи:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Надежность заказчика:&lt;/strong&gt; если у клиента процент найма выше 40%, он получает зеленый щит &lt;code&gt;🛡️ Надежный (57% нанятых)&lt;/code&gt;. Если ниже 20% — красный сигнал &lt;code&gt;⚠️ Риск&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Радар конкуренции:&lt;/strong&gt; главный спаситель откликов.
+&lt;ul&gt;
+&lt;li&gt;🟢 &lt;code&gt;🎯 Предложений: 0–3&lt;/code&gt; — конкурентов почти нет, вы будете одним из первых, заказчик точно увидит ваш питч.&lt;/li&gt;
+&lt;li&gt;🟡 &lt;code&gt;👥 Предложений: 4–14&lt;/code&gt; — рабочая конкуренция, можно смело заходить со своим кейсом.&lt;/li&gt;
+&lt;li&gt;🔴 &lt;code&gt;🔥 Предложений: 15+&lt;/code&gt; — в личке у покупателя уже толпа фрилансеров, лучше поберечь отклик.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;2. Маркер «⭐ Моё», спам-фильтр и ЧС авторов&lt;/h4&gt;
+&lt;p&gt;В настройках скрипта теперь есть три независимых списка фильтрации:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;⭐ Маркер «Моё»:&lt;/strong&gt; сюда я заношу ключевые слова своего стека (&lt;code&gt;парсинг&lt;/code&gt;, &lt;code&gt;fastapi&lt;/code&gt;, &lt;code&gt;скрипт&lt;/code&gt;, &lt;code&gt;wordpress&lt;/code&gt; и т.д.). Если в заказе есть совпадение, карточка сразу подсвечивается золотистой рамкой и получает бейдж &lt;code&gt;⭐ Моё&lt;/code&gt; прямо в заголовке.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🛑 Фильтр стоп-слов:&lt;/strong&gt; карточки со словами &lt;em&gt;«за отзыв», «бесплатно», «бартер», «за процент»&lt;/em&gt; автоматически обесцвечиваются (или полностью скрываются из ленты).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🚫 Чёрный список заказчиков:&lt;/strong&gt; рядом с логином каждого покупателя появилась кнопка &lt;code&gt;🚫&lt;/code&gt;. Если какой-то автор постоянно спамит неадекватными задачами, один клик навсегда убирает его заказы с глаз.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;3. 🎯 Снайпер-режим и бесконечная лента&lt;/h4&gt;
+&lt;p&gt;Когда ты работаешь, сидеть и вручную обновлять страницу биржи каждые две минуты невозможно. Поэтому в боковой панели &lt;code&gt;KH&lt;/code&gt; есть два режима под разный сценарий:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Бесконечная лента (Infinite Scroll):&lt;/strong&gt; когда нужно спокойно полистать старые заказы без кликов по пагинации.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Авто-обновление + 🎯 Снайпер-пуши:&lt;/strong&gt; скрипт обновляет ленту каждые 60 секунд и запоминает уже просмотренные карточки. Свежие проекты получают метку &lt;code&gt;✨ НОВЫЙ&lt;/code&gt;. А если новый заказ &lt;strong&gt;не спам, без толпы конкурентов, с хорошим бюджетом или вашим ключевым словом из «⭐ Моё»&lt;/strong&gt; — скрипт подает мягкий звуковой сигнал и присылает системное пуш-уведомление на рабочий стол.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::tip
+Клик по пуш-уведомлению Снайпера сразу переключает фокус на вкладку с Kwork и плавно прокручивает страницу прямо к нужному заказу.
+:::&lt;/p&gt;
+&lt;h4&gt;4. 🤖 ИИ-аналитик + генератор черновика отклика&lt;/h4&gt;
+&lt;p&gt;Рядом с названием каждого проекта есть кнопка &lt;strong&gt;🤖&lt;/strong&gt;. В версии 2.1 я серьезно доработал то, какие данные скрипт отправляет в языковую модель.&lt;/p&gt;
+&lt;p&gt;Теперь нейросеть получает не просто текст описания, а &lt;strong&gt;полное досье на проект&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Заголовок и полное ТЗ (даже если оно свернуто под кат «Показать полностью»);&lt;/li&gt;
+&lt;li&gt;Желаемый и допустимый бюджет;&lt;/li&gt;
+&lt;li&gt;Процент найма покупателя и общее число размещенных им проектов;&lt;/li&gt;
+&lt;li&gt;Количество уже поданных откликов от других исполнителей.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;В ответ ИИ выдает краткий вердикт (&lt;code&gt;[ОТКЛИКАТЬСЯ / ОСТОРОЖНО / ПРОПУСТИТЬ]&lt;/code&gt;), подсвечивает подводные камни ТЗ и — если заказ адекватный — &lt;strong&gt;сразу генерирует короткий цепляющий отклик&lt;/strong&gt; в отдельном блоке с кнопкой &lt;strong&gt;«📋 Скопировать отклик»&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;:::note
+Скрипт поддерживает любой OpenAI-совместимый API. Можно указать как стандартный &lt;code&gt;https://api.openai.com/v1&lt;/code&gt;, так и &lt;strong&gt;OpenRouter&lt;/strong&gt; (&lt;code&gt;https://openrouter.ai/api/v1&lt;/code&gt;), который позволяет выбрать любую быструю модель вроде &lt;code&gt;openai/gpt-4o-mini&lt;/code&gt; или &lt;code&gt;deepseek/deepseek-chat&lt;/code&gt;.
+:::&lt;/p&gt;
+&lt;h3&gt;Немного о том, как это устроено внутри&lt;/h3&gt;
+&lt;p&gt;Поскольку вёрстка крупных площадок периодически меняется, я постарался сделать скрипт максимально живучим и быстрым:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Изоляция шагов (&lt;code&gt;safe()&lt;/code&gt;):&lt;/strong&gt; каждый этап обработки карточки (спам-фильтр, цены, рейтинг, конкуренция, ИИ) обернут в изолированный перехватчик. Даже если Kwork завтра переименует один из блоков, остальные функции продолжат работать как ни в чём не бывало.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Самодиагностика DOM (&lt;code&gt;checkDomHealth()&lt;/code&gt;):&lt;/strong&gt; скрипт сам следит за ключевыми селекторами и один раз предупредит в консоли, если заметит изменения в структуре сайта.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Кэширование ответов ИИ:&lt;/strong&gt; результаты анализа сохраняются в памяти на время сессии. Если вы случайно закрыли блок с ответом нейросети и нажали на 🤖 ещё раз, ответ откроется мгновенно без повторного расхода токенов.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Если вам захочется подстроить пороги цен или конкуренции под свою нишу, это делается за пару секунд в объекте &lt;code&gt;DEFAULTS&lt;/code&gt; в самом начале кода:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const DEFAULTS = {
+    goodPrice: 3000,     // От какой суммы подсвечивать заказ зеленым (₽)
+    badPrice: 500,       // До какой суммы подсвечивать красным (₽)
+    goodHireRate: 40,    // Процент найма для статуса &quot;🛡️ Надежный&quot; (%)
+    badHireRate: 20,     // Процент найма для статуса &quot;⚠️ Риск&quot; (%)
+    goodOffersMax: 3,    // До скольки откликов считать конкуренцию низкой
+    badOffersMin: 15,    // От скольки откликов красить конкуренцию в красный
+    refreshTime: 60,     // Таймер автообновления (сек)
+    // ...
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::caution
+При обновлении со старой версии Kwork Helper 2.0 обязательно зайдите в настройки скрипта (&lt;strong&gt;⚙️&lt;/strong&gt;) и нажмите кнопку &lt;strong&gt;«🔄 Вставить промпт v2.1»&lt;/strong&gt;, а затем сохраните настройки. Иначе в вашем &lt;code&gt;localStorage&lt;/code&gt; останется старый системный промпт без поддержки блока &lt;code&gt;&amp;lt;pitch&amp;gt;&lt;/code&gt; для копирования готового отклика.
+:::&lt;/p&gt;
+&lt;h3&gt;Чек-лист: как установить и настроить за 2 минуты&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[ ] Установите расширение &lt;strong&gt;Tampermonkey&lt;/strong&gt; для своего браузера (&lt;a href=&quot;https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo&quot;&gt;Chrome / Edge / Brave&lt;/a&gt;, &lt;a href=&quot;https://addons.mozilla.org/ru/firefox/addon/tampermonkey/&quot;&gt;Firefox&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;[ ] Перейдите по &lt;a href=&quot;https://raw.githubusercontent.com/hermanguilliman/kwork-helper/main/kwork-helper.user.js&quot;&gt;прямой ссылке установки Kwork Helper&lt;/a&gt; и подтвердите добавление скрипта.&lt;/li&gt;
+&lt;li&gt;[ ] Откройте &lt;a href=&quot;https://kwork.ru/projects&quot;&gt;Биржу проектов Kwork&lt;/a&gt; — слева появится плавающая кнопка &lt;strong&gt;«KH»&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;[ ] Нажмите на &lt;strong&gt;«KH» → ⚙️ (Настройки)&lt;/strong&gt; и добавьте 5–10 своих ключевых навыков в раздел &lt;strong&gt;«⭐ Маркер Моё»&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;[ ] При желании укажите свой API-ключ от OpenAI или OpenRouter, чтобы анализировать заказы и генерировать черновики откликов кнопкой &lt;strong&gt;🤖&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;[ ] Загляните в &lt;a href=&quot;https://github.com/hermanguilliman/kwork-helper&quot;&gt;репозиторий проекта на GitHub&lt;/a&gt; и поставьте звездочку, если скрипт сэкономил вам время и коннекты!&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>KEYTAG: онлайн-конструктор бирок и вкладышей для ключей с точной печатью в миллиметрах</title><link>https://blog.guilliman.ru/posts/keytag/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/keytag/</guid><description>Как быстро создать, пронумеровать и распечатать бумажные вкладыши для ключевых бирок на листе А4. Обзор бесплатного веб-инструмента KEYTAG с точными размерами в мм, иконками и выгрузкой в PDF/PNG.</description><pubDate>Sat, 31 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
 &lt;p&gt;Любой, кто хотя бы раз оформлял ключницу в офисе, серверной, гостинице, мастерской или на складе, знает эту боль: вы покупаете упаковку пластиковых бирок с крошечным окошком, а дальше начинается борьба с таблицами в Word или Excel. Подогнать ячейки ровно под &lt;code&gt;50 × 30 мм&lt;/code&gt;, отцентровать текст, сделать аккуратную линию отреза и не сойти с ума, когда при печати принтер решает «слегка уменьшить масштаб» — задача не из приятных.&lt;/p&gt;
 &lt;p&gt;Чтобы закрыть этот вопрос раз и навсегда, в рамках &lt;strong&gt;Guilliman&apos;s Lab&lt;/strong&gt; был создан &lt;strong&gt;&lt;a href=&quot;https://keytag.guilliman.ru/&quot;&gt;KEYTAG&lt;/a&gt;&lt;/strong&gt; — бесплатный браузерный конструктор сетки бирок и бумажных вкладышей, который считает всё в реальных физических миллиметрах и готовит идеальный лист для печати в один клик.&lt;/p&gt;
 &lt;h3&gt;Зачем нужен отдельный инструмент?&lt;/h3&gt;
