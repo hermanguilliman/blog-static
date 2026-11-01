@@ -33,13 +33,13 @@ const configHue = 165;
             );
         })();</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Как писать техдокументацию, чтобы через год всё ещё понимать","description":"Практический подход к документации, который сохраняет проект понятным через 6-12 месяцев: структура, шаблоны, проверки, откат и примеры","keywords":["documentation","devops","linux","maintenance","writing"],"author":{"@type":"Person","name":"Guilliman","url":"https://blog.guilliman.ru/"},"datePublished":"14.10.2026","inLanguage":"ru"}</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" title="Guilliman" href="https://blog.guilliman.ru/rss.xml"><!-- Yandex.RTB --><script>
             window.yaContextCb = window.yaContextCb || [];
-        </script><script src="https://yandex.ru/ads/system/context.js" async></script><link rel="stylesheet" href="/_astro/Layout.D8EfM71i.css">
-<link rel="stylesheet" href="/_astro/Layout.DSulWsr7.css">
-<link rel="stylesheet" href="/_astro/_page_.CQpCb35u.css">
+        </script><script src="https://yandex.ru/ads/system/context.js" async></script><link rel="stylesheet" href="/_astro/Layout.DSulWsr7.css">
+<link rel="stylesheet" href="/_astro/Layout.D8EfM71i.css">
+<link rel="stylesheet" href="/_astro/_page_.6qNw5A0I.css">
 <link rel="stylesheet" href="/_astro/_page_.DfSTB08i.css">
 <link rel="stylesheet" href="/_astro/about.BVRjWv9H.css">
-<style>#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k){-webkit-appearance:none;height:1.5rem;background-image:var(--color-selection-bar);transition:background-image .15s ease-in-out}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb:active{background:#fff9}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;border-width:0;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb:active{background:#fff9}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb:active{background:#fff9}
-input.svelte-1wah7ro:focus{outline:0}
+<style>input.svelte-1wah7ro:focus{outline:0}
+#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k){-webkit-appearance:none;height:1.5rem;background-image:var(--color-selection-bar);transition:background-image .15s ease-in-out}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-webkit-slider-thumb:active{background:#fff9}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;border-width:0;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-moz-range-thumb:active{background:#fff9}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb{-webkit-appearance:none;height:1rem;width:.5rem;border-radius:.125rem;background:#ffffffb3;box-shadow:none}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb:hover{background:#fffc}#display-setting.svelte-d7tq3k input[type=range]:where(.svelte-d7tq3k)::-ms-thumb:active{background:#fff9}
 </style><script type="module" src="/_astro/page.DXzasPyy.js"></script></head> <body class="min-h-screen transition" data-overlayscrollbars-initialize data-astro-cid-sckkx6r4 style="--bannerOffset: 15vh;--banner-height-home: 65vh;--banner-height: 35vh;--configHue: 165;--page-width: 75rem;"> <!-- Yandex.Metrika counter --> <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {
                 m[i] =
@@ -232,11 +232,11 @@ loadPagefind()
 <li><strong>Он содержит проверочные шаги.</strong> «curl вернул 200» лучше, чем «сайт поднялся».</li>
 <li><strong>Он обновляется вместе с изменением.</strong> Документ обновляют вместе с патчем, а не отдельной задачей.</li>
 </ul><p>Пишите так, чтобы читатель мог открыть терминал, выполнить пару команд и понять, на каком шаге он находится.</p></section>
-<section><h3 id="железные-правила">Железные правила<a class="anchor" href="#железные-правила"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><section><h4 id="1-каждая-важная-инструкция-начинается-с-цели">1. Каждая важная инструкция начинается с цели<a class="anchor" href="#1-каждая-важная-инструкция-начинается-с-цели"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Не пишите: «Установите Nginx».</p><p>Пишите: «Нужно обрабатывать запросы по домену example.com, отдать статику и прокинуть API в контейнер на порт 3000».</p><p>Цель сокращает ошибки и показывает, что можно выкинуть из инструкции.</p></section><section><h4 id="2-команды-должны-быть-копируемыми">2. Команды должны быть копируемыми<a class="anchor" href="#2-команды-должны-быть-копируемыми"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Команда в документе должна запускаться copy-paste. Если в команде есть <code>&#x3C;VPS_IP></code>, читатель обязан понять, что подставлять. Если есть <code>${USER}</code>, читатель должен знать, откуда берётся переменная.</p><p>Плохо:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">ssh</span><span style="color:#F1FA8C"> user@server</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> up</span></span></code></pre><p>Лучше:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">ssh</span><span style="color:#F1FA8C"> deploy@203.0.113.10</span></span>
-<span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> /opt/app</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> up</span><span style="color:#BD93F9"> -d</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> ps</span></span></code></pre><p>Последняя строка объясняет, как проверить результат.</p></section><section><h4 id="3-показывайте-ожидаемый-результат">3. Показывайте ожидаемый результат<a class="anchor" href="#3-показывайте-ожидаемый-результат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>После команды пишите ожидаемый вывод или признак успеха.</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">curl</span><span style="color:#BD93F9"> -I</span><span style="color:#F1FA8C"> https://example.com</span></span></code></pre><p>Ожидается: HTTP/2 200 и заголовок <code>server: Caddy</code> или <code>server: nginx</code>.</p><p>Если результат непредсказуем, пишите: «Там должно появиться сообщение <code>Container app started</code>».</p></section><section><h4 id="4-документируйте-откат">4. Документируйте откат<a class="anchor" href="#4-документируйте-откат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Для каждой необратимой операции пишите rollback.</p><p>Чек-лист отката:</p><ul>
+<section><h3 id="железные-правила">Железные правила<a class="anchor" href="#железные-правила"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><section><h4 id="1-каждая-важная-инструкция-начинается-с-цели">1. Каждая важная инструкция начинается с цели<a class="anchor" href="#1-каждая-важная-инструкция-начинается-с-цели"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Не пишите: «Установите Nginx».</p><p>Пишите: «Нужно обрабатывать запросы по домену example.com, отдать статику и прокинуть API в контейнер на порт 3000».</p><p>Цель сокращает ошибки и показывает, что можно выкинуть из инструкции.</p></section><section><h4 id="2-команды-должны-быть-копируемыми">2. Команды должны быть копируемыми<a class="anchor" href="#2-команды-должны-быть-копируемыми"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Команда в документе должна запускаться copy-paste. Если в команде есть <code>&#x3C;VPS_IP></code>, читатель обязан понять, что подставлять. Если есть <code>${USER}</code>, читатель должен знать, откуда берётся переменная.</p><p>Плохо:</p><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">ssh</span><span style="color:var(--astro-code-token-string)"> user@server</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> up</span></span></code></pre><p>Лучше:</p><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">ssh</span><span style="color:var(--astro-code-token-string)"> deploy@203.0.113.10</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">cd</span><span style="color:var(--astro-code-token-string)"> /opt/app</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> up</span><span style="color:var(--astro-code-token-string)"> -d</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> ps</span></span></code></pre><p>Последняя строка объясняет, как проверить результат.</p></section><section><h4 id="3-показывайте-ожидаемый-результат">3. Показывайте ожидаемый результат<a class="anchor" href="#3-показывайте-ожидаемый-результат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>После команды пишите ожидаемый вывод или признак успеха.</p><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">curl</span><span style="color:var(--astro-code-token-string)"> -I</span><span style="color:var(--astro-code-token-string)"> https://example.com</span></span></code></pre><p>Ожидается: HTTP/2 200 и заголовок <code>server: Caddy</code> или <code>server: nginx</code>.</p><p>Если результат непредсказуем, пишите: «Там должно появиться сообщение <code>Container app started</code>».</p></section><section><h4 id="4-документируйте-откат">4. Документируйте откат<a class="anchor" href="#4-документируйте-откат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h4><p>Для каждой необратимой операции пишите rollback.</p><p>Чек-лист отката:</p><ul>
 <li>изменение сделано;</li>
 <li>как итог - что changed;</li>
 <li>rollback - восстановить из backup;</li>
@@ -248,57 +248,57 @@ loadPagefind()
 <li>версия;</li>
 <li>для какого окружения написано.</li>
 </ul><p>Тогда через полгода будет ясно, актуален ли текст.</p></section></section>
-<section><h3 id="шаблон-хорошего-runbook">Шаблон хорошего runbook<a class="anchor" href="#шаблон-хорошего-runbook"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:#BD93F9;font-weight:bold"># Название задачи</span></span>
+<section><h3 id="шаблон-хорошего-runbook">Шаблон хорошего runbook<a class="anchor" href="#шаблон-хорошего-runbook"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold"># Название задачи</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">Дата: 2026-10-14</span></span>
-<span class="line"><span style="color:#F8F8F2">Автор: ansible</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Дата: 2026-10-14</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Автор: ansible</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Цель</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Цель</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">Что мы делаем и какой результат ожидаем.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Что мы делаем и какой результат ожидаем.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Контекст</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Контекст</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- где находится система;</span></span>
-<span class="line"><span style="color:#F8F8F2">- какие ограничения;</span></span>
-<span class="line"><span style="color:#F8F8F2">- что уже настроено;</span></span>
-<span class="line"><span style="color:#F8F8F2">- какие доступы нужны.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- где находится система;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- какие ограничения;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- что уже настроено;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- какие доступы нужны.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Предусловия</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Предусловия</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- root/ssh;</span></span>
-<span class="line"><span style="color:#F8F8F2">- backup сделан;</span></span>
-<span class="line"><span style="color:#F8F8F2">- домен указывает на IP.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- root/ssh;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- backup сделан;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- домен указывает на IP.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Шаги</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Шаги</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">1. Сделать backup.</span></span>
-<span class="line"><span style="color:#F8F8F2">2. Применить изменение.</span></span>
-<span class="line"><span style="color:#F8F8F2">3. Проверить.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">1. Сделать backup.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">2. Применить изменение.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">3. Проверить.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Проверка</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Проверка</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- команда 1;</span></span>
-<span class="line"><span style="color:#F8F8F2">- команда 2;</span></span>
-<span class="line"><span style="color:#F8F8F2">- ожидаемый вывод.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- команда 1;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- команда 2;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- ожидаемый вывод.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Откат</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Откат</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- шаг 1;</span></span>
-<span class="line"><span style="color:#F8F8F2">- шаг 2;</span></span>
-<span class="line"><span style="color:#F8F8F2">- проверка отката.</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- шаг 1;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- шаг 2;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- проверка отката.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Чек-лист</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Чек-лист</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- [ ] backup есть</span></span>
-<span class="line"><span style="color:#F8F8F2">- [ ] тесты прошли</span></span>
-<span class="line"><span style="color:#F8F8F2">- [ ] логи чисты</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- [ ] backup есть</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- [ ] тесты прошли</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- [ ] логи чисты</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">## Ссылки</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Ссылки</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">- репозиторий;</span></span>
-<span class="line"><span style="color:#F8F8F2">- dashboard;</span></span>
-<span class="line"><span style="color:#F8F8F2">- backup job.</span></span></code></pre><p>Шаблон работает, если держать его коротким и конкретным.</p></section>
+<span class="line"><span style="color:var(--astro-code-foreground)">- репозиторий;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- dashboard;</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">- backup job.</span></span></code></pre><p>Шаблон работает, если держать его коротким и конкретным.</p></section>
 <section><h3 id="таблица-типы-документации">Таблица: типы документации<a class="anchor" href="#таблица-типы-документации"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3>
 
 
@@ -347,24 +347,24 @@ loadPagefind()
 
 
 <table><thead><tr><th>Тип документа</th><th>Когда нужен</th><th>Отличный признак</th><th>Частая ошибка</th></tr></thead><tbody><tr><td>README</td><td>Вход в проект</td><td>Первые 5 минут запуска</td><td>Дублировать всё</td></tr><tr><td>Runbook</td><td>Операционные задачи</td><td>Пошаговые команды</td><td>Нет отката</td></tr><tr><td>ADR</td><td>Решения</td><td>Причина, альтернативы</td><td>Пишут вместо кода</td></tr><tr><td>API docs</td><td>Публичные интерфейсы</td><td>Примеры запроса/ответа</td><td>Тела запроса без примеров</td></tr><tr><td>Run-and-trace</td><td>Инциденты</td><td>Что делать сейчас</td><td>Путают с архитектурой</td></tr><tr><td>Architecture</td><td>Большая система</td><td>Схемы и границы</td><td>Нет связи с кодом</td></tr></tbody></table><p>README должен отвечать на вопрос «как запустить». Runbook - «как применить на проде». ADR - «почему так сделали».</p></section>
-<section><h3 id="пример-плохого-и-хорошего-документа">Пример плохого и хорошего документа<a class="anchor" href="#пример-плохого-и-хорошего-документа"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><p>Плохой:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:#BD93F9;font-weight:bold">## Деплой</span></span>
+<section><h3 id="пример-плохого-и-хорошего-документа">Пример плохого и хорошего документа<a class="anchor" href="#пример-плохого-и-хорошего-документа"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><p>Плохой:</p><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Деплой</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">Запусти compose. Загрузи образ. Проверь.</span></span></code></pre><p>Читатель не знает, какой compose, куда загрузить, как проверить.</p><p>Хороший:</p><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:#BD93F9;font-weight:bold">## Деплой релиза 1.4.0</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Запусти compose. Загрузи образ. Проверь.</span></span></code></pre><p>Читатель не знает, какой compose, куда загрузить, как проверить.</p><p>Хороший:</p><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="md"><code><span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">## Деплой релиза 1.4.0</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">Дата: 2026-10-14</span></span>
-<span class="line"><span style="color:#F8F8F2">Сервер: app-01</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Дата: 2026-10-14</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">Сервер: app-01</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BD93F9;font-weight:bold">### 1. Сделать backup базы</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground);font-weight:bold">### 1. Сделать backup базы</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#50FA7B">```bash</span></span>
-<span class="line"><span style="color:#50FA7B">pg_dump</span><span style="color:#BD93F9"> -Fc</span><span style="color:#F1FA8C"> production</span><span style="color:#FF79C6"> ></span><span style="color:#F1FA8C"> /backup/db-</span><span style="color:#F8F8F2">$(</span><span style="color:#50FA7B">date</span><span style="color:#F1FA8C"> +%F</span><span style="color:#F8F8F2">)</span><span style="color:#F1FA8C">.dump</span></span></code></pre><p>Ожидается файл размером более 100 МБ.</p></section>
-<section><h3 id="2-обновить-код">2. Обновить код<a class="anchor" href="#2-обновить-код"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> /opt/app</span></span>
-<span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> fetch</span><span style="color:#BD93F9"> --tags</span></span>
-<span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> checkout</span><span style="color:#F1FA8C"> v1.4.0</span></span></code></pre></section>
-<section><h3 id="3-перезапустить">3. Перезапустить<a class="anchor" href="#3-перезапустить"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> up</span><span style="color:#BD93F9"> -d</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> ps</span></span></code></pre><p>Ожидается: все контейнеры в статусе running.</p></section>
-<section><h3 id="откат">Откат<a class="anchor" href="#откат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> checkout</span><span style="color:#F1FA8C"> v1.3.9</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> compose</span><span style="color:#F1FA8C"> up</span><span style="color:#BD93F9"> -d</span></span></code></pre><pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">```bash</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">pg_dump</span><span style="color:var(--astro-code-token-string)"> -Fc</span><span style="color:var(--astro-code-token-string)"> production</span><span style="color:var(--astro-code-token-keyword)"> ></span><span style="color:var(--astro-code-token-string)"> /backup/db-</span><span style="color:var(--astro-code-foreground)">$(</span><span style="color:var(--astro-code-token-function)">date</span><span style="color:var(--astro-code-token-string)"> +%F</span><span style="color:var(--astro-code-foreground)">)</span><span style="color:var(--astro-code-token-string)">.dump</span></span></code></pre><p>Ожидается файл размером более 100 МБ.</p></section>
+<section><h3 id="2-обновить-код">2. Обновить код<a class="anchor" href="#2-обновить-код"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">cd</span><span style="color:var(--astro-code-token-string)"> /opt/app</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">git</span><span style="color:var(--astro-code-token-string)"> fetch</span><span style="color:var(--astro-code-token-string)"> --tags</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">git</span><span style="color:var(--astro-code-token-string)"> checkout</span><span style="color:var(--astro-code-token-string)"> v1.4.0</span></span></code></pre></section>
+<section><h3 id="3-перезапустить">3. Перезапустить<a class="anchor" href="#3-перезапустить"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> up</span><span style="color:var(--astro-code-token-string)"> -d</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> ps</span></span></code></pre><p>Ожидается: все контейнеры в статусе running.</p></section>
+<section><h3 id="откат">Откат<a class="anchor" href="#откат"><span class="anchor-icon" data-pagefind-ignore="">#</span></a></h3><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-function)">git</span><span style="color:var(--astro-code-token-string)"> checkout</span><span style="color:var(--astro-code-token-string)"> v1.3.9</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">docker</span><span style="color:var(--astro-code-token-string)"> compose</span><span style="color:var(--astro-code-token-string)"> up</span><span style="color:var(--astro-code-token-string)"> -d</span></span></code></pre><pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
 <span class="line"><span>Это длиннее, но читается за минуту и не требует догадок.</span></span>
 <span class="line"><span></span></span>
 <span class="line"><span>### Как выбирать уровень деталей</span></span>
