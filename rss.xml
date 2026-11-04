@@ -1612,8 +1612,8 @@ KbdInteractiveAuthentication no
 &lt;ol&gt;
 &lt;li&gt;Проверьте синтаксис и перезагрузите демон:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sshd -t
-systemctl reload ssh
+&lt;pre&gt;&lt;code&gt;sudo sshd -t
+sudo systemctl reload ssh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;:::tip
 &lt;code&gt;systemctl reload ssh&lt;/code&gt; не обрывает уже открытые сессии, поэтому его можно выполнять, не закрывая текущее подключение.
@@ -1621,64 +1621,69 @@ systemctl reload ssh
 &lt;ol&gt;
 &lt;li&gt;Если исходный пользователь больше не нужен, удалите его вместе с домашним каталогом:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;deluser --remove-home ubuntu
+&lt;pre&gt;&lt;code&gt;sudo deluser --remove-home ubuntu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;:::warning
 Запускайте эту команду только после того, как убедились, что вход под &lt;code&gt;newuser&lt;/code&gt; работает. Имя &lt;code&gt;ubuntu&lt;/code&gt; замените на реального исходного пользователя, если оно другое.
 :::&lt;/p&gt;
 &lt;h3&gt;Файрвол UFW&lt;/h3&gt;
 &lt;p&gt;Разрешите SSH и включите UFW:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ufw default deny incoming
-ufw default allow outgoing
-ufw allow 22/tcp
-ufw enable
-ufw status verbose
+&lt;pre&gt;&lt;code&gt;sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22/tcp
+sudo ufw enable
+sudo ufw status verbose
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Если используете нестандартный порт SSH, замените &lt;code&gt;22/tcp&lt;/code&gt; на нужный порт до &lt;code&gt;ufw enable&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;Docker и Docker Compose&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Удалите конфликтующие старые пакеты:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
-  apt remove -y &quot;$pkg&quot; 2&amp;gt;/dev/null || true
-done
+&lt;pre&gt;&lt;code&gt;sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Добавьте официальный репозиторий Docker:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
+&lt;pre&gt;&lt;code&gt;# Add Docker&apos;s official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-  https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; \
-  &amp;gt; /etc/apt/sources.list.d/docker.list
+# Add the repository to Apt sources:
+sudo tee /etc/apt/sources.list.d/docker.sources &amp;lt;&amp;lt;EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release &amp;amp;&amp;amp; echo &quot;${UBUNTU_CODENAME:-$VERSION_CODENAME}&quot;)
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Установите Docker Engine и Compose plugin:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;apt update
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+&lt;pre&gt;&lt;code&gt;sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Проверьте установку:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;docker --version
-docker compose version
+&lt;pre&gt;&lt;code&gt;sudo systemctl status docker
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Разрешите &lt;code&gt;newuser&lt;/code&gt; запускать Docker без &lt;code&gt;sudo&lt;/code&gt; и проверьте отдельной оболочкой:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;usermod -aG docker newuser
-runuser -l newuser -c &apos;docker run --rm hello-world&apos;
+&lt;pre&gt;&lt;code&gt;sudo usermod -aG docker newuser
+docker run hello-world
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Zsh&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Установите Zsh:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;apt install -y zsh
+&lt;pre&gt;&lt;code&gt;sudo apt install -y zsh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Сделайте Zsh оболочкой по умолчанию для &lt;code&gt;newuser&lt;/code&gt;:&lt;/li&gt;
