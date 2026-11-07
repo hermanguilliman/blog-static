@@ -1532,19 +1532,18 @@ docs(runbook): update deploy steps for v1.4.0
 &lt;p&gt;:::tip
 Лучший способ понять ценность docs - убрать себя из процесса запуска и посмотреть, где читатель застрянет.
 :::&lt;/p&gt;
-</content:encoded></item><item><title>Настройка VPS на примере Ubuntu — расширенное руководство</title><link>https://blog.guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup/</guid><description>Полная и безопасная настройка VPS: пользователь с sudo, SSH-ключи, UFW, Docker, Zsh, Oh My Posh, Homebrew и Neofetch</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
-&lt;p&gt;Это руководство поможет сделать новый VPS безопасным и удобным для повседневной работы. Мы возьмём сервер с чистой Ubuntu и превратим его в готовую среду для запуска проектов, работы с Docker-контейнерами и удалённой разработки.&lt;/p&gt;
+</content:encoded></item><item><title>Настройка VPS на примере Ubuntu — расширенное руководство</title><link>https://blog.guilliman.ru/posts/vps_setup/</link><guid isPermaLink="true">https://blog.guilliman.ru/posts/vps_setup/</guid><description>Полная и безопасная настройка VPS: пользователь с sudo, SSH-ключи, UFW, Docker, Homebrew, Zsh, Starship и современные CLI-утилиты</description><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Краткий брифинг&lt;/h3&gt;
+&lt;p&gt;Это руководство поможет сделать новый VPS безопасным и максимально удобным для повседневной работы. Мы возьмём сервер с чистой Ubuntu и превратим его в мощную среду для запуска проектов, управления Docker-контейнерами и комфортной жизни в терминале.&lt;/p&gt;
 &lt;p&gt;Что и для чего делается:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Смена root на отдельного пользователя&lt;/strong&gt; — чтобы не работать постоянно с максимальными привилегиями и ограничить возможный ущерб при компрометации.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SSH-ключ вместо пароля&lt;/strong&gt; — защищает от брутфорса и избавляет от ввода пароля при каждом подключении.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Отключение входа для root и парольной аутентификации&lt;/strong&gt; — закрывает самые частые векторы атак на SSH.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH-ключ вместо пароля и отключение входа root&lt;/strong&gt; — защищает от брутфорса и закрывает главные векторы атак на SSH.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Файрвол UFW&lt;/strong&gt; — блокирует все входящие соединения, кроме явно разрешённых портов.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Docker и Compose&lt;/strong&gt; — упрощают развёртывание и обновление приложений в изолированных контейнерах.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Zsh, Oh My Posh и Homebrew&lt;/strong&gt; — делают терминал информативнее и дают доступ к свежим версиям утилит.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zsh, плагины и Starship&lt;/strong&gt; — дают быстрый информативный промпт (ветка Git, время выполнения команд, коды ошибок), автодополнение и подсветку синтаксиса.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Homebrew и современные CLI-утилиты&lt;/strong&gt; — заменяют стандартные &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;cat&lt;/code&gt;, &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;grep&lt;/code&gt; и &lt;code&gt;cd&lt;/code&gt; на реактивные аналоги (&lt;code&gt;eza&lt;/code&gt;, &lt;code&gt;bat&lt;/code&gt;, &lt;code&gt;fd&lt;/code&gt;, &lt;code&gt;ripgrep&lt;/code&gt;, &lt;code&gt;zoxide&lt;/code&gt;, &lt;code&gt;fzf&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Neofetch в MOTD&lt;/strong&gt; — выводит наглядную сводку о состоянии системы сразу при входе на сервер.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;В результате вы получите защищённый VPS, готовый к деплою проектов и комфортной работе в консоли.&lt;/p&gt;
 &lt;h3&gt;Соглашения в этом руководстве&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Первая часть команд выполняется от имени &lt;code&gt;root&lt;/code&gt; (после входа через &lt;code&gt;ssh root@VPS_IP&lt;/code&gt;).&lt;/li&gt;
@@ -1554,7 +1553,7 @@ docs(runbook): update deploy steps for v1.4.0
 &lt;li&gt;&lt;strong&gt;Важно:&lt;/strong&gt; перед отключением входа по паролю обязательно проверьте доступ по SSH-ключу в соседнем окне терминала.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Исходная подготовка сервера&lt;/h3&gt;
-&lt;p&gt;Подключитесь к серверу под &lt;code&gt;root&lt;/code&gt;, обновите систему и установите базовые пакеты (включая зависимости, которые позже пригодятся для Docker, Homebrew и Oh My Posh):&lt;/p&gt;
+&lt;p&gt;Подключитесь к серверу под &lt;code&gt;root&lt;/code&gt;, обновите систему и установите базовые пакеты (включая зависимости для Docker и Homebrew):&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;apt update &amp;amp;&amp;amp; apt full-upgrade -y &amp;amp;&amp;amp; apt install -y ca-certificates curl gnupg lsb-release ufw unzip git build-essential procps file
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;При необходимости настройте часовой пояс:&lt;/p&gt;
@@ -1584,10 +1583,10 @@ docs(runbook): update deploy steps for v1.4.0
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;ssh newuser@VPS_IP
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Также проверьте, что у пользователя работает повышение привилегий (после ввода пароля команда должна вернуть &lt;code&gt;root&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;Проверьте, что у пользователя работает повышение привилегий (после ввода пароля команда должна вернуть &lt;code&gt;root&lt;/code&gt;):&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo whoami
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Только после успешной проверки возвращайтесь к настройке &lt;code&gt;sshd&lt;/code&gt; (делать это можно уже от имени &lt;code&gt;newuser&lt;/code&gt; через &lt;code&gt;sudo&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Только после успешной проверки переходите к настройке &lt;code&gt;sshd&lt;/code&gt; (делать это можно уже от имени &lt;code&gt;newuser&lt;/code&gt; через &lt;code&gt;sudo&lt;/code&gt;).&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Проверьте, не переопределены ли настройки SSH в дополнительных конфигурационных файлах (часто встречается у облачных провайдеров):&lt;/li&gt;
 &lt;/ol&gt;
@@ -1648,65 +1647,69 @@ KbdInteractiveAuthentication no
 &lt;pre&gt;&lt;code&gt;sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
-&lt;li&gt;Проверьте статус службы:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo systemctl status docker --no-pager
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Разрешите вашему пользователю работать с Docker без &lt;code&gt;sudo&lt;/code&gt;, примените новую группу к текущей сессии и запустите тестовый контейнер:&lt;/li&gt;
+&lt;li&gt;Разрешите вашему пользователю работать с Docker без &lt;code&gt;sudo&lt;/code&gt; и примените новую группу к текущей сессии:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;sudo usermod -aG docker $USER &amp;amp;&amp;amp; newgrp docker
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Проверьте работу контейнера:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Проверьте работу Docker тестовым контейнером:&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;docker run --rm hello-world
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Zsh&lt;/h3&gt;
+&lt;h3&gt;Zsh и Homebrew&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Установите оболочку Zsh:&lt;/li&gt;
+&lt;li&gt;Установите оболочку Zsh, сделайте её основной для вашего пользователя и создайте файлы конфигурации:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install -y zsh
+&lt;pre&gt;&lt;code&gt;sudo apt install -y zsh &amp;amp;&amp;amp; sudo chsh -s &quot;$(command -v zsh)&quot; $USER &amp;amp;&amp;amp; mkdir -p ~/.config/zsh &amp;amp;&amp;amp; touch ~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
-&lt;li&gt;Сделайте Zsh оболочкой по умолчанию для вашего пользователя и создайте пустой файл конфигурации:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo chsh -s &quot;$(command -v zsh)&quot; $USER &amp;amp;&amp;amp; touch ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Homebrew&lt;/h3&gt;
-&lt;p&gt;Пакетный менеджер Homebrew устанавливается строго от имени обычного пользователя (не &lt;code&gt;root&lt;/code&gt;).&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Запустите официальный скрипт установки (в процессе он попросит ввести ваш пароль для создания каталога в &lt;code&gt;/home/linuxbrew&lt;/code&gt;):&lt;/li&gt;
+&lt;li&gt;Установите пакетный менеджер Homebrew (выполняется строго от обычного пользователя; в процессе скрипт попросит пароль от &lt;code&gt;sudo&lt;/code&gt; для создания каталога &lt;code&gt;/home/linuxbrew&lt;/code&gt;):&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
-&lt;li&gt;Добавьте инициализацию Homebrew в &lt;code&gt;~/.zshrc&lt;/code&gt; (с защитой от дублирования строки):&lt;/li&gt;
+&lt;li&gt;Активируйте Homebrew в текущей сессии и добавьте его в &lt;code&gt;~/.zshrc&lt;/code&gt;:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;grep -q &quot;linuxbrew/.linuxbrew/bin/brew shellenv&quot; ~/.zshrc || printf &apos;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;\n&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;pre&gt;&lt;code&gt;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot; &amp;amp;&amp;amp; grep -q &quot;linuxbrew/.linuxbrew/bin/brew shellenv&quot; ~/.zshrc || printf &apos;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;\n&apos; &amp;gt;&amp;gt; ~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Oh My Posh&lt;/h3&gt;
+&lt;h3&gt;Современный терминал: Starship, CLI-утилиты и плагины Zsh&lt;/h3&gt;
+&lt;p&gt;Вместо стандартных утилит мы установим современный стек инструментов на Rust, который кардинально ускоряет работу в терминале:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;starship&lt;/strong&gt; — быстрый и информативный промпт (показывает путь, статус Git, время выполнения долгих команд и код ошибки; отличная альтернатива &lt;em&gt;Oh My Posh&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;fzf&lt;/strong&gt; — интерактивный нечёткий поиск по истории команд (&lt;code&gt;Ctrl+R&lt;/code&gt;), файлам (&lt;code&gt;Ctrl+T&lt;/code&gt;) и папкам (&lt;code&gt;Alt+C&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;zoxide&lt;/strong&gt; — умная замена &lt;code&gt;cd&lt;/code&gt; (запоминает часто посещаемые папки, позволяет прыгать в них по части названия через &lt;code&gt;z&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;eza&lt;/strong&gt; — современная замена &lt;code&gt;ls&lt;/code&gt; с иконками, цветами и поддержкой дерева каталогов.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bat&lt;/strong&gt; — клон &lt;code&gt;cat&lt;/code&gt; с подсветкой синтаксиса и нумерацией строк.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;fd&lt;/strong&gt; и &lt;strong&gt;ripgrep (rg)&lt;/strong&gt; — сверхбыстрые альтернативы для &lt;code&gt;find&lt;/code&gt; и &lt;code&gt;grep&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;Установите Oh My Posh (по умолчанию бинарный файл скачивается в &lt;code&gt;~/.local/bin&lt;/code&gt;):&lt;/li&gt;
+&lt;li&gt;Установите все утилиты и плагины Zsh одной командой через Homebrew:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;curl -s https://ohmyposh.dev/install.sh | bash -s
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Добавьте каталог &lt;code&gt;~/.local/bin&lt;/code&gt; в &lt;code&gt;PATH&lt;/code&gt; внутри &lt;code&gt;~/.zshrc&lt;/code&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;grep -q &apos;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&apos; ~/.zshrc || printf &apos;export PATH=&quot;$HOME/.local/bin:$PATH&quot;\n&apos; &amp;gt;&amp;gt; ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;Пропишите инициализацию темы (например, &lt;code&gt;amro&lt;/code&gt;) в &lt;code&gt;~/.zshrc&lt;/code&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;grep -q &quot;oh-my-posh init zsh&quot; ~/.zshrc || printf &apos;eval &quot;$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/amro.omp.json)&quot;\n&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;pre&gt;&lt;code&gt;brew install starship fzf zoxide eza bat fd ripgrep zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-history-substring-search
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;:::note
-В примере используется прямая ссылка на тему &lt;code&gt;amro&lt;/code&gt; из репозитория Oh My Posh. При желании вы можете скачать JSON-файл темы локально, чтобы терминал не обращался к GitHub при первой загрузке. Чтобы символы в приглашении отображались корректно, в вашем локальном терминале должен быть выбран любой &lt;a href=&quot;https://www.nerdfonts.com/&quot;&gt;Nerd Font&lt;/a&gt;.
+Если вы не хотите использовать Homebrew, бинарные файлы этих утилит можно скачать напрямую с GitHub в &lt;code&gt;~/.local/bin&lt;/code&gt; без прав &lt;code&gt;sudo&lt;/code&gt; (достаточно добавить &lt;code&gt;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&lt;/code&gt; в &lt;code&gt;.zshrc&lt;/code&gt;). Также для корректного отображения иконок в вашем локальном терминале должен быть установлен любой &lt;a href=&quot;https://www.nerdfonts.com/&quot;&gt;Nerd Font&lt;/a&gt;.
 :::&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Настройте в &lt;code&gt;~/.zshrc&lt;/code&gt; историю на 100 000 команд, подключите плагины и инициализируйте &lt;code&gt;starship&lt;/code&gt;, &lt;code&gt;fzf&lt;/code&gt; и &lt;code&gt;zoxide&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;printf &apos;HISTFILE=~/.zsh_history\nHISTSIZE=100000\nSAVEHIST=100000\nsetopt APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE\n\nsource $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh\nsource $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\nsource $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh\n\neval &quot;$(fzf --zsh)&quot;\neval &quot;$(zoxide init zsh)&quot;\neval &quot;$(starship init zsh)&quot;\n&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Добавьте набор удобных алиасов (для &lt;code&gt;eza&lt;/code&gt;, &lt;code&gt;bat&lt;/code&gt;, мониторинга ресурсов и коротких команд &lt;code&gt;Docker Compose&lt;/code&gt;) в отдельный модульный файл &lt;code&gt;~/.config/zsh/aliases.zsh&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;printf &apos;alias ll=&quot;eza -la --icons --git&quot;\nalias lt=&quot;eza --tree --level=2 --icons&quot;\nalias cat=&quot;bat -p&quot;\nalias ports=&quot;sudo ss -tulpn&quot;\nalias mem=&quot;free -h&quot;\nalias cpu=&quot;top -bn1 | head -n 20&quot;\n\n# Docker Compose\nalias dc=&quot;docker compose&quot;\nalias dcu=&quot;docker compose up -d&quot;\nalias dcd=&quot;docker compose down&quot;\nalias dcl=&quot;docker compose logs -f --tail=100&quot;\nalias dcps=&quot;docker compose ps&quot;\n\nmkcd() { mkdir -p &quot;$1&quot; &amp;amp;&amp;amp; cd &quot;$1&quot;; }\n&apos; &amp;gt; ~/.config/zsh/aliases.zsh &amp;amp;&amp;amp; printf &apos;source ~/.config/zsh/aliases.zsh\n&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;Переключите текущую сессию в настроенный Zsh:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;exec zsh -l
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::tip
+&lt;strong&gt;Как я структурировал свой конфиг на сервере:&lt;/strong&gt;
+Чтобы &lt;code&gt;~/.zshrc&lt;/code&gt; не разрастался, я использую модульную архитектуру в &lt;code&gt;~/.config/zsh/&lt;/code&gt;, разделив настройки по файлам: &lt;code&gt;options&lt;/code&gt;, &lt;code&gt;plugins&lt;/code&gt; (включая &lt;code&gt;fzf-tab&lt;/code&gt; для автодополнения через fzf), &lt;code&gt;aliases&lt;/code&gt;, &lt;code&gt;functions&lt;/code&gt; (быстрая распаковка архивов &lt;code&gt;extract&lt;/code&gt;, бэкапы &lt;code&gt;backup&lt;/code&gt;, поиск процессов &lt;code&gt;psg&lt;/code&gt;), &lt;code&gt;prompt&lt;/code&gt; и расширенный модуль &lt;code&gt;docker&lt;/code&gt; (&lt;code&gt;dcsh&lt;/code&gt;, &lt;code&gt;dclog&lt;/code&gt;, &lt;code&gt;dchelp&lt;/code&gt;).
+Кроме того, у меня настроена единая цветовая палитра &lt;strong&gt;Osaka Jade&lt;/strong&gt; для &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;eza&lt;/code&gt;, &lt;code&gt;bat&lt;/code&gt;, &lt;code&gt;fzf&lt;/code&gt;, &lt;code&gt;starship&lt;/code&gt; и подсветки синтаксиса (включая применение палитры терминала на лету через OSC-последовательности), благодаря чему время старта оболочки составляет всего &lt;code&gt;~0.2 с&lt;/code&gt;.
+:::&lt;/p&gt;
 &lt;h3&gt;Neofetch в приветствии (MOTD)&lt;/h3&gt;
 &lt;p&gt;Neofetch выводит сводку о системе и логотип дистрибутива. Его удобно добавить в сценарии MOTD (Message of the Day), чтобы видеть состояние сервера сразу при входе по SSH.&lt;/p&gt;
 &lt;ol&gt;
@@ -1715,7 +1718,7 @@ KbdInteractiveAuthentication no
 &lt;pre&gt;&lt;code&gt;sudo apt install -y neofetch
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;:::note
-В Ubuntu 24.04 пакет находится в репозитории &lt;code&gt;universe&lt;/code&gt;. Если &lt;code&gt;apt&lt;/code&gt; его не находит, выполните &lt;code&gt;sudo add-apt-repository universe &amp;amp;&amp;amp; sudo apt update&lt;/code&gt;. &lt;em&gt;(Так как разработка Neofetch прекращена, в будущих релизах Ubuntu его можно аналогично заменить на более быстрый аналог — &lt;code&gt;fastfetch&lt;/code&gt;).&lt;/em&gt;
+В Ubuntu 24.04 пакет находится в репозитории &lt;code&gt;universe&lt;/code&gt;. Если &lt;code&gt;apt&lt;/code&gt; его не находит, выполните &lt;code&gt;sudo add-apt-repository universe &amp;amp;&amp;amp; sudo apt update&lt;/code&gt;. &lt;em&gt;(Так как разработка Neofetch прекращена, в качестве современной замены можно аналогично установить &lt;code&gt;fastfetch&lt;/code&gt; через &lt;code&gt;brew install fastfetch&lt;/code&gt;).&lt;/em&gt;
 :::&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Создайте исполняемый скрипт в каталоге &lt;code&gt;update-motd.d&lt;/code&gt;:&lt;/li&gt;
@@ -1729,10 +1732,10 @@ KbdInteractiveAuthentication no
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Итоговая проверка&lt;/h3&gt;
 &lt;p&gt;Убедитесь, что все установленные компоненты доступны и работают корректно:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;id &amp;amp;&amp;amp; docker --version &amp;amp;&amp;amp; docker compose version &amp;amp;&amp;amp; zsh --version &amp;amp;&amp;amp; brew --version &amp;amp;&amp;amp; oh-my-posh --version
+&lt;pre&gt;&lt;code&gt;id &amp;amp;&amp;amp; docker --version &amp;amp;&amp;amp; docker compose version &amp;amp;&amp;amp; zsh --version &amp;amp;&amp;amp; brew --version &amp;amp;&amp;amp; starship --version &amp;amp;&amp;amp; fzf --version &amp;amp;&amp;amp; eza --version
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Проверьте сетевой статус и безопасность:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;systemctl is-active ssh &amp;amp;&amp;amp; sudo ufw status verbose &amp;amp;&amp;amp; (sudo ss -tulpn | grep &quot;:22&quot; || true)
+&lt;pre&gt;&lt;code&gt;systemctl is-active ssh &amp;amp;&amp;amp; sudo ufw status verbose &amp;amp;&amp;amp; ports
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Чек-лист безопасности&lt;/h3&gt;
 &lt;ul&gt;
